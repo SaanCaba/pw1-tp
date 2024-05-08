@@ -1,0 +1,54 @@
+header{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(22, 132, 165, 0.459);
+}
+.opciones{
+    display: flex;
+    justify-content: center;
+}
+main{
+    margin: 20%;
+    text-align: center;
+}
+footer{
+    text-align: center;
+}
+.redessociales{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+    background-color: rgb(22, 132, 165);
+    padding:0.8em;
+    border-radius: 1em;
+    margin: 0em 1em 0em 1em;
+}
+a:hover{
+    background-color: rgba(16, 95, 119, 0.993);
+    padding:0.8em;
+    border-radius: 1em;
+}
+a:visited{
+    color: black;
+}
+h1{
+    font-size: 5em;
+    margin: 0em;
+}
+h2{
+    font-size: 2em;
+    margin: 0.5em;
+}
+h3{
+    font-size: 1.5em;
+    margin: 0.5em 0em 1.5em 0em;
+}
