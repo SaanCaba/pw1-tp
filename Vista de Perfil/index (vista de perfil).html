@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Streaming</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <section>
+        <nav class="nav">
+          <ul class="ul">
+            <li class="lista-nav"><a href="Home.html">Home</a></li>
+            <li class="lista-nav"><a href="Series.html">Series</a></li>
+            <li class="lista-nav"><a href="Peliculas.html">Peliculas</a></li>
+            <li class="lista-nav"><a href="Perfil.html">Perfil</a></li>
+          </ul>
+        </nav>
+      </section>
+    </header>
+    <main>
+      <section class="imagen-y-usuario">
+        <img
+          src="./Imagenes/perfil-avatar-hombre-icono-redondo_24640-14049.avif"
+          alt="Foto De Perfil"
+          title="Foto De Perfil"
+        />
+        <div>
+          <h5 class="nombre-de-usuario">Nombre de Usuario</h5>
+        </div>
+      </section>
+
+      <section class="Formulario">
+        <section>
+          <form class="section-form">
+            <div>
+              <h2>Datos Personales</h2>
+            </div>
+
+            <div>
+              <h4 class="h4-textos">E-Mail:</h4>
+              <input class="email" type="email" placeholder="Email" />
+            </div>
+
+            <div>
+              <h4 class="h4-textos">Contraseña:</h4>
+              <input class="contraseña" ="password" placeholder="Contraseña" />
+            </div>
+
+            <div>
+              <h4 class="h4-textos">Nueva Contraseña:</h4>
+              <input
+                class="nueva-contraseña"
+                type="password"
+                placeholder="Nueva Contraseña"
+              />
+            </div>
+
+            <div>
+              <h4 class="h4-textos">Repetir Contraseña:</h4>
+              <input
+                class="repetir-contraseña"
+                type="password"
+                placeholder="Repetir Contraseña"
+              />
+            </div>
+          </form>
+        </section>
+
+        <section>
+          <form class="section-form2">
+            <div>
+              <h2>Metodos de Pago</h2>
+            </div>
+
+            <div>
+              <input type="radio" />
+              <h4 class="opcionTarjetaDeCredito">Tarjeta de Credito:</h4>
+              <input
+                class="numeroDeTarjeta"
+                type="number"
+                placeholder="Numero de Tarjeta"
+              />
+              <input class="numeroDeTarjeta" type="number" placeholder="XXX" />
+            </div>
+
+            <div>
+              <div>
+                <input type="radio" />
+                <h4>Cupon de Pago:</h4>
+              </div>
+
+              <div>
+                <input type="checkbox" />
+                <h4>RapiPago</h4>
+                <input type="checkbox" />
+                <h4>PagoFacil</h4>
+              </div>
+            </div>
+
+            <div>
+              <input type="radio" />
+              <h4>Transferencia Bancaria:</h4>
+              <input type="number" placeholder="CBU" />
+            </div>
+          </form>
+        </section>
+      </section>
+    </main>
+    <section class="botones">
+      <button class="botonGuardar">Guardar Cambios</button>
+      <button class="botonCancelar">Cancelar Subscripcion</button>
+    </section>
+  </body>
+</html>

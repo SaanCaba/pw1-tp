@@ -1,0 +1,133 @@
+body {
+    margin: auto;
+    background-color: gray;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+main {
+    justify-content: space-around;
+    display: flex;
+    flex-direction: row;
+}
+
+img {
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+    width: 100px;
+
+}
+
+.nombre-de-usuario {
+    display: inline;
+    padding-left: 1px;
+}
+
+
+.header {
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    border-bottom: 2px solid black;
+}
+
+.ul {
+    display: flex;
+    flex-direction: row;
+    gap: 140px;
+    justify-content: center;
+    
+}
+
+h4 {
+    display: inline;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.lista-nav {
+    list-style: none;
+}
+
+.Formulario {
+    gap: 350px;
+    display: flex;
+    flex-direction: row;
+}
+
+.section-form {
+    
+    display: flex;
+    flex-direction: column;
+    gap: 4em;
+    align-items: end;
+}
+
+.section-form2 {
+    
+    display: flex;
+    flex-direction: column;
+    gap: 4em;
+    margin-left: 4px;   
+}
+
+.h4-textos {
+    display: inline; 
+}
+
+.email {
+    display: inline;
+    
+}
+
+.contraseña {
+    display: inline;
+
+}
+
+.nueva-contraseña {
+    display: inline;
+
+}
+
+.repetir-contraseña {
+    display: inline;
+
+}
+
+.opcionTarjetaDeCredito {
+    display: inline;
+}
+
+.numeroDeTarjeta {
+    display: inline;
+}
+
+.botones {
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
