@@ -120,6 +120,10 @@ footer {
     width: 1rem;
     align-items: center;
   }
+  a {
+    text-decoration: none;
+    color: #cecece;
+  }
 }
 
 span {
