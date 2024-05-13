@@ -125,7 +125,10 @@ footer {
     color: #cecece;
   }
 }
-
+.interno {
+  text-decoration: none;
+  color: #ffffff;
+}
 span {
   font-weight: bold;
 }
