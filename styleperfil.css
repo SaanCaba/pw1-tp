@@ -45,7 +45,10 @@ img {
   justify-content: center;
   gap: 1rem;
 }
-
+.cbu {
+  list-style-type: none;
+  margin-top: 1rem;
+}
 h4 {
   display: inline;
 }
