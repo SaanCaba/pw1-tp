@@ -65,6 +65,7 @@ nav {
   margin: 0 auto;
   width: fit-content;
   padding-left: 1rem;
+  align-items: center;
 }
 
 nav ul {
@@ -73,6 +74,11 @@ nav ul {
   display: flex;
   justify-content: center;
   gap: 1rem;
+  align-items: center;
+  li{
+    gap: 0.2rem;
+    display: flex;
+  }
 }
 
 nav ul li:hover {
