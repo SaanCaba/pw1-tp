@@ -23,7 +23,7 @@ header {
   padding: 0.8em;
   border-radius: 1em;
 }
-h2 {
+h1 {
   font-size: 2em;
   margin: 0.5em;
 }
@@ -51,7 +51,7 @@ input {
   margin-bottom: 1em;
   font-size: 1em;
 }
-h3 {
+h2 {
   font-size: 2em;
 }
 button {
