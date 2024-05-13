@@ -136,3 +136,44 @@ footer {
 span {
   font-weight: bold;
 }
+
+
+@media screen and (max-width: 640px) {
+  .navbar-list > a{
+    text-align: center;
+    
+  }
+  .navbar-list > a > li{
+    padding: 10px 0px;
+  }
+  .article{
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  }
+  .information{
+    width: 100%;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .information > div{
+    display: flex;
+    justify-content: center;
+  }
+  .p{
+    max-width: 100%;
+    width: 100%;
+    text-align: center;
+    padding: 0px;
+  }
+  .button-start{
+    width: 100%;
+  }
+  .ul-similar-content{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+}
