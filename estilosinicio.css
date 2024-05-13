@@ -10,12 +10,29 @@ header {
   justify-content: space-between;
   background-color: #1684a575;
 }
+
+.container-img {
+  width: 100vw;
+  height: 50vh;
+  position: absolute;
+  overflow: hidden;
+  .portada {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}
+
+.container-inicio {
+  position: absolute;
+}
 .opciones {
   display: flex;
   justify-content: center;
 }
 main {
-  margin: 20%;
+  margin: 0;
+  color: #ffffff;
   text-align: center;
 }
 footer {
