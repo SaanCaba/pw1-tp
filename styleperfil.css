@@ -1,133 +1,158 @@
 body {
-    margin: auto;
-    background-color: gray;
-    align-items: center;
-    justify-content: center;
-    
+  margin: auto;
+  background: linear-gradient(to bottom, #ffffff, #105f77fd);
+  height: 100vh;
+
+  align-items: center;
+  justify-content: center;
 }
 
 main {
-    justify-content: space-around;
-    display: flex;
-    flex-direction: row;
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
 }
 
 img {
-    display: flex;
-    flex-direction: column;
-    padding-left: 10px;
-    width: 100px;
-
+  display: flex;
+  flex-direction: column;
+  padding-left: 10px;
+  width: 100px;
 }
-
+.svgNav {
+  width: 1rem;
+}
 .nombre-de-usuario {
-    display: inline;
-    padding-left: 1px;
+  display: inline;
+  padding-left: 1px;
 }
-
 
 .header {
-    justify-content: center;
-    display: flex;
-    flex-direction: row;
-    border-bottom: 2px solid black;
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  border-bottom: 2px solid #000000;
 }
 
 .ul {
-    display: flex;
-    flex-direction: row;
-    gap: 140px;
-    justify-content: center;
-    
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
 }
 
 h4 {
-    display: inline;
+  display: inline;
 }
 
 a {
-    text-decoration: none;
-    color: black;
+  text-decoration: none;
+  color: #000000;
 }
 
-.lista-nav {
-    list-style: none;
+.lista-nav:hover {
+  font-weight: bold;
 }
 
 .Formulario {
-    gap: 350px;
-    display: flex;
-    flex-direction: row;
+  gap: 350px;
+  display: flex;
+  flex-direction: row;
 }
 
 .section-form {
-    
-    display: flex;
-    flex-direction: column;
-    gap: 4em;
-    align-items: end;
+  display: flex;
+  flex-direction: column;
+  gap: 4em;
+  align-items: end;
 }
 
 .section-form2 {
-    
-    display: flex;
-    flex-direction: column;
-    gap: 4em;
-    margin-left: 4px;   
+  display: flex;
+  flex-direction: column;
+  gap: 4em;
+  margin-left: 4px;
 }
 
 .h4-textos {
-    display: inline; 
+  display: inline;
 }
 
 .email {
-    display: inline;
-    
+  display: inline;
 }
 
 .contraseña {
-    display: inline;
-
+  display: inline;
 }
 
 .nueva-contraseña {
-    display: inline;
-
+  display: inline;
 }
 
 .repetir-contraseña {
-    display: inline;
-
+  display: inline;
 }
 
 .opcionTarjetaDeCredito {
-    display: inline;
+  display: inline;
 }
 
 .numeroDeTarjeta {
-    display: inline;
+  display: inline;
 }
 
 .botones {
-    justify-content: center;
-    display: flex;
-    flex-direction: row;
-    
+  justify-content: center;
+  padding: 2rem;
+  gap: 2rem;
+  display: flex;
+  flex-direction: row;
+}
+.botonGuardar,
+.botonCancelar {
+  border-radius: 1em;
+  background-color: #ffffff;
+  border: none;
+  cursor: pointer;
+  font-size: 1em;
+  margin: 2em 0em 2em 0em;
 }
 
+.botonGuardar:hover,
+.botonCancelar:hover {
+  background-color: #105f77fd;
+  border-radius: 1em;
+}
 
+footer {
+  background-color: #000000;
+  color: #cecece;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-around;
+  ul {
+    list-style-type: none;
+  }
+  svg {
+    width: 1rem;
+    align-items: center;
+  }
+  a {
+    text-decoration: none;
+    color: #cecece;
+  }
+}
+.copy {
+  margin: 0;
+  padding: 1rem;
+  text-align: center;
+  font-size: small;
+  background-color: #000000;
+  color: #cecece;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+span {
+  font-weight: bold;
+}
