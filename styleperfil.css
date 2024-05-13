@@ -19,8 +19,8 @@ main {
 img {
   display: flex;
   flex-direction: column;
-  padding-left: 10px;
-  width: 100px;
+  padding-left: 1rem;
+  width: 6.25em;
 }
 .svgNav {
   width: 1rem;
@@ -62,7 +62,7 @@ a {
 }
 
 .Formulario {
-  gap: 350px;
+  gap: 22em;
   display: flex;
   flex-direction: row;
 }
