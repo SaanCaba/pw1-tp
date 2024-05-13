@@ -1,314 +1,147 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Stream Time</title>
-    <link rel="stylesheet" href="stylePrincipal.css" />
-  </head>
-  <body>
-    <div class="main-background">
-      <header>
-        <nav>
-          <ul>
-            <li>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 16 16"
-                fill="currentColor"
-                class="svgNav"
-              >
-                <path
-                  d="M8.543 2.232a.75.75 0 0 0-1.085 0l-5.25 5.5A.75.75 0 0 0 2.75 9H4v4a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-1a1 1 0 1 1 2 0v1a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1V9h1.25a.75.75 0 0 0 .543-1.268l-5.25-5.5Z"
-                />
-              </svg>
-              <a href="pantallaPrincipal.html" class="interno">Home</a>
-            </li>
-            <li>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 16 16"
-                fill="currentColor"
-                class="svgNav"
-              >
-                <path d="M12 5H4v4h8V5Z" />
-                <path
-                  fill-rule="evenodd"
-                  d="M1 3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1h-4v1.5h2.25a.75.75 0 0 1 0 1.5h-8.5a.75.75 0 0 1 0-1.5H6V12H2a1 1 0 0 1-1-1V3Zm1.5 7.5v-7h11v7h-11Z"
-                  clip-rule="evenodd"
-                />
-              </svg>
-              <a href="principalSeries.html" class="interno"> Series</a>
-            </li>
-            <li>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 16 16"
-                fill="currentColor"
-                class="svgNav"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M1 3.5A1.5 1.5 0 0 1 2.5 2h11A1.5 1.5 0 0 1 15 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-11A1.5 1.5 0 0 1 1 12.5v-9Zm1.5.25a.25.25 0 0 1 .25-.25h1.5a.25.25 0 0 1 .25.25v1a.25.25 0 0 1-.25.25h-1.5a.25.25 0 0 1-.25-.25v-1Zm3.75-.25a.25.25 0 0 0-.25.25v3.5c0 .138.112.25.25.25h3.5a.25.25 0 0 0 .25-.25v-3.5a.25.25 0 0 0-.25-.25h-3.5ZM6 8.75a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.5a.25.25 0 0 1-.25.25h-3.5a.25.25 0 0 1-.25-.25v-3.5Zm5.75-5.25a.25.25 0 0 0-.25.25v1c0 .138.112.25.25.25h1.5a.25.25 0 0 0 .25-.25v-1a.25.25 0 0 0-.25-.25h-1.5ZM2.5 11.25a.25.25 0 0 1 .25-.25h1.5a.25.25 0 0 1 .25.25v1a.25.25 0 0 1-.25.25h-1.5a.25.25 0 0 1-.25-.25v-1Zm9.25-.25a.25.25 0 0 0-.25.25v1c0 .138.112.25.25.25h1.5a.25.25 0 0 0 .25-.25v-1a.25.25 0 0 0-.25-.25h-1.5ZM2.5 8.75a.25.25 0 0 1 .25-.25h1.5a.25.25 0 0 1 .25.25v1a.25.25 0 0 1-.25.25h-1.5a.25.25 0 0 1-.25-.25v-1Zm9.25-.25a.25.25 0 0 0-.25.25v1c0 .138.112.25.25.25h1.5a.25.25 0 0 0 .25-.25v-1a.25.25 0 0 0-.25-.25h-1.5ZM2.5 6.25A.25.25 0 0 1 2.75 6h1.5a.25.25 0 0 1 .25.25v1a.25.25 0 0 1-.25.25h-1.5a.25.25 0 0 1-.25-.25v-1ZM11.75 6a.25.25 0 0 0-.25.25v1c0 .138.112.25.25.25h1.5a.25.25 0 0 0 .25-.25v-1a.25.25 0 0 0-.25-.25h-1.5Z"
-                  clip-rule="evenodd"
-                />
-              </svg>
-              <a href="principalPeliculas.html" class="interno">Películas</a>
-            </li>
-            <li>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 16 16"
-                fill="currentColor"
-                class="svgNav"
-              >
-                <path
-                  d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM12.735 14c.618 0 1.093-.561.872-1.139a6.002 6.002 0 0 0-11.215 0c-.22.578.254 1.139.872 1.139h9.47Z"
-                />
-              </svg>
-              <a href="perfil.html" class="interno"> Perfil</a>
-            </li>
-          </ul>
-        </nav>
-      </header>
-      <div class="container-img">
-        <img
-          class="portada"
-          src="https://image.tmdb.org/t/p/original/iHYh4cdO8ylA3W0dUxTDVdyJ5G9.jpg"
-        />
-      </div>
-      <div class="movie-details">
-        <h1>El planeta de los simios: nuevo reino</h1>
-        <p>
-          Mientras un nuevo y tiránico líder simio construye su imperio, un
-          joven simio emprende un viaje desgarrador que le llevará a
-          cuestionarse todo lo que sabe sobre el pasado y a tomar decisiones que
-          definirán el futuro de simios y humanos por igual.
-        </p>
-        <div class="container-btn">
-          <button class="moreInfo">Más informacion</button>
-          <button class="viewFilm">Ver película</button>
-        </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stream Time</title>
+  <link rel="stylesheet" href="stylePrincipal.css" />
+</head>
+
+<body>
+  <div class="main-background">
+    <header>
+      <nav>
+        <ul>
+          <li>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="svgNav">
+              <path
+                d="M8.543 2.232a.75.75 0 0 0-1.085 0l-5.25 5.5A.75.75 0 0 0 2.75 9H4v4a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-1a1 1 0 1 1 2 0v1a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1V9h1.25a.75.75 0 0 0 .543-1.268l-5.25-5.5Z" />
+            </svg>
+            <a href="pantallaPrincipal.html" class="interno">Home</a>
+          </li>
+          <li>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="svgNav">
+              <path d="M12 5H4v4h8V5Z" />
+              <path fill-rule="evenodd"
+                d="M1 3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1h-4v1.5h2.25a.75.75 0 0 1 0 1.5h-8.5a.75.75 0 0 1 0-1.5H6V12H2a1 1 0 0 1-1-1V3Zm1.5 7.5v-7h11v7h-11Z"
+                clip-rule="evenodd" />
+            </svg>
+            <a href="principalSeries.html" class="interno"> Series</a>
+          </li>
+          <li>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="svgNav">
+              <path fill-rule="evenodd"
+                d="M1 3.5A1.5 1.5 0 0 1 2.5 2h11A1.5 1.5 0 0 1 15 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-11A1.5 1.5 0 0 1 1 12.5v-9Zm1.5.25a.25.25 0 0 1 .25-.25h1.5a.25.25 0 0 1 .25.25v1a.25.25 0 0 1-.25.25h-1.5a.25.25 0 0 1-.25-.25v-1Zm3.75-.25a.25.25 0 0 0-.25.25v3.5c0 .138.112.25.25.25h3.5a.25.25 0 0 0 .25-.25v-3.5a.25.25 0 0 0-.25-.25h-3.5ZM6 8.75a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.5a.25.25 0 0 1-.25.25h-3.5a.25.25 0 0 1-.25-.25v-3.5Zm5.75-5.25a.25.25 0 0 0-.25.25v1c0 .138.112.25.25.25h1.5a.25.25 0 0 0 .25-.25v-1a.25.25 0 0 0-.25-.25h-1.5ZM2.5 11.25a.25.25 0 0 1 .25-.25h1.5a.25.25 0 0 1 .25.25v1a.25.25 0 0 1-.25.25h-1.5a.25.25 0 0 1-.25-.25v-1Zm9.25-.25a.25.25 0 0 0-.25.25v1c0 .138.112.25.25.25h1.5a.25.25 0 0 0 .25-.25v-1a.25.25 0 0 0-.25-.25h-1.5ZM2.5 8.75a.25.25 0 0 1 .25-.25h1.5a.25.25 0 0 1 .25.25v1a.25.25 0 0 1-.25.25h-1.5a.25.25 0 0 1-.25-.25v-1Zm9.25-.25a.25.25 0 0 0-.25.25v1c0 .138.112.25.25.25h1.5a.25.25 0 0 0 .25-.25v-1a.25.25 0 0 0-.25-.25h-1.5ZM2.5 6.25A.25.25 0 0 1 2.75 6h1.5a.25.25 0 0 1 .25.25v1a.25.25 0 0 1-.25.25h-1.5a.25.25 0 0 1-.25-.25v-1ZM11.75 6a.25.25 0 0 0-.25.25v1c0 .138.112.25.25.25h1.5a.25.25 0 0 0 .25-.25v-1a.25.25 0 0 0-.25-.25h-1.5Z"
+                clip-rule="evenodd" />
+            </svg>
+            <a href="principalPeliculas.html" class="interno">Películas</a>
+          </li>
+          <li>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="svgNav">
+              <path
+                d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM12.735 14c.618 0 1.093-.561.872-1.139a6.002 6.002 0 0 0-11.215 0c-.22.578.254 1.139.872 1.139h9.47Z" />
+            </svg>
+            <a href="perfil.html" class="interno"> Perfil</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <div class="container-img">
+      <img class="portada" src="https://image.tmdb.org/t/p/original/iHYh4cdO8ylA3W0dUxTDVdyJ5G9.jpg" />
+    </div>
+    <div class="movie-details">
+      <h1>El planeta de los simios: nuevo reino</h1>
+      <p>
+        Mientras un nuevo y tiránico líder simio construye su imperio, un
+        joven simio emprende un viaje desgarrador que le llevará a
+        cuestionarse todo lo que sabe sobre el pasado y a tomar decisiones que
+        definirán el futuro de simios y humanos por igual.
+      </p>
+      <div class="container-btn">
+        <button class="moreInfo">Más informacion</button>
+        <button class="viewFilm">Ver película</button>
       </div>
     </div>
+  </div>
 
-    <main>
-      <section class="container">
-        <form class="categoria" method="post">
-          <label for="categorias">Categorías:</label>
-          <select id="categorias">
-            <option value="valor1">Acción</option>
-            <option value="valor2">Anime</option>
-            <option value="valor3">Ciencia ficción</option>
-            <option value="valor4">Comedia</option>
-            <option value="valor5">Comedia romantica</option>
-            <option value="valor6">Documental</option>
-            <option value="valor7">Fantasía</option>
-            <option value="valor8">Romance</option>
-            <option value="valor9">Sci-fi</option>
-            <option value="valor10">Telenovela</option>
-            <option value="valor11">Terror</option>
-            <option value="valor12">Thriller</option>
-          </select>
-        </form>
-        <form class="search" method="get">
-          <input type="search" id="site-search" placeholder="Buscar" />
-          <button class="search" type="submit">Buscar</button>
-        </form>
-      </section>
+  <main>
+    <section class="container">
+      <form class="categoria" method="post">
+        <label for="categorias">Categorías:</label>
+        <select id="categorias">
+          <option value="valor1">Acción</option>
+          <option value="valor2">Anime</option>
+          <option value="valor3">Ciencia ficción</option>
+          <option value="valor4">Comedia</option>
+          <option value="valor5">Comedia romantica</option>
+          <option value="valor6">Documental</option>
+          <option value="valor7">Fantasía</option>
+          <option value="valor8">Romance</option>
+          <option value="valor9">Sci-fi</option>
+          <option value="valor10">Telenovela</option>
+          <option value="valor11">Terror</option>
+          <option value="valor12">Thriller</option>
+        </select>
+      </form>
+      <form class="search" method="get">
+        <input type="search" id="site-search" placeholder="Buscar" />
+        <button class="search" type="submit">Buscar</button>
+      </form>
+    </section>
 
-      <section class="films">
-        <img
-          alt="Shrek"
-          src="https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/1B198B2046A7A40129694795EDD68088730AC9273D6AFAB345D71A38B52893A6/scale?width=1200&aspectRatio=1.78&format=webp"
-        />
-        <img
-          alt="The society"
-          src="https://i0.wp.com/www.crimemagazine.it/wp-content/uploads/the-society.jpg?fit=1000%2C563&ssl=1"
-        />
-        <img
-          alt="La ley y el orden"
-          src="https://m.media-amazon.com/images/S/pv-target-images/83f4ec38fc671836bf9daeba7aa89c6d4700ccb23bd96e3c298c932f6bf97130.jpg"
-        />
-        <img
-          alt="Nerve"
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQe8ezCOziASlgKfTHJ0lnWDdfYkxsz0A4hnw&usqp=CAU"
-        />
-        <img
-          alt="Lucifer"
-          src="https://cineverso.es/wp-content/uploads/2018/07/https_2F2Fimage.tmdb_.org2Ft2Fp2Fw12802FxHnoXecLjQGEC3QefwuMDn7FMhr.jpg"
-        />
-        <img
-          alt="Outlander"
-          src="https://larepublica.cronosmedia.glr.pe/original/2022/03/06/62253397740cc210fb2ac8ff.jpg"
-        />
-        <img
-          alt="Alicia"
-          src="https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/26809199207CDDAAD4E787964BB7920167DE510683763A85A3169D7A78DC58CA/scale?width=1200&amp;aspectRatio=1.78&amp;format=webp"
-        />
-        <img
-          alt="El diaro de la princesa"
-          src="https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/0C2D6A6718D920509B384A885BBB3906E01C655D602A3B3F12B5B755A74DFDA0/scale?width=1200&amp;aspectRatio=1.78&amp;format=webp"
-        />
-        <img
-          alt="El precio del mañana"
-          src="https://media.c5n.com/p/bfbc272a89ae4f003cbbda69989bb09b/adjuntos/326/imagenes/000/217/0000217841/790x0/smart/peliculas-netflix.jpg"
-        />
-        <img
-          alt="El proyecto adam"
-          src="https://akamai.sscdn.co/uploadfile/letras/playlists/5/1/1/e/511e0ce6d52243e98de263bdfd6bd7aa.jpg"
-        />
-        <img
-          alt="El diablo viste a la moda"
-          src="https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/110FF005A720DE7F4D53C9CD3218613711D38D356A0B5987E77E141D8045D292/scale?width=1200&amp;aspectRatio=1.78&amp;format=webp"
-        />
-        <img
-          alt="Codigo 8"
-          src="https://www.rublog.cl/wp-content/uploads/2021/05/codigo8.jpg"
-        />
-        <img
-          alt="The walking dead"
-          src="https://www.clarin.com/img/2019/10/24/A9ZAwfJM_360x240__1.jpg"
-        />
-        <img
-          alt="La gran apuesta"
-          src="https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/media/image/2016/01/554642-gran-apuesta-critica-film-brad-pitt-ryan-gosling-christian-bale-steve-carell.jpg?tf=3840x"
-        />
-        <img
-          alt="Suits"
-          src="https://m.media-amazon.com/images/S/pv-target-images/ff9d4df422069326d090cc3e192d749c7946c94cc3c5c2432d6fd25880735c71.jpg"
-        />
-        <img
-          alt="Dexter"
-          src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgMkTaivs5M0HGzr7AupKp6jAavKfKAnEvuaUIFStY32XLp86Axa-ssg7RCVGK3P8yz_Q4lN-Lz3qGFFV4r43WWueK0KjYqaIfL9eq73wR8kNyddEOyeotAgNOpH-tIBXNiaLCymsWY2M4/s1600/Michael+C.+Hall+es+Dexter+%2528Showtime%2529.jpg"
-        />
-        <img
-          alt="El diario de la princesa 2"
-          src="https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/170C8DCF88490CB3E3BF6F16FAE73924B4AF5E1D0979055A06BBE77650A637E2/scale?width=1200&aspectRatio=1.78&format=webp"
-        />
-        <img
-          alt="Dark"
-          src="https://cdn.culturagenial.com/es/imagenes/dark-logo-cke.jpg"
-        />
-        <img
-          alt="Modern family"
-          src="https://img.hulu.com/user/v3/artwork/883c414c-34a3-4fcc-b50a-0ad5a184c977?base_image_bucket_name=image_manager&base_image=e4f9fac4-459e-4019-a41f-2f52c4e6f4c6&size=1200x630&format=webp"
-        />
-        <img
-          alt="La familia del futuro"
-          src="https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/770C9D3F157518459FB094FFDD25B38CB8E4B7BFD7330BE0FF7C7AC832187CC9/scale?width=1200&amp;aspectRatio=1.78&amp;format=webp"
-        />
-        <img
-          alt="Death note"
-          src="https://www.nintenderos.com/wp-content/uploads/2023/10/death-note.jpg"
-        />
-        <img
-          alt="Mi villano favorito 3"
-          src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiSHVkL417O56g0B9jW2M3UrxCL8RtMwi-KuhO8LabrnM-Dvz2KZM4IR4zaIWxuwW1u8-5-TMHdvWfIJw5r_lU1CMTBPbMKViNqqN4FoLmhVp4uaSMJmDGiuVftt75nZkY197QrzaRZy9s/s1600/Despicable-Me-3.jpg"
-        />
-        <img
-          alt="Orange is the new black"
-          src="https://imagenes.diariodenavarra.es/files/image_477_265/uploads/2019/07/15/60b1c7b325bd2.jpeg"
-        />
-        <img
-          alt="Friends"
-          src="https://beam-images.warnermediacdn.com/BEAM_LWM_DELIVERABLES/52dae4c7-2ab1-4bb9-ab1c-8100fd54e2f9/525e19cadd275c68e933773cc3bdad91a12fe10e.jpg?submitted=1684658977805&host=wbd-images.prod-vod.h264.io&partner=beamcom"
-        />
-        <img
-          alt="Another"
-          src="https://cdn2.mediotiempo.com/uploads/media/2022/10/03/another-twitter.jpg"
-        />
-        <img
-          alt="Dejar el mundo atrás"
-          src="https://kinefilia.files.wordpress.com/2024/01/dejar-el-mundo-atras-1.jpg"
-        />
-        <img
-          alt="La purga"
-          src="https://www.locosxlosjuegos.com/wp-content/uploads/2017/05/6891_5098.jpg"
-        />
-        <img
-          alt="Corre"
-          src="https://i.ytimg.com/vi/IjR4B6Rc0HU/maxresdefault.jpg"
-        />
-        <img
-          alt="No respires"
-          src="https://occ-0-2794-2219.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABZ62uCDJfXNXaNv04P8DmSmVjS3yTVqWgFSslDZyQewhQJOY_NiUmOM2kZ-l8XZQTkjjAdK27FesP3_7cSn4pZMW2CfSNZlBe_mu.jpg?r=b24"
-        />
-        <img
-          alt="Una esposa de mentira"
-          src="https://m.media-amazon.com/images/S/pv-target-images/830c21c0842a3e932310d5fced7507221f969d383ccdec22e0941497f390fa8d.jpg"
-        />
-        <img
-          alt="Son como niños"
-          src="https://pbs.twimg.com/media/EkftW9GWMAMTZR_.jpg"
-        />
-        <img
-          alt="Formula 1"
-          src="https://phantom-marca.unidadeditorial.es/1004691c06b0e32a735b18c9926d3b20/resize/1320/f/jpg/assets/multimedia/imagenes/2021/03/05/16149799085665.png"
-        />
-        <img
-          alt="Coco"
-          src="https://thedisinsider.com/wp-content/uploads/2017/10/13F993DC-2CD7-4ECD-80B4-9CB5C3FCCA79.jpeg"
-        />
-        <img
-          alt="Van helsing"
-          src="https://occ-0-2794-2219.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABc1wOEs6X6bNkQFcE795y3uGvfeS8hcsUQ_qB_LsvvW4wehHW5q83Pm-tBWhrd_x4C4gTRZyr4yvd_ix2_9XcZJVID8iUJDm1RyS.jpg?r=de7"
-        />
-        <img
-          alt="El codigo enigma"
-          src="https://cinemaseriesok.wordpress.com/wp-content/uploads/2021/07/imitationgamethewhorizontal.jpg?w=675"
-        />
-        <img
-          alt="Comer rezar amar"
-          src="https://images.hive.blog/0x0/https://files.peakd.com/file/peakd-hive/belug/23zGnsLZb8Ve6Gcq4AbJjkGFYaQctFJCyEu22jdztFwK7JZF1scEGsd49bJSJsrhTCa5K.webp"
-        />
-      </section>
-    </main>
+    <section class="films">
+      <a href="./detalles/detalle-pelicula-shrek/">
+        <img alt="Shrek" src="./images/shrek.webp" />
+      </a>
+      <a href="./detalles/detalle-pelicula-plan-simios/"><img alt="Planeta de los simios"
+          src="./images/planetaDeLosSimios.jpg" /></a>
+      <a href="./detalles/detalle-pelicula-titanic/"><img alt="Titanic" src="./images/titanic.webp" /></a>
+      <a href="./detalles/detalle-pelicula-star-wars/"><img alt="Star Wars" src="./images/starWars.jpg" /></a>
+      <a href="./detalles/detalle-serie-breaking-bad/">
+        <img alt="Breaking bad" src="./images/breakingBad.jpg" />
+      </a>
+      <a href="./detalles/detalle-serie-cobra-kai/"><img alt="Cobra kai" src="./images/cobraKai.jpg" /></a>
+      <a href="./detalles/detalle-serie-stranger-things/"><img alt="Stranger Things"
+          src="./images/strangerThings.png" /></a>
+      <a href="./detalles/detalle-serie-vikings/"><img alt="Vikings" src="./images/vikings.webp" /></a>
+    </section>
+  </main>
 
-    <footer>
-      <ul class="company">
-        <li><a href="inicio.html">Inicio</a></li>
-        <li>Nosotros</li>
-        <li>Blog</li>
-      </ul>
-      <ul class="contact">
-        <span>Contacto</span>
-        <li>
-          <a href="https://twitter.com/" target="_blank">Twitter</a>
-        </li>
-        <li>
-          <a href="https://www.instagram.com/" target="_blank">Instagram</a>
-        </li>
-        <li>
-          <a href="https://www.facebook.com/" target="_blank">Facebook</a>
-        </li>
-        <li>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 16 16"
-            fill="currentColor"
-            class="w-4 h-4"
-          >
-            <path
-              d="M2.5 3A1.5 1.5 0 0 0 1 4.5v.793c.026.009.051.02.076.032L7.674 8.51c.206.1.446.1.652 0l6.598-3.185A.755.755 0 0 1 15 5.293V4.5A1.5 1.5 0 0 0 13.5 3h-11Z"
-            />
-            <path
-              d="M15 6.954 8.978 9.86a2.25 2.25 0 0 1-1.956 0L1 6.954V11.5A1.5 1.5 0 0 0 2.5 13h11a1.5 1.5 0 0 0 1.5-1.5V6.954Z"
-            />
-          </svg>
-          <a
-            href="https://www.gmail.com/mail/help/intl/es/about.html?iframe"
-            target="_blank"
-            >Email</a
-          >
-        </li>
-      </ul>
-      <ul class="policies">
-        <li>Políticas de pago</li>
-        <li>Políticas de privacidad</li>
-        <li>Condiciones generales</li>
-      </ul>
-    </footer>
-    <p class="copy">&copy;2024 StreamTime. Todos los derechos reservados.</p>
-  </body>
+  <footer>
+    <ul class="company">
+      <li><a href="inicio.html">Inicio</a></li>
+      <li>Nosotros</li>
+      <li>Blog</li>
+    </ul>
+    <ul class="contact">
+      <span>Contacto</span>
+      <li>
+        <a href="https://twitter.com/" target="_blank">Twitter</a>
+      </li>
+      <li>
+        <a href="https://www.instagram.com/" target="_blank">Instagram</a>
+      </li>
+      <li>
+        <a href="https://www.facebook.com/" target="_blank">Facebook</a>
+      </li>
+      <li>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
+          <path
+            d="M2.5 3A1.5 1.5 0 0 0 1 4.5v.793c.026.009.051.02.076.032L7.674 8.51c.206.1.446.1.652 0l6.598-3.185A.755.755 0 0 1 15 5.293V4.5A1.5 1.5 0 0 0 13.5 3h-11Z" />
+          <path
+            d="M15 6.954 8.978 9.86a2.25 2.25 0 0 1-1.956 0L1 6.954V11.5A1.5 1.5 0 0 0 2.5 13h11a1.5 1.5 0 0 0 1.5-1.5V6.954Z" />
+        </svg>
+        <a href="https://www.gmail.com/mail/help/intl/es/about.html?iframe" target="_blank">Email</a>
+      </li>
+    </ul>
+    <ul class="policies">
+      <li>Políticas de pago</li>
+      <li>Políticas de privacidad</li>
+      <li>Condiciones generales</li>
+    </ul>
+  </footer>
+  <p class="copy">&copy;2024 StreamTime. Todos los derechos reservados.</p>
+</body>
+
 </html>
