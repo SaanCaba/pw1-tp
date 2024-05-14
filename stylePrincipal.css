@@ -231,7 +231,7 @@ span {
     color: #cecece;
     width: 90%;
     bottom: 0;
-    padding-left: 1rem;
+    padding-left: 1em;
     font-size: medium;
     position: relative;
 
@@ -248,8 +248,8 @@ span {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    grid-gap: 1.5rem;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    grid-gap: 1.5em;
+    padding-top: 2em;
+    padding-bottom: 2em;
   }
 }
