@@ -36,6 +36,7 @@ header {
   bottom: 11rem;
   text-align: justify;
   padding: 1rem;
+  box-sizing: border-box;
   .moreInfo,
   .viewFilm {
     border-radius: 0.4em;
@@ -110,6 +111,7 @@ a {
   grid-gap: 1.5rem;
   padding-top: 2rem;
   padding-bottom: 2rem;
+  box-sizing: border-box;
 }
 img {
   width: 12rem;
@@ -169,9 +171,6 @@ span {
       height: auto;
       overflow: hidden;
     }
-    .portada {
-      height: auto;
-    }
   }
   header {
     width: 100vw;
@@ -189,6 +188,12 @@ span {
   }
   main {
     margin: 0;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-left: 1rem;
   }
   .films {
     display: flex;
@@ -201,20 +206,22 @@ span {
   }
 }
 
-@media screen and (max-width: 900px) and (min-width: 640px) {
-  .main-background {
+@media screen and (max-width: 1024px) and (min-width: 640px) {
+  body {
     width: 100vw;
+    overflow: hidden;
+  }
+  .main-background {
+    box-sizing: border-box;
+    width: 100%;
     .container-img {
       width: 100%;
       height: auto;
       overflow: hidden;
     }
-    .portada {
-      height: auto;
-    }
   }
   header {
-    width: 100vw;
+    width: 100%;
   }
   .movie-details {
     color: #cecece;
@@ -223,6 +230,7 @@ span {
     padding-left: 1rem;
     font-size: medium;
     position: relative;
+
     h1 {
       width: 90%;
     }
@@ -231,6 +239,7 @@ span {
     margin: 0;
   }
   .films {
+    box-sizing: border-box;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
