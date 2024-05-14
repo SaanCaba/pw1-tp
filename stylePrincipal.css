@@ -7,7 +7,6 @@ body {
   margin: 0;
   border: 0;
   padding: 0;
-  overflow-x: hidden;
 }
 main {
   margin: 1rem;
@@ -34,7 +33,7 @@ header {
   color: #1d1b1b;
   position: absolute;
   width: 25vw;
-  top: 45%;
+  bottom: 11rem;
   text-align: justify;
   padding: 1rem;
   .moreInfo,
@@ -44,7 +43,6 @@ header {
     background-color: #504747;
     color: #ffffff;
     text-decoration: none;
-    cursor: pointer;
   }
   h1 {
     text-align: left;
@@ -104,16 +102,15 @@ nav ul li:hover {
 }
 .films {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   justify-items: center;
   grid-gap: 1.5rem;
-  padding-top: 2.3rem;
+  padding-top: 2rem;
   padding-bottom: 2rem;
 }
 img {
-  width: 17rem;
-  height: 11rem;
-  cursor: pointer;
+  width: 12rem;
+  height: 7rem;
 }
 
 footer {
