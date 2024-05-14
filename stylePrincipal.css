@@ -75,7 +75,7 @@ nav ul {
   justify-content: center;
   gap: 1rem;
   align-items: center;
-  li{
+  li {
     gap: 0.2rem;
     display: flex;
   }
@@ -99,6 +99,10 @@ nav ul li:hover {
 .search {
   background-color: none;
   color: #000000;
+}
+a {
+  text-decoration: none;
+  color: #cecece;
 }
 .films {
   display: grid;
@@ -124,17 +128,15 @@ footer {
     list-style-type: none;
     display: flex;
     flex-direction: column;
-    
   }
   svg {
     width: 1rem;
-    
   }
   a {
     text-decoration: none;
     color: #cecece;
   }
-  li{
+  li {
     display: flex;
     gap: 0.5rem;
     align-items: flex-end;
@@ -155,6 +157,7 @@ span {
   background-color: #000000;
   color: #cecece;
 }
+
 @media screen and (max-width: 640px) {
   .svgNav {
     display: none;

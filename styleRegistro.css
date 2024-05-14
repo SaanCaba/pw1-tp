@@ -93,6 +93,9 @@ h2 {
   padding: 0.8em;
   border-radius: 1em;
   margin: 0em 1em 0em 1em;
+  a {
+    text-decoration: none;
+  }
 }
 
 .btn:hover {
