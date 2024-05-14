@@ -21,7 +21,7 @@ li {
   color: black;
 }
 
-a{
+a {
   color: black;
   text-decoration: none;
 }
@@ -117,16 +117,23 @@ footer {
   padding: 1rem;
   display: flex;
   justify-content: space-around;
+  align-items: center;
   ul {
     list-style-type: none;
+    display: flex;
+    flex-direction: column;
   }
   svg {
     width: 1rem;
-    align-items: center;
   }
   a {
     text-decoration: none;
     color: #cecece;
+  }
+  li {
+    display: flex;
+    gap: 0.5rem;
+    align-items: flex-end;
   }
 }
 .copy {
@@ -142,41 +149,39 @@ span {
   font-weight: bold;
 }
 
-
 @media screen and (max-width: 640px) {
-  .navbar-list > a{
+  .navbar-list > a {
     text-align: center;
-    
   }
-  .navbar-list > a > li{
+  .navbar-list > a > li {
     padding: 10px 0px;
   }
-  .article{
-  display: flex;
-  flex-direction: column;
-  row-gap: 10px;
+  .article {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
   }
-  .information{
+  .information {
     width: 100%;
     padding: 0px;
     display: flex;
     flex-direction: column;
     justify-content: center;
   }
-  .information > div{
+  .information > div {
     display: flex;
     justify-content: center;
   }
-  .p{
+  .p {
     max-width: 100%;
     width: 100%;
     text-align: center;
     padding: 0px;
   }
-  .button-start{
+  .button-start {
     width: 100%;
   }
-  .ul-similar-content{
+  .ul-similar-content {
     display: flex;
     flex-direction: column;
     row-gap: 10px;
