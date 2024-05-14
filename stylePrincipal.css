@@ -7,6 +7,8 @@ body {
   margin: 0;
   border: 0;
   padding: 0;
+  width: 100%;
+  overflow-x: hidden;
 }
 main {
   margin: 1rem;
@@ -163,7 +165,9 @@ span {
   .svgNav {
     display: none;
   }
-
+  body {
+    width: 100vw;
+  }
   .main-background {
     width: 100vw;
     .container-img {
@@ -177,7 +181,7 @@ span {
   }
   .movie-details {
     color: #cecece;
-    width: 90%;
+    width: 100%;
     bottom: 0;
     padding-left: 1rem;
     font-size: medium;
@@ -209,7 +213,6 @@ span {
 @media screen and (max-width: 1024px) and (min-width: 640px) {
   body {
     width: 100vw;
-    overflow: hidden;
   }
   .main-background {
     box-sizing: border-box;
@@ -225,7 +228,7 @@ span {
   }
   .movie-details {
     color: #cecece;
-    width: 90%;
+    width: 100%;
     bottom: 0;
     padding-left: 1rem;
     font-size: medium;
