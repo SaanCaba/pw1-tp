@@ -89,8 +89,6 @@ footer {
 }
 .interno:hover {
   background-color: #105f77fd;
-  padding: 0.8em;
-  border-radius: 1em;
 }
 .interno:visited {
   color: #000000;

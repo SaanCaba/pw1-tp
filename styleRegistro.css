@@ -46,8 +46,8 @@ h2 {
     font-size: 1.2rem;
   }
   input {
-    border-radius: 0.2rem;
     font-size: 1.2rem;
+
   }
 }
 
@@ -73,7 +73,6 @@ h2 {
     font-size: 1.2rem;
   }
   input {
-    border-radius: 0.2rem;
     font-size: 1.2rem;
   }
   p {
@@ -100,8 +99,6 @@ h2 {
 
 .btn:hover {
   background-color: #105f77fd;
-  padding: 0.8em;
-  border-radius: 1em;
 }
 .input2 {
   width: 3rem;
