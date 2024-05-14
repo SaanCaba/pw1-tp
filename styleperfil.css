@@ -16,6 +16,7 @@ body {
 }
 
 main {
+  padding: 2rem 0 2rem 0;
   justify-content: center;
   display: flex;
   flex-direction: row;
@@ -128,19 +129,18 @@ a {
 .botonGuardar,
 .botonCancelar,
 .botonCerrar {
+  text-decoration: none;
+  background-color: #1684a5;
+  padding: 0.8em;
   border-radius: 1em;
-  background-color: #ffffff;
+  margin: 0em 1em 0em 1em;
   border: none;
-  cursor: pointer;
-  font-size: 1em;
-  margin: 2em 0em 2em 0em;
 }
 
 .botonGuardar:hover,
 .botonCancelar:hover,
 .botonCerrar:hover {
   background-color: #105f77fd;
-  border-radius: 1em;
 }
 
 .footer-sections{

@@ -47,7 +47,6 @@ h2 {
   }
   input {
     font-size: 1.2rem;
-
   }
 }
 
@@ -92,6 +91,7 @@ h2 {
   padding: 0.8em;
   border-radius: 1em;
   margin: 0em 1em 0em 1em;
+  border: none;
   a {
     text-decoration: none;
   }
