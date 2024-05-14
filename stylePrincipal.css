@@ -172,7 +172,7 @@ span {
     width: 100vw;
     .container-img {
       width: 100%;
-      height: auto;
+      height: 70%;
       overflow: hidden;
     }
   }
@@ -219,7 +219,7 @@ span {
     width: 100%;
     .container-img {
       width: 100%;
-      height: auto;
+      height: 70%;
       overflow: hidden;
     }
   }
