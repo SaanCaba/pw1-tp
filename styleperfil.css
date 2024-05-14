@@ -132,7 +132,8 @@ a {
 }
 
 .botonGuardar:hover,
-.botonCancelar:hover {
+.botonCancelar:hover,
+.botonCerrar:hover {
   background-color: #105f77fd;
   border-radius: 1em;
 }
