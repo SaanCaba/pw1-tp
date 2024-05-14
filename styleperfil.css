@@ -49,6 +49,9 @@ img {
   list-style-type: none;
   margin-top: 1rem;
 }
+img {
+  border-radius: 3.5rem;
+}
 h4 {
   display: inline;
 }

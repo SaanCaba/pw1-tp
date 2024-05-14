@@ -72,7 +72,7 @@ a {
   cursor: pointer;
 }
 .button-start:hover {
-  background-color: #000000;
+  background-color: #3b3a3a;
 }
 
 .information {
@@ -118,7 +118,9 @@ footer {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  ul {
+  .company,
+  .contact,
+  .policies {
     list-style-type: none;
     display: flex;
     flex-direction: column;
@@ -130,7 +132,7 @@ footer {
     text-decoration: none;
     color: #cecece;
   }
-  li {
+  .footer-li {
     display: flex;
     gap: 0.5rem;
     align-items: flex-end;

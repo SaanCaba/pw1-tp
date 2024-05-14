@@ -7,6 +7,8 @@ body {
   margin: 0;
   border: 0;
   padding: 0;
+  width: 100%;
+  overflow-x: hidden;
 }
 main {
   margin: 1rem;
@@ -36,6 +38,7 @@ header {
   bottom: 11rem;
   text-align: justify;
   padding: 1rem;
+  box-sizing: border-box;
   .moreInfo,
   .viewFilm {
     border-radius: 0.4em;
@@ -64,7 +67,6 @@ nav {
   display: flex;
   margin: 0 auto;
   width: fit-content;
-  padding-left: 1rem;
   align-items: center;
 }
 
@@ -111,6 +113,7 @@ a {
   grid-gap: 1.5rem;
   padding-top: 2rem;
   padding-bottom: 2rem;
+  box-sizing: border-box;
 }
 img {
   width: 12rem;
@@ -161,5 +164,92 @@ span {
 @media screen and (max-width: 640px) {
   .svgNav {
     display: none;
+  }
+  body {
+    width: 100vw;
+  }
+  .main-background {
+    width: 100vw;
+    .container-img {
+      width: 100%;
+      height: 70%;
+      overflow: hidden;
+    }
+  }
+  header {
+    width: 100vw;
+  }
+  .movie-details {
+    color: #cecece;
+    width: 90%;
+    bottom: 0;
+    padding-left: 1rem;
+    font-size: medium;
+    position: relative;
+    h1 {
+      width: 90%;
+    }
+  }
+  main {
+    margin: 0;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding-left: 1rem;
+  }
+  .films {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    grid-gap: 1.5rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 641px) {
+  body {
+    width: 100vw;
+  }
+  .main-background {
+    box-sizing: border-box;
+    width: 100%;
+    .container-img {
+      width: 100%;
+      height: 70%;
+      overflow: hidden;
+    }
+  }
+  header {
+    width: 100%;
+  }
+  .movie-details {
+    color: #cecece;
+    width: 90%;
+    bottom: 0;
+    padding-left: 1rem;
+    font-size: medium;
+    position: relative;
+
+    h1 {
+      width: 90%;
+    }
+  }
+  main {
+    margin: 0;
+  }
+  .films {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    grid-gap: 1.5rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
   }
 }
