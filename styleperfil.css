@@ -121,7 +121,8 @@ a {
   flex-direction: row;
 }
 .botonGuardar,
-.botonCancelar {
+.botonCancelar,
+.botonCerrar {
   border-radius: 1em;
   background-color: #ffffff;
   border: none;
