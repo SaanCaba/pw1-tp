@@ -35,7 +35,7 @@ header {
   color: #1d1b1b;
   position: absolute;
   width: 25vw;
-  bottom: 11rem;
+  top: 40%;
   text-align: justify;
   padding: 1rem;
   box-sizing: border-box;
@@ -49,10 +49,14 @@ header {
   }
   h1 {
     text-align: left;
-    width: 30vw;
+    width: 100%;
     margin: 0;
+    white-space: nowrap;
+  };
+  p{
+    width: 50%;
+    white-space: nowrap;
   }
-
   .viewFilm:hover {
     opacity: 0.8;
     background-color: #000000;
