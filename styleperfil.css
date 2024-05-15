@@ -7,7 +7,7 @@ html {
 }
 body {
   margin: auto;
-  background: linear-gradient(#ffffff, #105f77fd);
+  background: linear-gradient(to bottom, #ffffff, #105f77fd);
   align-items: center;
   justify-content: center;
   overflow-x: hidden;
