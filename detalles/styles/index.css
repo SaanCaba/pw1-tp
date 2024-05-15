@@ -82,7 +82,8 @@ a {
   -webkit-box-shadow: 0px 0px 6px 0px #000000bf;
   -moz-box-shadow: 0px 0px 6px 0px #000000bf;
   width: 100%;
-  padding-inline: 40px;
+  padding-inline: 0px;
+  padding-left:10px;
   border-radius: 8px;
 }
 
