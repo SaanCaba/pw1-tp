@@ -1,39 +1,33 @@
 <!DOCTYPE html>
 <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="estilologin.css" />
+    <title>Login</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="estilologin.css" />
-  <title>Login</title>
-</head>
-
-<body>
-  <header>
-    <a href="index.html" class="inicio">
-      <h1>Stream Time</h1>
-    </a>
-    <a href="registro.html" class="registrarse">Registrarse ahora</a>
-  </header>
-  <main>
-    <h2>Inicia sesión</h2>
-    <form action="" method="post" class="formulario">
-      <label for="usuario">
-        Nombre de usuario
-        <input type="text" name="usuario" id="usuario" required/>
-      </label>
-      <label for="contraseña">
-        Contraseña
-        <input type="password" name="contraseña" id="contraseña" required />
-      </label>
-      <a href="contraseña.html" class="recucontra">Recuperar contraseña</a>
-      <button>
-        <a style="text-decoration: none" href="
-          pantallaPrincipal.html">
-          Iniciar sesión</a>
-      </button>
-    </form>
-  </main>
-</body>
-
+  <body>
+    <header>
+      <a href="index.html" class="inicio">
+        <h1>Stream Time</h1>
+      </a>
+      <a href="registro.html" class="registrarse">Registrarse ahora</a>
+    </header>
+    <main>
+      <h2>Inicia sesión</h2>
+      <form action="pantallaPrincipal.html" method="post" class="formulario">
+        <label for="usuario">
+          Nombre de usuario
+          <input type="text" name="usuario" id="usuario" required />
+        </label>
+        <label for="contraseña">
+          Contraseña
+          <input type="password" name="contraseña" id="contraseña" required />
+        </label>
+        <a href="contraseña.html" class="recucontra">Recuperar contraseña</a>
+        <button>Iniciar sesión</button>
+      </form>
+    </main>
+  </body>
 </html>
