@@ -153,6 +153,16 @@ span {
   font-weight: bold;
 }
 
+.dropdowns-container{
+  display: flex;
+  gap: 10px;
+}
+
+.dropdowns-container > div {
+  display: flex;
+  column-gap: 5px;
+}
+
 @media screen and (max-width: 900px) {
   .navbar-list > a {
     text-align: center;
@@ -189,5 +199,10 @@ span {
     display: flex;
     flex-direction: column;
     row-gap: 10px;
+  }
+  .dropdowns-container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
   }
 }
