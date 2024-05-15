@@ -54,7 +54,6 @@ header {
     p {
       width: 35%;
       margin-top: 0;
-
     }
     .viewFilm:hover {
       opacity: 0.8;
@@ -238,4 +237,13 @@ span {
   main {
     margin: 0;
   }
+}
+@media screen and (max-width: 1124px) and (min-width: 1024px) {
+
+.movie-details {
+  color: #cecece;
+  width: 50%;
+  top: 35%;
+
+}
 }
