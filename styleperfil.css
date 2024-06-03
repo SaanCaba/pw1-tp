@@ -212,18 +212,12 @@ span {
 }
 
 @media screen and (min-width: 640px) and (max-width: 900px) {
-  body {
-    font-size: 70%;
-  }
   .svgNav {
     display: none;
   }
 }
 
 @media screen and (max-width: 640px) {
-  body {
-    font-size: 70%;
-  }
   .svgNav {
     display: none;
   }
