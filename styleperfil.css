@@ -157,32 +157,31 @@ footer {
   width: 100%;
   height: min-content;
   color: white;
-  div{
+  div {
     width: 100%;
     display: flex;
     justify-content: space-around;
-      ul {
-        list-style-type: none;
-        display: flex;
-        flex-direction: column;
-      }
-      svg {
-        width: 1rem;
-      }
-      a {
-        text-decoration: none;
-        color: #cecece;
-      }
-      li {
-        display: flex;
-        gap: 0.5rem;
-        align-items: flex-end;
-      }
-      p{
-        width: 100%;
-      }
+    ul {
+      list-style-type: none;
+      display: flex;
+      flex-direction: column;
+    }
+    svg {
+      width: 1rem;
+    }
+    a {
+      text-decoration: none;
+      color: #cecece;
+    }
+    li {
+      display: flex;
+      gap: 0.5rem;
+      align-items: flex-end;
+    }
+    p {
+      width: 100%;
+    }
   }
-  
 }
 .interno {
   text-decoration: none;
@@ -207,11 +206,24 @@ span {
   body {
     font-size: 70%;
   }
+  .lista-nav {
+    font-size: 140%;
+  }
+
+  .svgNav {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 640px) {
   body {
     font-size: 70%;
+  }
+  .lista-nav {
+    font-size: 140%;
+  }
+  .svgNav {
+    display: none;
   }
 
   main {
