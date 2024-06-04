@@ -139,6 +139,7 @@ a {
 .botonCancelar:hover,
 .botonCerrar:hover {
   background-color: #105f77fd;
+  cursor: pointer;
 }
 
 .footer-sections {

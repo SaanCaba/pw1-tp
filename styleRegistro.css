@@ -99,6 +99,7 @@ h2 {
 
 .btn:hover {
   background-color: #105f77fd;
+  cursor: pointer;
 }
 .input2 {
   width: 3rem;
