@@ -68,6 +68,9 @@ button:hover {
   padding: 0.8em;
   border-radius: 1em;
 }
+a{
+  text-decoration: none;
+}
 a:visited {
   color: #000000;
 }
