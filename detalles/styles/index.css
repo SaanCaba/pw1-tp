@@ -23,35 +23,19 @@ a {
   text-decoration: none;
 }
 
-nav {
-  color: #000000;
+.navbar-list {
   display: flex;
-  margin: 0 auto;
-  width: fit-content;
-  align-items: center;
+  justify-content: space-between;
+  height: min-content;
 }
 
-nav ul {
-  list-style-type: none;
-  color: #000000;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  gap: 1em;
-  align-items: center;
-  li {
-    gap: 0.2em;
-    display: flex;
-  }
+.navbar-list > a {
+  text-decoration: none;
+  width: 100%;
+  color: black;
+  border: 1px solid #1684a575;
 }
 
-nav ul li:hover {
-  font-weight: bold;
-}
-
-.svgNav {
-  width: 1em;
-}
 .list-item {
   list-style: none;
   width: 100%;
@@ -180,14 +164,12 @@ span {
 }
 
 @media screen and (max-width: 900px) {
-  body {
-    font-size: 70%;
-  }
-  .lista-nav {
-    font-size: 140%;
+  .navbar-list > a {
     text-align: center;
   }
-
+  .navbar-list > a > li {
+    padding: 10px 0px;
+  }
   .article {
     display: flex;
     flex-direction: column;
