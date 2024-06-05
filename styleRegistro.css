@@ -10,7 +10,9 @@ header {
   flex-wrap: nowrap;
   background-color: #1684a575;
 }
-body{ margin: 0px;}
+body {
+  margin: 0px;
+}
 
 a {
   text-decoration: none;
@@ -42,7 +44,7 @@ h2 {
     display: flex;
     justify-content: flex-end;
     gap: 1rem;
-    margin-top: 1rem;
+    margin: 1rem;
   }
   label {
     font-size: 1.2rem;
