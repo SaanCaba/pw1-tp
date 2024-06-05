@@ -23,19 +23,34 @@ a {
   text-decoration: none;
 }
 
-.navbar-list {
+nav {
+  color: #ffffff;
   display: flex;
-  justify-content: space-between;
-  height: min-content;
+  margin: 0 auto;
+  width: fit-content;
+  align-items: center;
 }
 
-.navbar-list > a {
-  text-decoration: none;
-  width: 100%;
-  color: black;
-  border: 1px solid #1684a575;
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  align-items: center;
+  li {
+    gap: 0.2em;
+    display: flex;
+  }
 }
 
+nav ul li:hover {
+  font-weight: bold;
+}
+
+.svgNav {
+  width: 1em;
+}
 .list-item {
   list-style: none;
   width: 100%;
