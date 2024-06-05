@@ -10,7 +10,9 @@ header {
   flex-wrap: nowrap;
   background-color: #1684a575;
 }
-body{ margin: 0px;}
+body {
+  margin: 0px;
+}
 
 a {
   text-decoration: none;
@@ -42,7 +44,7 @@ h2 {
     display: flex;
     justify-content: flex-end;
     gap: 1rem;
-    margin-top: 1rem;
+    margin: 1rem;
   }
   label {
     font-size: 1.2rem;
@@ -112,6 +114,7 @@ h2 {
   justify-content: space-between;
   gap: 20px;
   margin: 0;
+  padding-bottom: 1rem;
 }
 
 @media screen and (max-width: 640px) {
@@ -138,6 +141,9 @@ h2 {
     justify-content: space-around;
   }
   h2 {
+    margin-left: 0;
+    display: flex;
+    justify-content: center;
     font-size: 1.5em;
   }
 }
@@ -169,5 +175,11 @@ h2 {
   }
   .container-btn {
     justify-content: space-around;
+  }
+  h2 {
+    margin-left: 0;
+    display: flex;
+    justify-content: center;
+    font-size: 1.5em;
   }
 }

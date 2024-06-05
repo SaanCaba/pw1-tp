@@ -11,7 +11,9 @@ header {
   background-color: #1684a575;
 }
 
-body{ margin: 0px;}
+body {
+  margin: 0px;
+}
 
 .container-img {
   width: 100%;
@@ -118,7 +120,7 @@ span {
   font-weight: bold;
 }
 
-@media screen and (max-width:640px) {
+@media screen and (max-width: 640px) {
   .container-inicio {
     padding: 0.5rem;
   }
@@ -141,9 +143,6 @@ span {
   }
 
   footer {
-    flex-direction: column;
-    ul{
-      padding: 0;
-    }
+    font-size: 70%;
   }
 }
