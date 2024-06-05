@@ -142,6 +142,7 @@ h2 {
   }
   h2 {
     margin-left: 0;
+    display: flex;
     justify-content: center;
     font-size: 1.5em;
   }
@@ -178,6 +179,7 @@ h2 {
   }
   h2 {
     margin-left: 0;
+    display: flex;
     justify-content: center;
     font-size: 1.5em;
   }
