@@ -6,6 +6,8 @@ body {
   margin: 0px;
   padding: 0px;
   background: linear-gradient(to bottom, #ffffff, #105f77fd);
+  display: flex;
+  flex-direction: column;
 }
 ul {
   padding-inline-start: 0px;
