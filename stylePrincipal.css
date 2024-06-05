@@ -166,6 +166,12 @@ span {
 }
 
 @media screen and (max-width: 640px) {
+  body {
+    font-size: 70%;
+  }
+  .lista-nav {
+    font-size: 140%;
+  }
   .svgNav {
     display: none;
   }
@@ -208,6 +214,12 @@ span {
 
 @media screen and (max-width: 1024px) and (min-width: 641px) {
   body {
+    font-size: 70%;
+  }
+  .lista-nav {
+    font-size: 140%;
+  }
+  body {
     width: 100vw;
   }
   .main-background {
@@ -239,11 +251,9 @@ span {
   }
 }
 @media screen and (max-width: 1124px) and (min-width: 1024px) {
-
-.movie-details {
-  color: #cecece;
-  width: 50%;
-  top: 35%;
-
-}
+  .movie-details {
+    color: #cecece;
+    width: 50%;
+    top: 35%;
+  }
 }
