@@ -184,13 +184,9 @@ span {
   }
   .lista-nav {
     font-size: 140%;
-  }
-  .navbar-list > a {
     text-align: center;
   }
-  .navbar-list > a > li {
-    padding: 10px 0px;
-  }
+
   .article {
     display: flex;
     flex-direction: column;
