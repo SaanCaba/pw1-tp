@@ -153,7 +153,7 @@ span {
   font-weight: bold;
 }
 
-.dropdowns-container{
+.dropdowns-container {
   display: flex;
   gap: 10px;
 }
@@ -164,6 +164,12 @@ span {
 }
 
 @media screen and (max-width: 900px) {
+  body {
+    font-size: 70%;
+  }
+  .lista-nav {
+    font-size: 140%;
+  }
   .navbar-list > a {
     text-align: center;
   }
@@ -200,7 +206,7 @@ span {
     flex-direction: column;
     row-gap: 10px;
   }
-  .dropdowns-container{
+  .dropdowns-container {
     display: flex;
     align-items: center;
     flex-direction: column;
