@@ -179,7 +179,7 @@ span {
     width: 100vw;
   }
   .main-background {
-    width: 100vw;
+    width: 100%;
     .container-img {
       width: 100%;
       height: 70%;
@@ -187,7 +187,7 @@ span {
     }
   }
   header {
-    width: 100vw;
+    width: 100%;
   }
   .movie-details {
     color: #cecece;
@@ -250,7 +250,7 @@ span {
     margin: 0;
   }
 }
-@media screen and (max-width: 1124px) and (min-width: 1024px) {
+@media screen and (max-width: 1320px) and (min-width: 1024px) {
   .movie-details {
     color: #cecece;
     width: 50%;
