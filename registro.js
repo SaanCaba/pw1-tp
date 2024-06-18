@@ -69,6 +69,12 @@ document
         return;
       }
 
+      if (!isValidCardNumber(cardNumber)) {
+        alert("El número de la tarjeta es inválido");
+        document.getElementById("cardNumber").focus();
+        return;
+      }
+
       if (cardCVC.length !== 3 || !/^\d{3}$/.test(cardCVC)) {
         alert("El código CVC debe contener exactamente 3 dígitos");
         document.getElementById("cardCVC").focus();
@@ -101,6 +107,16 @@ document
     alert("Formulario enviado con éxito y guardado en Session Storage");
     window.location.href = "login.html";
   });
+
+function isValidCardNumber(cardNumber) {
+  const digits = cardNumber.split("").map(Number);
+  const lastDigit = digits.pop();
+  const sum = digits.reduce((acc, digit) => acc + digit, 0);
+  return (
+    (sum % 2 === 0 && lastDigit % 2 !== 0) ||
+    (sum % 2 !== 0 && lastDigit % 2 === 0)
+  );
+}
 
 // Restricciones en tiempo real para los campos de tarjeta de crédito y CVC
 document.getElementById("cardNumber").addEventListener("input", function () {
