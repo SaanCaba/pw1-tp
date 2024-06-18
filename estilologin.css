@@ -92,6 +92,23 @@ a:visited {
   width: 100%;
 }
 
+/* estilo para el error */
+
+.es-invisible{
+  display: none;
+}
+.es-visible{
+  border: 0.15em solid #a10000;
+}
+.p-email, .p-usuario{
+  border-width: 0;
+  border-radius: 1em;
+  background-color: #a1000034;
+  font-size: 0.8em;
+  padding: 0.8em;
+}
+
+
 @media screen and (max-width: 600px) {
   main{
     width: 90%;
