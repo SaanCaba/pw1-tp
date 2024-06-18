@@ -84,12 +84,11 @@ function validar (evento) {
         email.classList.remove("es-visible");
         errorEmail.classList.add("es-invisible");
     }
-}
-    
-   if (ES_VALIDO){
+    if (ES_VALIDO){
         window.location.href = "login.html"
     };
-
+}
+    
 
 function validarEmail (texto) {
     return EXPRESION_EMAIL.test(texto);
