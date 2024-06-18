@@ -99,6 +99,7 @@ document
     console.log("Formulario guardado en Session Storage:", formData);
     sessionStorage.setItem("formData", JSON.stringify(formData));
     alert("Formulario enviado con éxito y guardado en Session Storage");
+    window.location.href = "login.html";
   });
 
 // Restricciones en tiempo real para los campos de tarjeta de crédito y CVC
