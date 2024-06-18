@@ -14,26 +14,36 @@
       </a>
       <a href="registro.html" class="registrarse">Registrarse ahora</a>
     </header>
+
     <main>
       <h2>Recuperar contraseña</h2>
+
       <form action="login.html" method="post" class="formulario">
+        
         <label for="usuario">
           Nombre de usuario
-          <input type="text" name="usuario" id="usuario" />
+          <input type="text" name="usuario" id="usuario"/>
+          <p class="p-usuario es-invisible"></p>
         </label>
+
         <label for="mail">
           Correo electrónico
-          <input type="email" name="mail" id="mail" />
+          <input type="email" name="mail" id="mail"/>
+          <p class="p-email es-invisible"></p>
         </label>
+
         <div class="botones">
-          <button type="button">
-            <a href="login.html">Enviar email</a>
+          <button type="submit" class="verifMail">
+            Enviar email
           </button>
           <button type="button">
             <a href="login.html"> Cancelar</a>
           </button>
         </div>
+
       </form>
+
     </main>
+    <script src="contraseña.js"></script>
   </body>
 </html>
