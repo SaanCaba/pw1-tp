@@ -1,3 +1,6 @@
+
+let USUARIOS = JSON.parse(localStorage.getItem("DATOS REGISTRADOS")) || [];
+
 document
   .getElementById("registrationForm")
   .addEventListener("submit", function (event) {
@@ -88,7 +91,7 @@ document
       }
     }
 
-    const formData = {
+    const USUARIO_REGISTRADO = {
       firstName,
       lastName,
       email,
@@ -101,9 +104,15 @@ document
           : null,
       cardCVC: selectedPaymentMethod.value === "creditCard" ? cardCVC : null,
     };
+    /*
+    while (USUARIOS [i !== null]){
+      i++;
+    }
+    USUARIOS[i] = USUARIO_REGISTRADO; */
+    USUARIOS.push(USUARIO_REGISTRADO);
 
-    console.log("Formulario guardado en Session Storage:", formData);
-    sessionStorage.setItem("formData", JSON.stringify(formData));
+    console.log("Formulario guardado en Session Storage:", USUARIOS);
+    localStorage.setItem("DATOS REGISTRADOS", JSON.stringify(USUARIOS));
     alert("Formulario enviado con éxito y guardado en Session Storage");
     window.location.href = "login.html";
   });
@@ -126,3 +135,5 @@ document.getElementById("cardNumber").addEventListener("input", function () {
 document.getElementById("cardCVC").addEventListener("input", function () {
   this.value = this.value.replace(/\D/g, "").slice(0, 3);
 });
+
+

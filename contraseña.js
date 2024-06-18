@@ -2,15 +2,7 @@ const EXPRESION_EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 /*para manejar el local storage*/
 
-
-const usuario1 = {usuario: "pedrito123", email: "pedrito123@gmail.com"};
-const usuario2 = {usuario: "palomamami", email: "palomamami@gmail.com"};
-const USUARIOS = [usuario1, usuario2];
-
-const usuariosRegistrados = 'usuariosregistrados'
-
-localStorage.setItem(usuariosRegistrados, JSON.stringify(USUARIOS));
-const JSON_USUARIOS_REGISTRADOS = localStorage.getItem(usuariosRegistrados);
+const JSON_USUARIOS_REGISTRADOS = localStorage.getItem("DATOS REGISTRADOS");
 const USUARIOS_REGISTRADOS = JSON.parse(JSON_USUARIOS_REGISTRADOS);
 
 
@@ -40,6 +32,8 @@ function validar (evento) {
     const errorUsuario = document.querySelector(".p-usuario");
     const errorEmail = document.querySelector(".p-email");
 
+    /* verificación usuario */
+
     if (usuario.value === "") {
         usuario.classList.add("es-visible");
         errorUsuario.classList.remove("es-invisible");
@@ -47,16 +41,15 @@ function validar (evento) {
         usuario.focus();
         ES_VALIDO = false;
     } else if (USUARIOS_REGISTRADOS !== null){
-        for (let usuarioRegistrado in USUARIOS_REGISTRADOS){
-            if (usuario.value !== usuarioRegistrado.usuario) {
+        for (let usuarioRegistrado of USUARIOS_REGISTRADOS){
+            if (usuario.value !== usuarioRegistrado.username) {
                 usuario.classList.add("es-visible");
                 errorUsuario.classList.remove("es-invisible");
                 errorUsuario.textContent = MENSAJE_ERROR.usuario.noExiste;
                 usuario.focus();
                 ES_VALIDO = false;
             } else {
-                usuario.classList.remove("es-visible");
-                errorUsuario.classList.add("es-invisible");
+                ES_VALIDO = true;
             }
         }
     } else {
@@ -64,6 +57,7 @@ function validar (evento) {
         errorUsuario.classList.add("es-invisible");
     }
 
+    /* verificación email */
 
     if (email.value === "") {
         email.classList.add("es-visible");
@@ -78,16 +72,13 @@ function validar (evento) {
         email.focus();
         ES_VALIDO = false;
     } else if (USUARIOS_REGISTRADOS !== null) {
-        for (let usuarioRegistrado in USUARIOS_REGISTRADOS){
+        for (let usuarioRegistrado of USUARIOS_REGISTRADOS){
             if (email.value !== usuarioRegistrado.email) {
                 email.classList.add("es-visible");
                 errorEmail.classList.remove("es-invisible");
                 errorEmail.textContent = MENSAJE_ERROR.email.noExiste;
                 email.focus();
                 ES_VALIDO = false;
-            } else {
-                email.classList.remove("es-visible");
-                errorEmail.classList.add("es-invisible");
             }
         }
     } else {
@@ -95,34 +86,7 @@ function validar (evento) {
         errorEmail.classList.add("es-invisible");
     }
 }
-
-    /* para recorrer todos los datos y validar si existen 
-
-    for (let usuarioRegistrado in USUARIOS_REGISTRADOS){
-        if (usuario.value !== usuarioRegistrado.usuario) {
-            usuario.classList.add("es-visible");
-            errorUsuario.classList.remove("es-invisible");
-            errorUsuario.textContent = MENSAJE_ERROR.usuario.noExiste;
-            usuario.focus();
-            ES_VALIDO = false;
-        } else {
-            usuario.classList.remove("es-visible");
-            errorUsuario.classList.add("es-invisible");
-        }
-        if (email.value !== usuarioRegistrado.email) {
-            email.classList.add("es-visible");
-            errorEmail.classList.remove("es-invisible");
-            errorEmail.textContent = MENSAJE_ERROR.email.noExiste;
-            email.focus();
-            ES_VALIDO = false;
-        } else {
-            email.classList.remove("es-visible");
-            errorEmail.classList.add("es-invisible");
-        }
-        }
-    }
-*/
-
+    
    if (ES_VALIDO){
         window.location.href = "login.html"
     };
