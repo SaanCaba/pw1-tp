@@ -18,6 +18,8 @@ verifEmail.addEventListener("click", validar);
 function validar (evento) {
     evento.preventDefault();
 
+    let ES_VALIDO = true;
+
     const usuario = document.querySelector("#usuario");
     const email = document.querySelector("#mail");
     const errorUsuario = document.querySelector(".p-usuario");
@@ -28,6 +30,7 @@ function validar (evento) {
         errorUsuario.classList.remove("es-invisible");
         errorUsuario.textContent = MENSAJE_ERROR.usuario.vacio;
         usuario.focus();
+        ES_VALIDO = false;
     } else {
         usuario.classList.remove("es-visible");
         errorUsuario.classList.add("es-invisible");
@@ -38,18 +41,24 @@ function validar (evento) {
         errorEmail.classList.remove("es-invisible");
         errorEmail.textContent = MENSAJE_ERROR.email.vacio;
         email.focus();
+        ES_VALIDO = false;
     } else if (!validarEmail(email.value)) {
         email.classList.remove("es-invisible")
         errorEmail.classList.add("es-visible");
         errorEmail.textContent = MENSAJE_ERROR.email.noValido;
         email.focus();
+        ES_VALIDO = false;
     } else {
         email.classList.remove("es-visible");
         errorEmail.classList.add("es-invisible");
     }
     
+   if (ES_VALIDO){
+        window.location.href = "login.html"
+    };
 }
 
 function validarEmail (texto) {
     return EXPRESION_EMAIL.test(texto);
 }
+
