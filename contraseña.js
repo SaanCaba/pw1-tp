@@ -48,8 +48,6 @@ function validar (evento) {
                 errorUsuario.textContent = MENSAJE_ERROR.usuario.noExiste;
                 usuario.focus();
                 ES_VALIDO = false;
-            } else {
-                ES_VALIDO = true;
             }
         }
     } else {
@@ -57,7 +55,8 @@ function validar (evento) {
         errorUsuario.classList.add("es-invisible");
     }
 
-    /* verificación email */
+    /* verificación email, el primer if es si está vacío, el segundo es si no corresponde con el formato (asd@gmail.com) 
+    y el tercero es lo que no funca, si no está vacío el local storage, lo recorre y compara*/
 
     if (email.value === "") {
         email.classList.add("es-visible");
