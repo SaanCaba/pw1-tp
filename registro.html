@@ -35,31 +35,31 @@
     </h2>
 
     <main>
-      <form action="login.html" class="container">
+      <form id="registrationForm" class="container">
         <section class="register">
           <div>
-            <label for="">Nombre</label>
-            <input type="text" required />
+            <label for="firstName">Nombre</label>
+            <input type="text" id="firstName" pattern="[A-Za-z]+" required />
           </div>
           <div>
-            <label for="">Apellido</label>
-            <input type="text" required />
+            <label for="lastName">Apellido</label>
+            <input type="text" id="lastName" pattern="[A-Za-z]+" required />
           </div>
           <div>
-            <label for="">E-mail</label>
-            <input type="email" required />
+            <label for="email">E-mail</label>
+            <input type="email" id="email" required />
           </div>
           <div>
-            <label for="">Nombre de usuario</label>
-            <input type="text" required />
+            <label for="username">Nombre de usuario</label>
+            <input type="text" id="username" pattern="[A-Za-z0-9]+" required />
           </div>
           <div>
-            <label for="">Contraseña</label>
-            <input type="password" required />
+            <label for="password">Contraseña</label>
+            <input type="password" id="password" required />
           </div>
           <div>
-            <label for="">Repetir Contraseña</label>
-            <input type="password" required />
+            <label for="confirmPassword">Repetir Contraseña</label>
+            <input type="password" id="confirmPassword" required />
           </div>
         </section>
         <section class="payMethod">
@@ -83,7 +83,12 @@
           <div class="payMethods">
             <ul>
               <li>
-                <input class="roundCheck" type="radio" name="payMethod1" />
+                <input
+                  class="roundCheck"
+                  type="radio"
+                  name="payMethod"
+                  value="creditCard"
+                />
                 <label for="">Tarjeta de credito</label>
                 <ul>
                   <li>
@@ -91,21 +96,43 @@
                       class="input1"
                       type="text"
                       placeholder="Numero de tarjeta"
+                      id="cardNumber"
                     />
-                    <input class="input2" type="text" placeholder="XXX" />
+                    <input
+                      class="input2"
+                      type="text"
+                      placeholder="XXX"
+                      id="cardCVC"
+                      pattern="[1-9]{3}"
+                    />
                   </li>
                 </ul>
               </li>
               <li>
-                <input class="roundCheck" type="radio" name="payMethod1" />
+                <input
+                  class="roundCheck"
+                  type="radio"
+                  name="payMethod"
+                  value="pagoFacil"
+                />
                 <label for="">Pago Fácil</label>
               </li>
               <li>
-                <input class="roundCheck" type="radio" name="payMethod1" />
+                <input
+                  class="roundCheck"
+                  type="radio"
+                  name="payMethod"
+                  value="rapipago"
+                />
                 <label for="">Rapipago</label>
               </li>
               <li>
-                <input class="roundCheck" type="radio" name="payMethod1" />
+                <input
+                  class="roundCheck"
+                  type="radio"
+                  name="payMethod"
+                  value="bankTransfer"
+                />
                 <label for="">Transferencia bancaria</label>
                 <ul>
                   <li>
@@ -117,13 +144,14 @@
           </div>
           <div class="container-btn">
             <button type="submit" class="btn">Confirmar</button>
-
             <button type="button" class="btn">
-              <a href="login.html"> Cancelar</a>
+              <a href="login.html">Cancelar</a>
             </button>
           </div>
         </section>
       </form>
     </main>
+    <script src="registro.js"></script>
+     
   </body>
 </html>
