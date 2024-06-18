@@ -13,7 +13,7 @@ document
 
     // Patrón para la contraseña: mínimo 2 letras, 2 números, 2 caracteres especiales y al menos 8 caracteres de longitud
     const passwordPattern =
-      /^(?=(.[A-Za-z]){2})(?=(.\d){2})(?=(.*[^A-Za-z0-9]){2}).{8,}$/;
+      /^(?=(.*[A-Za-z]){2})(?=(.*\d){2})(?=(.*[^A-Za-z0-9]){2}).{8,}$/;
 
     if (!firstName.match(/^[A-Za-z]+$/)) {
       alert("El nombre solo puede contener letras");
