@@ -19,6 +19,31 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+// buscar.js
+
+document.addEventListener("DOMContentLoaded", function () {
+  const searchForm = document.getElementById("searchForm");
+  const searchInput = document.getElementById("site-search");
+  const filmsSection = document.querySelector(".films");
+  const films = filmsSection.querySelectorAll(".film");
+
+  searchForm.addEventListener("submit", function (event) {
+    event.preventDefault();
+    const searchTerm = searchInput.value.toLowerCase();
+
+    films.forEach(function (film) {
+      const altText = film.querySelector("img").alt.toLowerCase();
+
+      if (altText.includes(searchTerm)) {
+        film.style.display = "block"; // Mostrar la película si coincide con el término de búsqueda
+      } else {
+        film.style.display = "none"; // Ocultar la película si no coincide
+      }
+    });
+  });
+});
+
 // Cerrar sesión
 function logout() {
   localStorage.clear();
