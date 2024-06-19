@@ -74,6 +74,20 @@ const contenido = [
               experiencia cinematográfica
               inolvidable.`
     },
+    {
+       nombre:"Toy Story",
+       duracion: "1 Horas 57 minutos",
+       genero: "Animada",
+       critica: "Excelente",
+       actores: [
+        {
+            nombre:"Tom Hanks",
+            wikipediaUrl: "https://es.wikipedia.org/wiki/Tom_Hanks"
+        }
+       ],
+       youtubeVideo:"https://www.youtube.com/embed/v-PjgYDrg70",
+       resumen:"Toy Story es una película infantil de animación por computadora dirigida por John Lasseter, estrenada en 1995 y producida por Pixar. Fue el primer largometraje de Pixar, además de la primera cinta animada completamente con efectos digitales en la historia del cine."
+    },
 ]
 
 const contenidoSimilar = [
@@ -96,6 +110,11 @@ const contenidoSimilar = [
         href:"?name=Planeta de los simios",
         imgSrc:"../fotos-peliculas/simios.jpg",
         alt:"Planeta de los simios movie"
+    },
+    {
+        href:"?name=Toy Story",
+        imgSrc:"../fotos-peliculas/toy-story.jpg",
+        alt:"Toy story"
     }
 ]
 
@@ -110,6 +129,24 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
     
+});
+
+const miBotonL = document.getElementById('left-btn');
+const miBotonR = document.getElementById('right-btn');
+
+
+
+miBotonL.addEventListener('click', function() {
+    const ulSimContent = document.getElementById("similar-content")
+
+    ulSimContent.style.transform = `translateX(${0}%)`
+});
+
+miBotonR.addEventListener('click', function() {
+    // alert('¡Has hecho clic en el botón!');
+    const ulSimContent = document.getElementById("similar-content")
+
+    ulSimContent.style.transform = `translateX(-${50}%)`
 });
 
 function mostrarDetalle(name){
