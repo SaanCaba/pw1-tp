@@ -27,20 +27,29 @@ document.addEventListener("DOMContentLoaded", function () {
   const searchInput = document.getElementById("site-search");
   const filmsSection = document.querySelector(".films");
   const films = filmsSection.querySelectorAll(".film");
+  const noResultsMessage = document.getElementById("no-results");
 
   searchForm.addEventListener("submit", function (event) {
     event.preventDefault();
     const searchTerm = searchInput.value.toLowerCase();
+    let found = false;
 
     films.forEach(function (film) {
       const altText = film.querySelector("img").alt.toLowerCase();
 
       if (altText.includes(searchTerm)) {
         film.style.display = "block"; // Mostrar la película si coincide con el término de búsqueda
+        found = true;
       } else {
         film.style.display = "none"; // Ocultar la película si no coincide
       }
     });
+
+    if (!found) {
+      noResultsMessage.style.display = "block"; // Mostrar el mensaje si no se encuentran coincidencias
+    } else {
+      noResultsMessage.style.display = "none"; // Ocultar el mensaje si hay coincidencias
+    }
   });
 });
 

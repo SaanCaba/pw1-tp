@@ -175,6 +175,11 @@ span {
   background-color: #000000;
   color: #cecece;
 }
+#no-results {
+  display: none;
+  color: #ffffff;
+  font-weight: bold;
+}
 
 @media screen and (max-width: 640px) {
   body {
