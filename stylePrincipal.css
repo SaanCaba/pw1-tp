@@ -123,6 +123,17 @@ img {
   width: 12em;
   height: 7em;
 }
+.dropdown {
+  position: relative;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
 
 footer {
   background-color: #000000;

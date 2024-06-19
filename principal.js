@@ -427,72 +427,27 @@ const films = [
     imgSrc: "./films-home/oa.jpg",
   },
 ];
+// filtro.js
 
-// Inicializar
-document.addEventListener("DOMContentLoaded", () => {
-  renderFilms(films);
+document.addEventListener("DOMContentLoaded", function () {
+  const categoriasSelect = document.getElementById("categorias");
+  const filmsSection = document.querySelector(".films");
+  const films = filmsSection.querySelectorAll(".film"); // Selecciona todos los elementos con la clase '.film'
 
-  document
-    .getElementById("site-search")
-    .addEventListener("input", filterByName);
-  document
-    .getElementById("categorias")
-    .addEventListener("change", filterByCategory);
+  categoriasSelect.addEventListener("change", function () {
+    const selectedCategoria = categoriasSelect.value;
 
-  document.querySelectorAll("nav .interno").forEach((link) => {
-    link.addEventListener("click", navigate);
+    films.forEach(function (film) {
+      const categoria = film.dataset.categoria; // Obtener la categoría del atributo 'data-categoria'
+
+      if (selectedCategoria === "valor1" || categoria === selectedCategoria) {
+        film.style.display = "block"; // Mostrar la película
+      } else {
+        film.style.display = "none"; // Ocultar la película
+      }
+    });
   });
-
-  document.querySelector(".logout-button").addEventListener("click", logout);
 });
-
-// Renderizar películas y series
-function renderFilms(films) {
-  const filmsContainer = document.querySelector(".films");
-  filmsContainer.innerHTML = "";
-
-  films.forEach((film) => {
-    const filmElement = document.createElement("a");
-    filmElement.href = film.detailsLink;
-    filmElement.innerHTML = `<img alt="${film.title}" src="${film.imgSrc}" />`;
-    filmsContainer.appendChild(filmElement);
-  });
-}
-
-// Filtrar por nombre
-function filterByName() {
-  const query = document.getElementById("site-search").value.toLowerCase();
-  const filteredFilms = films.filter((film) =>
-    film.title.toLowerCase().includes(query)
-  );
-  renderFilms(filteredFilms);
-}
-
-// Filtrar por categoría
-function filterByCategory() {
-  const category = document.getElementById("categorias").value;
-  const filteredFilms = films.filter((film) => film.category === category);
-  renderFilms(filteredFilms);
-}
-
-// Navegar a diferentes vistas
-function navigate(event) {
-  event.preventDefault();
-  const target = event.target.getAttribute("href");
-
-  if (target.includes("pantallaPrincipal")) {
-    renderFilms(films);
-  } else if (target.includes("principalSeries")) {
-    const series = films.filter((film) => film.type === "series");
-    renderFilms(series);
-  } else if (target.includes("principalPeliculas")) {
-    const movies = films.filter((film) => film.type === "movie");
-    renderFilms(movies);
-  } else if (target.includes("perfil")) {
-    window.location.href = "perfil.html";
-  }
-}
-
 // Cerrar sesión
 function logout() {
   localStorage.clear();

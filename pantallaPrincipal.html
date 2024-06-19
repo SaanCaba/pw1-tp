@@ -55,7 +55,7 @@
               </svg>
               <a href="principalPeliculas.html" class="interno">Películas</a>
             </li>
-            <li class="lista-nav">
+            <li class="lista-nav dropdown">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 16 16"
@@ -66,7 +66,11 @@
                   d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM12.735 14c.618 0 1.093-.561.872-1.139a6.002 6.002 0 0 0-11.215 0c-.22.578.254 1.139.872 1.139h9.47Z"
                 />
               </svg>
-              <a href="perfil.html" class="interno"> Perfil</a>
+              <p class="interno perfil-toggle"> Perfil</p>
+              <ul class="dropdown-content">
+                <li><a href="perfil.html" class="interno">Perfil</a></li>
+                <li><a href="index.html" class="interno">Cerrar sesión</a></li>
+              </ul>
             </li>
           </ul>
         </nav>
@@ -103,18 +107,19 @@
       <form class="categoria" method="post">
         <label for="categorias">Categorías:</label>
         <select id="categorias">
-          <option value="valor1">Acción</option>
-          <option value="valor2">Anime</option>
-          <option value="valor4">Comedia</option>
-          <option value="valor6">Drama</option>
-          <option value="valor7">Fantasía</option>
-          <option value="valor8">Romance</option>
-          <option value="valor9">Sci-fi</option>
-          <option value="valor10">Deportes</option>
-          <option value="valor11">Terror</option>
-          <option value="valor12">Thriller</option>
-          <option value="valor11">Crimen</option>
-          <option value="valor12">Animacion</option>
+          <option value="valor1">Todos</option>
+          <option value="Accion">Accion</option>
+          <option value="Comedia">Comedia</option>
+          <option value="Drama">Drama</option>
+          <option value="Fantasia">Fantasia</option>
+          <option value="Romance">Romance</option>
+          <option value="Sci-fi">Sci-fi</option>
+          <option value="Deportes">Deportes</option>
+          <option value="Terror">Terror</option>
+          <option value="Thriller">Thriller</option>
+          <option value="Crimen">Crimen</option>
+          <option value="Animacion">Animacion</option>
+          <option value="Anime">Anime</option>
         </select>
       </form>
       <form class="search" method="get">
@@ -124,84 +129,230 @@
     </section>
 
     <section class="films">
-      <a href="./detalles/detalle-pelicula-shrek/index.html"><img alt="Shrek" src="./films-home/shrek.webp" /></a>
+     <div class="film" data-categoria="Comedia"> 
+      <a href="./detalles/detalle-pelicula-shrek/index.html">
+      <img alt="Shrek" src="./films-home/shrek.webp" /></a></div>
+
+      <div class="film" data-categoria="Romance">
       <a href="./detalles/detalle-pelicula-titanic/index.html"><img src="./films-home/titanic.webp"
-          alt="Titanic movie" /></a>
+          alt="Titanic movie" /></a></div>
+        
+
+      <div class="film" data-categoria="Drama">
       <a href="./detalles/detalle-serie-breaking-bad/index.html">
-        <img alt="Breaking bad" src="./films-home/breaking_bad.jpg" /></a>
+        <img alt="Breaking bad" src="./films-home/breaking_bad.jpg" /></a></div>
+
+        <div class="film" data-categoria="Sci-fi">
       <a href="./detalles/detalle-serie-stranger-things/index.html">
-        <img alt="Stranger things" src="./films-home/Stranger_Things.png" /></a>
+        <img alt="Stranger things" src="./films-home/Stranger_Things.png" /></a></div>
+
+        <div class="film" data-categoria="Accion">
       <a href="./detalles/detalle-serie-vikings/index.html">
-        <img alt="Vikingos" src="./films-home/vikings.webp" /></a>
+        <img alt="Vikingos" src="./films-home/vikings.webp" /></a></div>
+
+      <div class="film" data-categoria="Sci-fi">
       <a href="./detalles/detalle-pelicula-star-wars/index.html">
-        <img alt="Star wars " src="./films-home/star-wars.jpg" /></a>
-      <img alt="Alicia" src="./films-home/alicia.png" />
-      <img alt="El diaro de la princesa" src="./films-home/diario-princesa.png" />
-      <img alt="El precio del mañana" src="./films-home/precio-del-mañana.webp" />
+      <img alt="Star wars " src="./films-home/star-wars.jpg" /></a></div>
+
+      <div class="film" data-categoria="Accion">
       <a href="./detalles/detalle-serie-cobra-kai/index.html">
-        <img alt="Cobra kai" src="./films-home/cobra-kai.jpg" /></a>
-      <img alt="El diablo viste a la moda" src="./films-home/diablo-moda.png" />
-      <img alt="Codigo 8" src="./films-home/codigo8.jpg" />
-      <img alt="The walking dead" src="./films-home/walking-dead.jpg" />
-      <img alt="La gran apuesta" src="./films-home/gran-apuesta.webp" />
-      <img alt="Suits" src="./films-home/suits.jpg" />
-      <img alt="Dexter" src="./films-home/dexter.jpg" />
-      <img alt="El diario de la princesa 2" src="./films-home/diario2.webp" />
-      <img alt="Dark" src="./films-home/dark.webp" />
-      <img alt="Modern family" src="./films-home/modern-family.webp" />
-      <img alt="La familia del futuro" src="./films-home/familia-futuro.png" />
-      <img alt="Death note" src="./films-home/death-note.webp" />
-      <img alt="Mi villano favorito 3" src="./films-home/Despicable-Me-3.jpg" />
-      <img alt="Orange is the new black" src="./films-home/orange.jpeg" />
-      <img alt="Friends" src="./films-home/friends.avif" />
-      <img alt="Another" src="./films-home/another.jpg" />
-      <img alt="Dejar el mundo atrás" src="./films-home/dejar-el-mundo-atras-1.jpg" />
-      <img alt="La purga" src="./films-home/la-purga.jpg" />
-      <img alt="Corre" src="./films-home/corre.jpg" />
-      <img alt="No respires" src="./films-home/no-respires.jpg" />
-      <img alt="Una esposa de mentira" src="./films-home/esposa-de-mentira.jpg" />
-      <img alt="Son como niños" src="./films-home/son-como-ninios.jpg" />
-      <img alt="Formula 1" src="./films-home/formula1.jpg" />
-      <img alt="Coco" src="./films-home/coco.jpeg" />
-      <img alt="Van helsing" src="./films-home/van-helsing.jpg" />
-      <img alt="El codigo enigma" src="./films-home/codigo-enigma.webp" />
-      <img alt="Comer rezar amar" src="./films-home/comer-rezar-amar.webp" />
-      <img alt="Nerve" src="./films-home/nerve.jpg" />
-      <img alt="Joe bell" src="./films-home/Joe_Bell.jpg" />
-      <img alt="Patos" src="./films-home/patos.jpg" />
-      <img alt="El proyecto adam" src="./films-home/proyecto-adam.avif" />
-      <img alt="Oblivion" src="./films-home/oblivion.jpg" />
-      <img alt="Jung_e" src="./films-home/junge.jpeg" />
-      <img alt="Casi muerta" src="./films-home/casi-muerta.avif" />
-      <img alt="La familia perfecta" src="./films-home/familia-perfecta.jpg" />
-      <img alt="Milagro en la cueva" src="./films-home/milagro.jpg" />
-      <img alt="Moonfall" src="./films-home/moonfal.jpeg" />
-      <img alt="El viaje de chihiro" src="./films-home/El-viaje-de-Chihiro.jpg" />
-      <img alt="Ascenso" src="./films-home/ascenso.jpg" />
-      <img alt="El correo" src="./films-home/correo.jpg" />
-      <img alt="Buscando a nemo" src="./films-home/nemo.png" />
-      <img alt="Wonka" src="./films-home/wonka.jpg" />
-      <img alt="Amor y muerte" src="./films-home/amor-y-muerte.webp" />
-      <img alt="Outlander" src="./films-home/outlander.jpg" />
-      <img alt="El caso asunta serie" src="./films-home/caso-asunta.jpg" />
-      <img alt="El desorden que dejas" src="./films-home/el-desorden.jpg" />
-      <img alt="Machos alfa" src="./films-home/machos-alfa.jpg" />
-      <img alt="Ozark" src="./films-home/ozark.jpg" />
-      <img alt="Los simpson" src="./films-home/los-simpson.jpeg" />
-      <img alt="Que le paso a lunes" src="./films-home/lunes.jpg" />
-      <img alt="Todo el dinero" src="./films-home/todo-dinero.jpg" />
-      <img alt="Los protectores" src="./films-home/los-protectores.avif" />
-      <img alt="Un cuento perfecto" src="./films-home/cuento-perfecto.webp" />
-      <img alt="Hacks" src="./films-home/hacks.jpg" />
-      <img alt="Futurama" src="./films-home/futurama.jpg" />
-      <img alt="Bridgerton" src="./films-home/Bridgerton.webp" />
-      <img alt="Shadowhunters" src="./films-home/shadowhunters.webp" />
-      <img alt="Dr house" src="./films-home/house.jpg" />
-      <img alt="King the land" src="./films-home/king.jpg" />
-      <img alt="Ginny y georgia" src="./films-home/ginny-georgia.jpg" />
-      <img alt="Hannah montana" src="./films-home/hanna.webp" />
-      <img alt="The boys" src="./films-home/boys.webp" />
-      <img alt="The oa" src="./films-home/oa.jpg" />
+      <img alt="Cobra kai" src="./films-home/cobra-kai.jpg" /></a></div>
+
+      <div class="film" data-categoria="Fantasia">
+      <img alt="Alicia" src="./films-home/alicia.png" /></div>
+
+      <div class="film" data-categoria="Comedia">
+      <img alt="El diaro de la princesa" src="./films-home/diario-princesa.png" /></div>
+
+      <div class="film" data-categoria="Sci-fi">
+      <img alt="El precio del mañana" src="./films-home/precio-del-mañana.webp" /></div>
+
+      <div class="film" data-categoria="Comedia">
+      <img alt="El diablo viste a la moda" src="./films-home/diablo-moda.png" /></div>
+
+      <div class="film" data-categoria="Sci-fi">
+      <img alt="Codigo 8" src="./films-home/codigo8.jpg" /></div>
+
+      <div class="film" data-categoria="Terror">
+      <img alt="The walking dead" src="./films-home/walking-dead.jpg" /></div>
+
+      <div class="film" data-categoria="Drama">
+      <img alt="La gran apuesta" src="./films-home/gran-apuesta.webp" /></div>
+
+      <div class="film" data-categoria="Drama">
+      <img alt="Suits" src="./films-home/suits.jpg" /></div>
+
+      <div class="film" data-categoria="Crimen">
+      <img alt="Dexter" src="./films-home/dexter.jpg" /></div>
+
+      <div class="film" data-categoria="Comedia">
+      <img alt="El diario de la princesa 2" src="./films-home/diario2.webp" /></div>
+
+      <div class="film" data-categoria="Sci-fi">
+      <img alt="Dark" src="./films-home/dark.webp" /></div>
+
+      <div class="film" data-categoria="Comedia">
+      <img alt="Modern family" src="./films-home/modern-family.webp" /></div>
+
+      <div class="film" data-categoria="Animacion">
+      <img alt="La familia del futuro" src="./films-home/familia-futuro.png" /></div>
+
+      <div class="film" data-categoria="Anime">
+      <img alt="Death note" src="./films-home/death-note.webp" /></div>
+
+      <div class="film" data-categoria="Animacion">
+      <img alt="Mi villano favorito 3" src="./films-home/Despicable-Me-3.jpg" /></div>
+
+      <div class="film" data-categoria="Drama">
+      <img alt="Orange is the new black" src="./films-home/orange.jpeg" /></div>
+
+      <div class="film" data-categoria="Comedia">
+      <img alt="Friends" src="./films-home/friends.avif" /></div>
+
+      <div class="film" data-categoria="Anime">
+      <img alt="Another" src="./films-home/another.jpg" /></div>
+
+      <div class="film" data-categoria="Thriller">
+      <img alt="Dejar el mundo atrás" src="./films-home/dejar-el-mundo-atras-1.jpg" /></div>
+
+      <div class="film" data-categoria="Terror">
+      <img alt="La purga" src="./films-home/la-purga.jpg" /></div>
+
+      <div class="film" data-categoria="Thriller">
+      <img alt="Corre" src="./films-home/corre.jpg" /></div>
+
+      <div class="film" data-categoria="Terror">
+      <img alt="No respires" src="./films-home/no-respires.jpg" /></div>
+
+      <div class="film" data-categoria="Comedia">
+      <img alt="Una esposa de mentira" src="./films-home/esposa-de-mentira.jpg" /></div>
+
+      <div class="film" data-categoria="Comedia">
+      <img alt="Son como niños" src="./films-home/son-como-ninios.jpg" /></div>
+
+      <div class="film" data-categoria="Deportes">
+      <img alt="Formula 1" src="./films-home/formula1.jpg" /></div>
+
+      <div class="film" data-categoria="Animacion">
+      <img alt="Coco" src="./films-home/coco.jpeg" /></div>
+
+      <div class="film" data-categoria="Accion">
+      <img alt="Van helsing" src="./films-home/van-helsing.jpg" /></div>
+
+      <div class="film" data-categoria="Drama">
+      <img alt="El codigo enigma" src="./films-home/codigo-enigma.webp" /></div>
+
+      <div class="film" data-categoria="Romance">
+      <img alt="Comer rezar amar" src="./films-home/comer-rezar-amar.webp" /></div>
+
+      <div class="film" data-categoria="Thriller">
+      <img alt="Nerve" src="./films-home/nerve.jpg" /></div>
+
+      <div class="film" data-categoria="Drama">
+      <img alt="Joe bell" src="./films-home/Joe_Bell.jpg" /></div>
+
+      <div class="film" data-categoria="Animacion">
+      <img alt="Patos" src="./films-home/patos.jpg" /></div>
+
+      <div class="film" data-categoria="Fantasia">
+      <img alt="El proyecto adam" src="./films-home/proyecto-adam.avif" /></div>
+
+      <div class="film" data-categoria="Accion">
+      <img alt="Oblivion" src="./films-home/oblivion.jpg" /></div>
+
+      <div class="film" data-categoria="Fantasia">
+      <img alt="Jung_e" src="./films-home/junge.jpeg" /></div>
+
+      <div class="film" data-categoria="Comedia">
+      <img alt="Casi muerta" src="./films-home/casi-muerta.avif" /></div>
+
+      <div class="film" data-categoria="Comedia">
+      <img alt="La familia perfecta" src="./films-home/familia-perfecta.jpg" /></div>
+
+      <div class="film" data-categoria="Drama">
+      <img alt="Milagro en la cueva" src="./films-home/milagro.jpg" /></div>
+      
+      <div class="film" data-categoria="Sci-fi">
+      <img alt="Moonfall" src="./films-home/moonfal.jpeg" /></div>
+      
+      <div class="film" data-categoria="Anime">
+      <img alt="El viaje de chihiro" src="./films-home/El-viaje-de-Chihiro.jpg" /></div>
+      
+      <div class="film" data-categoria="Drama">
+      <img alt="Ascenso" src="./films-home/ascenso.jpg" /></div>
+     
+      <div class="film" data-categoria="Drama">
+      <img alt="El correo" src="./films-home/correo.jpg" /></div>
+      
+      <div class="film" data-categoria="Animacion">
+      <img alt="Buscando a nemo" src="./films-home/nemo.png" /></div>
+      
+      <div class="film" data-categoria="Fantasia">
+      <img alt="Wonka" src="./films-home/wonka.jpg" /></div>
+      
+      <div class="film" data-categoria="Crimen">
+      <img alt="Amor y muerte" src="./films-home/amor-y-muerte.webp" /></div>
+      
+      <div class="film" data-categoria="Drama">
+      <img alt="Outlander" src="./films-home/outlander.jpg" /></div>
+      
+      <div class="film" data-categoria="Crimen">
+      <img alt="El caso asunta serie" src="./films-home/caso-asunta.jpg" /></div>
+      
+      <div class="film" data-categoria="Drama">
+      <img alt="El desorden que dejas" src="./films-home/el-desorden.jpg" /></div>
+      
+      <div class="film" data-categoria="Comedia">
+      <img alt="Machos alfa" src="./films-home/machos-alfa.jpg" /></div>
+      
+      <div class="film" data-categoria="Drama">
+      <img alt="Ozark" src="./films-home/ozark.jpg" /></div>
+      
+      <div class="film" data-categoria="Animacion">
+      <img alt="Los simpson" src="./films-home/los-simpson.jpeg" /></div>
+      
+      <div class="film" data-categoria="Sci-fi">
+      <img alt="Que le paso a lunes" src="./films-home/lunes.jpg" /></div>
+      
+      <div class="film" data-categoria="Drama">
+      <img alt="Todo el dinero" src="./films-home/todo-dinero.jpg" /></div>
+      
+      <div class="film" data-categoria="Comedia">
+      <img alt="Los protectores" src="./films-home/los-protectores.avif" /></div>
+      
+      <div class="film" data-categoria="Romance">
+      <img alt="Un cuento perfecto" src="./films-home/cuento-perfecto.webp" /></div>
+      
+      <div class="film" data-categoria="Comedia">
+      <img alt="Hacks" src="./films-home/hacks.jpg" /></div>
+      
+      <div class="film" data-categoria="Animacion">
+      <img alt="Futurama" src="./films-home/futurama.jpg" /></div>
+      
+      <div class="film" data-categoria="Romance">
+      <img alt="Bridgerton" src="./films-home/Bridgerton.webp" /></div>
+      
+      <div class="film" data-categoria="Fantasia">
+      <img alt="Shadowhunters" src="./films-home/shadowhunters.webp" /></div>
+      
+      <div class="film" data-categoria="Drama">
+      <img alt="Dr house" src="./films-home/house.jpg" /></div>
+      
+      <div class="film" data-categoria="Romance">
+      <img alt="King the land" src="./films-home/king.jpg" /></div>
+      
+      <div class="film" data-categoria="Drama">
+      <img alt="Ginny y georgia" src="./films-home/ginny-georgia.jpg" /></div>
+      
+      <div class="film" data-categoria="Comedia">
+      <img alt="Hannah montana" src="./films-home/hanna.webp" /></div>
+      
+      <div class="film" data-categoria="Accion">
+      <img alt="The boys" src="./films-home/boys.webp" /></div>
+      
+      <div class="film" data-categoria="Crimen">
+      <img alt="The oa" src="./films-home/oa.jpg" /></div>
+
     </section>
   </main>
 
