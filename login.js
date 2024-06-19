@@ -1,19 +1,23 @@
-const EXPRESION_EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-const EXPRESION_USUARIO = /^[a-zA-Z0-9]+$/;
+
+/*para manejar el local storage*/
+
+const JSON_USUARIOS_REGISTRADOS = localStorage.getItem("DATOS REGISTRADOS");
+const USUARIOS_REGISTRADOS = JSON.parse(JSON_USUARIOS_REGISTRADOS);
+
 
 const MENSAJE_ERROR = {
-    email:{
-        vacio: "El correo electrónico es requerido",
-        noValido: "Intente con el formato tunombre@email.com"
-    },
     usuario:{
         vacio: "El nombre de usuario es requerido",
+        noExiste: "Usuario no existente"
     },
-    noCoincide: "El correo electrónico o el usuario no existe"
+    contrasenia:{
+        vacio: "La contraseña es requerida",
+        noExiste: "Contraseña incorrecta"
+    }
 }
 
-const verifEmail = document.querySelector(".verifMail");
-verifEmail.addEventListener("click", validar);
+const verifInicioSesion = document.querySelector(".verifInicioSesion");
+verifInicioSesion.addEventListener("click", validar);
 
 function validar (evento) {
     evento.preventDefault();
@@ -21,9 +25,11 @@ function validar (evento) {
     let ES_VALIDO = true;
 
     const usuario = document.querySelector("#usuario");
-    const email = document.querySelector("#mail");
+    const contrasenia = document.querySelector("#contraseña");
     const errorUsuario = document.querySelector(".p-usuario");
-    const errorEmail = document.querySelector(".p-email");
+    const errorContrasenia = document.querySelector(".p-contrasenia");
+
+    /* verificación usuario */
 
     if (usuario.value === "") {
         usuario.classList.add("es-visible");
@@ -31,33 +37,45 @@ function validar (evento) {
         errorUsuario.textContent = MENSAJE_ERROR.usuario.vacio;
         usuario.focus();
         ES_VALIDO = false;
-    } else {
-        usuario.classList.remove("es-visible");
-        errorUsuario.classList.add("es-invisible");
+    } else if (USUARIOS_REGISTRADOS !== null){
+        for (let usuarioRegistrado of USUARIOS_REGISTRADOS){
+            if (usuario.value !== usuarioRegistrado.username) {
+                usuario.classList.add("es-visible");
+                errorUsuario.classList.remove("es-invisible");
+                errorUsuario.textContent = MENSAJE_ERROR.usuario.noExiste;
+                usuario.focus();
+                ES_VALIDO = false;
+            } else {
+                usuario.classList.remove("es-visible");
+                errorUsuario.classList.add("es-invisible");
+            }
+        }
     }
 
-    if (email.value === "") {
-        email.classList.add("es-visible");
-        errorEmail.classList.remove("es-invisible");
-        errorEmail.textContent = MENSAJE_ERROR.email.vacio;
-        email.focus();
+    /* verificación contraseña */
+
+    if (contrasenia.value === "") {
+        contrasenia.classList.add("es-visible");
+        errorContrasenia.classList.remove("es-invisible");
+        errorContrasenia.textContent = MENSAJE_ERROR.contrasenia.vacio;
+        contrasenia.focus();
         ES_VALIDO = false;
-    } else if (!validarEmail(email.value)) {
-        email.classList.remove("es-invisible")
-        errorEmail.classList.add("es-visible");
-        errorEmail.textContent = MENSAJE_ERROR.email.noValido;
-        email.focus();
-        ES_VALIDO = false;
-    } else {
-        email.classList.remove("es-visible");
-        errorEmail.classList.add("es-invisible");
+    } else if (USUARIOS_REGISTRADOS !== null) {
+        for (let usuarioRegistrado of USUARIOS_REGISTRADOS){
+            if (contrasenia.value !== usuarioRegistrado.password) {
+                contrasenia.classList.add("es-visible");
+                errorContrasenia.classList.remove("es-invisible");
+                errorContrasenia.textContent = MENSAJE_ERROR.contrasenia.noExiste;
+                contrasenia.focus();
+                ES_VALIDO = false;
+            } else {
+                contrasenia.classList.remove("es-visible");
+                errorContrasenia.classList.add("es-invisible");
+            }
+        }
     }
-    
-   if (ES_VALIDO){
-        window.location.href = "login.html"
+
+    if (ES_VALIDO){
+        window.location.href = "pantallaPrincipal.html"
     };
-}
-
-function validarEmail (texto) {
-    return EXPRESION_EMAIL.test(texto);
 }

@@ -5,8 +5,6 @@ const EXPRESION_EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const JSON_USUARIOS_REGISTRADOS = localStorage.getItem("DATOS REGISTRADOS");
 const USUARIOS_REGISTRADOS = JSON.parse(JSON_USUARIOS_REGISTRADOS);
 
-
-
 const MENSAJE_ERROR = {
     email:{
         vacio: "El correo electrónico es requerido",
@@ -15,7 +13,7 @@ const MENSAJE_ERROR = {
     },
     usuario:{
         vacio: "El nombre de usuario es requerido",
-        noExiste: "El usuario no existe"
+        noExiste: "Usuario no existente"
     }
 }
 
@@ -48,11 +46,11 @@ function validar (evento) {
                 errorUsuario.textContent = MENSAJE_ERROR.usuario.noExiste;
                 usuario.focus();
                 ES_VALIDO = false;
+            } else {
+                usuario.classList.remove("es-visible");
+                errorUsuario.classList.add("es-invisible");
             }
         }
-    } else {
-        usuario.classList.remove("es-visible");
-        errorUsuario.classList.add("es-invisible");
     }
 
     /* verificación email, el primer if es si está vacío, el segundo es si no corresponde con el formato (asd@gmail.com) 
@@ -78,12 +76,13 @@ function validar (evento) {
                 errorEmail.textContent = MENSAJE_ERROR.email.noExiste;
                 email.focus();
                 ES_VALIDO = false;
+            } else {
+                email.classList.remove("es-visible");
+                errorEmail.classList.add("es-invisible");
             }
         }
-    } else {
-        email.classList.remove("es-visible");
-        errorEmail.classList.add("es-invisible");
     }
+
     if (ES_VALIDO){
         window.location.href = "login.html"
     };

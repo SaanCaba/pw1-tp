@@ -100,7 +100,7 @@ a:visited {
 .es-visible{
   border: 0.15em solid #a10000;
 }
-.p-email, .p-usuario{
+.p-email, .p-usuario, .p-contrasenia{
   border-width: 0;
   border-radius: 1em;
   background-color: #a1000034;
