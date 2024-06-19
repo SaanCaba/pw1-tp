@@ -1,60 +1,71 @@
 // filtro.js
 
 document.addEventListener("DOMContentLoaded", function () {
-  const categoriasSelect = document.getElementById("categorias");
   const filmsSection = document.querySelector(".films");
-  const films = filmsSection.querySelectorAll(".film"); // Selecciona todos los elementos con la clase '.film'
-
-  categoriasSelect.addEventListener("change", function () {
-    const selectedCategoria = categoriasSelect.value;
-
-    films.forEach(function (film) {
-      const categoria = film.dataset.categoria; // Obtener la categoría del atributo 'data-categoria'
-
-      if (selectedCategoria === "valor1" || categoria === selectedCategoria) {
-        film.style.display = "block"; // Mostrar la película
-      } else {
-        film.style.display = "none"; // Ocultar la película
-      }
-    });
-  });
-});
-
-// buscar.js
-
-document.addEventListener("DOMContentLoaded", function () {
+  const films = filmsSection.querySelectorAll(".film, .serie");
   const searchForm = document.getElementById("searchForm");
   const searchInput = document.getElementById("site-search");
-  const filmsSection = document.querySelector(".films");
-  const films = filmsSection.querySelectorAll(".film");
+  const categorySelect = document.getElementById("categorias");
   const noResultsMessage = document.getElementById("no-results");
+  const filterHomeButton = document.getElementById("filterHome");
+  const filterMoviesButton = document.getElementById("filterMovies");
+  const filterSeriesButton = document.getElementById("filterSeries");
+
+  let currentFilter = "todos";
+
+  const filterContent = () => {
+    const searchTerm = searchInput.value.toLowerCase();
+    const selectedCategories = Array.from(categorySelect.selectedOptions).map(
+      (option) => option.value
+    );
+    let found = false;
+
+    films.forEach((film) => {
+      const altText = film.querySelector("img").alt.toLowerCase();
+      const filmCategory = film.dataset.categoria;
+
+      const matchesSearch = altText.includes(searchTerm);
+      const matchesCategory =
+        selectedCategories.includes("todos") ||
+        selectedCategories.includes(filmCategory);
+      const matchesType =
+        currentFilter === "todos" || film.classList.contains(currentFilter);
+
+      if (matchesSearch && matchesCategory && matchesType) {
+        film.style.display = "block";
+        found = true;
+      } else {
+        film.style.display = "none";
+      }
+    });
+
+    noResultsMessage.style.display = found ? "none" : "block";
+  };
 
   searchForm.addEventListener("submit", function (event) {
     event.preventDefault();
-    const searchTerm = searchInput.value.toLowerCase();
-    let found = false;
+    filterContent();
+  });
 
-    films.forEach(function (film) {
-      const altText = film.querySelector("img").alt.toLowerCase();
+  categorySelect.addEventListener("change", function () {
+    filterContent();
+  });
 
-      if (altText.includes(searchTerm)) {
-        film.style.display = "block"; // Mostrar la película si coincide con el término de búsqueda
-        found = true;
-      } else {
-        film.style.display = "none"; // Ocultar la película si no coincide
-      }
-    });
+  filterHomeButton.addEventListener("click", function (event) {
+    event.preventDefault();
+    currentFilter = "todos";
+    filterContent();
+  });
 
-    if (!found) {
-      noResultsMessage.style.display = "block"; // Mostrar el mensaje si no se encuentran coincidencias
-    } else {
-      noResultsMessage.style.display = "none"; // Ocultar el mensaje si hay coincidencias
-    }
+  filterMoviesButton.addEventListener("click", function (event) {
+    event.preventDefault();
+    currentFilter = "film";
+    filterContent();
+  });
+
+  filterSeriesButton.addEventListener("click", function (event) {
+    event.preventDefault();
+    currentFilter = "serie";
+    filterContent();
   });
 });
-
-// Cerrar sesión
-function logout() {
-  localStorage.clear();
-  window.location.href = "index.html";
-}
