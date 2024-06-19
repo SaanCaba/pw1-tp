@@ -2,6 +2,15 @@ const contenido = [
     {
        nombre:"Cobra Kai",
        temporadas: 7,
+       capitulosPorTemporada:{
+        1:7,
+        2:10,
+        3:4,
+        4:10,
+        5:6,
+        6:10,
+        7:9
+       },
        genero: "Comedia",
        critica: "Excelente",
        actores: [
@@ -22,6 +31,15 @@ const contenido = [
         {
        nombre:"Halo",
        temporadas: 7,
+        capitulosPorTemporada:{
+        1:7,
+        2:10,
+        3:4,
+        4:10,
+        5:6,
+        6:10,
+        7:9
+       },
        genero: "Ciencia ficción",
        critica: "Excelente",
        actores: [
@@ -39,6 +57,15 @@ const contenido = [
        nombre:"Stranger Things",
        temporadas: 7,
        genero: "Ficción",
+       capitulosPorTemporada:{
+        1:7,
+        2:10,
+        3:4,
+        4:10,
+        5:6,
+        6:10,
+        7:9
+       },
        critica: "Excelente",
        actores: [
         {
@@ -56,6 +83,17 @@ const contenido = [
        temporadas: 9,
        genero: "Aventura",
        critica: "Excelente",
+       capitulosPorTemporada:{
+        1:7,
+        2:10,
+        3:4,
+        4:10,
+        5:6,
+        6:10,
+        7:9,
+        8:22,
+        9:20
+       },
        actores: [
         {
             nombre:"Travis Fimmel,",
@@ -76,6 +114,14 @@ const contenido = [
        temporadas: 6,
        genero: "Drama",
        critica: "Excelente",
+       capitulosPorTemporada:{
+        1:7,
+        2:10,
+        3:4,
+        4:10,
+        5:6,
+        6:10,
+       },
        actores: [
         {
             nombre:"Bryan Cranston,",
@@ -113,6 +159,10 @@ const contenidoSimilar = [
         href:"?name=Vikings",
         imgSrc:"../fotos-peliculas/vikings.webp",
         alt:"Vikings"
+    },{
+        href:"?name=Breaking Bad",
+        imgSrc:"../fotos-peliculas/breaking_bad.jpg",
+        alt:"Breaking Bad"
     }
 ]
 
@@ -123,21 +173,45 @@ document.addEventListener("DOMContentLoaded", function() {
 
    mostrarDetalle(peliNombre)
    mostrarContenidoSimilar()
+   completarTemporadas(peliNombre)
+
 });
+
+const miBotonL = document.getElementById('left-btn');
+const miBotonR = document.getElementById('right-btn');
+
+
+miBotonL.addEventListener('click', function() {
+    const ulSimContent = document.getElementById("similar-content")
+
+    ulSimContent.style.transform = `translateX(${0}%)`
+});
+
+miBotonR.addEventListener('click', function() {
+    // alert('¡Has hecho clic en el botón!');
+    const ulSimContent = document.getElementById("similar-content")
+
+    ulSimContent.style.transform = `translateX(-${50}%)`
+});
+
+    const optionTemporadas = document.getElementById('option-temporadas')
+
+
+
 
 function mostrarDetalle(name){
  for(let i = 0; i < contenido.length; i++){
         if(name === contenido[i].nombre){
         const iframe = document.getElementById("iframe-trailer")
         const titulo = document.getElementById("titulo")
-        const temporadas = document.getElementById("temporadas")
+        // const temporadas = document.getElementById("temporadas")
         const genero = document.getElementById("genero")
         const critica = document.getElementById("critica")
         const resumen = document.getElementById("resumen")
         const actoresDiv = document.getElementById("actores")
         iframe.src = contenido[i].youtubeVideo
         titulo.textContent = "Titulo: " + contenido[i].nombre
-        temporadas.textContent = "Temporadas: " + contenido[i].temporadas
+        // temporadas.textContent = "Temporadas: " + contenido[i].temporadas
         genero.textContent = "Género: " + contenido[i].genero
         critica.textContent = "Crítica: " + contenido[i].critica
         resumen.textContent = contenido[i].resumen
@@ -191,3 +265,44 @@ function mostrarContenidoSimilar(){
    }
 }
 
+function completarTemporadas(nombrePeli){
+    let serie;
+for(let i = 0; i < contenido.length; i++){
+    if(contenido[i].nombre === nombrePeli){
+        serie = contenido[i]
+    }
+}
+const selectTemporadas = document.getElementById("selectTemporadas")
+let i = 1;
+while(serie.temporadas >= i){
+    const option = document.createElement('option')
+    option.textContent = i;
+    option.id = "option-temporadas"
+    selectTemporadas.appendChild(option)
+    // option.addEventListener('click', function(){
+    // console.log("123")
+    // })
+    i++;
+}
+
+selectTemporadas.addEventListener('change', function() {
+        const temporadaSeleccionada = selectTemporadas.value;
+        console.log(`Seleccionaste la temporada ${temporadaSeleccionada}`);
+        completarCapitulos(serie,temporadaSeleccionada)
+        // Aquí puedes hacer lo que necesites con la temporada seleccionada
+    });
+}
+
+function completarCapitulos(serie, temporada){
+const selectCapitulos = document.getElementById("selectCapitulos")
+selectCapitulos.innerHTML = ""
+let i = 1;
+const capitulos = serie.capitulosPorTemporada[temporada]
+while(capitulos >= i){
+    const option = document.createElement('option')
+    option.textContent = i;
+    option.id = "option-capitulos"
+    selectCapitulos.appendChild(option)
+    i++;
+}
+}

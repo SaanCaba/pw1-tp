@@ -107,16 +107,39 @@ nav ul li:hover {
   display: flex;
   flex-direction: column;
   row-gap: 10px;
+  height: 340px;
+  position: relative;
 }
 
+
+
 .ul-similar-content {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  position: absolute;
+  display: flex;
   column-gap: 20px;
+  top: 50px;
+  /* transform: translateX(100px); */
+  transition: all 1s ease;
+}
+
+.left-btn{
+  position: absolute;
+  top: 180px;
+  z-index: 1000;
+  cursor: pointer;
+}
+
+.rigth-btn{
+  position: absolute;
+  top: 180px;
+  z-index: 1000;
+  right: 0px;
+  cursor: pointer;
 }
 
 .ul-similar-content > li > a > img {
-  width: 100%;
+  width: 450px;
+  max-width: 450px;
   height: 16em;
   object-fit: cover;
   cursor: pointer;
@@ -211,11 +234,33 @@ span {
   .button-start {
     width: 100%;
   }
+  .section-similar {
+    height: fit-content;
+  }
   .ul-similar-content {
     display: flex;
     flex-direction: column;
     row-gap: 10px;
+    position: relative;
+    top:0px;
   }
+.ul-similar-content > li > a > img {
+  width: 100%;
+}
+  
+.left-btn{
+  display: none;
+  position: static;
+  z-index: 1000;
+  cursor: pointer;
+}
+
+.rigth-btn{
+  display: none;
+  position: relative;
+  z-index: 1000;
+  cursor: pointer;
+}
   .dropdowns-container {
     display: flex;
     align-items: center;
