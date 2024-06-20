@@ -104,11 +104,7 @@ document
           : null,
       cardCVC: selectedPaymentMethod.value === "creditCard" ? cardCVC : null,
     };
-    /*
-    while (USUARIOS [i !== null]){
-      i++;
-    }
-    USUARIOS[i] = USUARIO_REGISTRADO; */
+
     USUARIOS.push(USUARIO_REGISTRADO);
 
     console.log("Formulario guardado en Session Storage:", USUARIOS);

@@ -37,18 +37,25 @@ function validar (evento) {
         errorUsuario.textContent = MENSAJE_ERROR.usuario.vacio;
         usuario.focus();
         ES_VALIDO = false;
-    } else if (USUARIOS_REGISTRADOS !== null){
-        for (let usuarioRegistrado of USUARIOS_REGISTRADOS){
-            if (usuario.value !== usuarioRegistrado.username) {
-                usuario.classList.add("es-visible");
-                errorUsuario.classList.remove("es-invisible");
-                errorUsuario.textContent = MENSAJE_ERROR.usuario.noExiste;
-                usuario.focus();
-                ES_VALIDO = false;
-            } else {
-                usuario.classList.remove("es-visible");
-                errorUsuario.classList.add("es-invisible");
-            }
+    } else if (USUARIOS_REGISTRADOS === null){
+        usuario.classList.add("es-visible");
+        errorUsuario.classList.remove("es-invisible");
+        errorUsuario.textContent = MENSAJE_ERROR.usuario.noExiste;
+        usuario.focus();
+        ES_VALIDO = false;
+        } else {
+            for (let usuarioRegistrado of USUARIOS_REGISTRADOS){
+                if (usuario.value !== usuarioRegistrado.username) {
+                    usuario.classList.add("es-visible");
+                    errorUsuario.classList.remove("es-invisible");
+                    errorUsuario.textContent = MENSAJE_ERROR.usuario.noExiste;
+                    usuario.focus();
+                    ES_VALIDO = false;
+                } else {
+                    usuario.classList.remove("es-visible");
+                    errorUsuario.classList.add("es-invisible");
+                    ES_VALIDO = true;
+                }
         }
     }
 
@@ -60,18 +67,25 @@ function validar (evento) {
         errorContrasenia.textContent = MENSAJE_ERROR.contrasenia.vacio;
         contrasenia.focus();
         ES_VALIDO = false;
-    } else if (USUARIOS_REGISTRADOS !== null) {
-        for (let usuarioRegistrado of USUARIOS_REGISTRADOS){
-            if (contrasenia.value !== usuarioRegistrado.password) {
-                contrasenia.classList.add("es-visible");
-                errorContrasenia.classList.remove("es-invisible");
-                errorContrasenia.textContent = MENSAJE_ERROR.contrasenia.noExiste;
-                contrasenia.focus();
-                ES_VALIDO = false;
-            } else {
-                contrasenia.classList.remove("es-visible");
-                errorContrasenia.classList.add("es-invisible");
-            }
+    } else if (USUARIOS_REGISTRADOS === null) {
+        contrasenia.classList.add("es-visible");
+        errorContrasenia.classList.remove("es-invisible");
+        errorContrasenia.textContent = MENSAJE_ERROR.contrasenia.noExiste;
+        contrasenia.focus();
+        ES_VALIDO = false;
+        } else {
+            for (let usuarioRegistrado of USUARIOS_REGISTRADOS){
+                if (contrasenia.value !== usuarioRegistrado.password) {
+                    contrasenia.classList.add("es-visible");
+                    errorContrasenia.classList.remove("es-invisible");
+                    errorContrasenia.textContent = MENSAJE_ERROR.contrasenia.noExiste;
+                    contrasenia.focus();
+                    ES_VALIDO = false;
+                } else {
+                    contrasenia.classList.remove("es-visible");
+                    errorContrasenia.classList.add("es-invisible");
+                    ES_VALIDO = true;
+                }
         }
     }
 
