@@ -123,6 +123,17 @@ img {
   width: 12em;
   height: 7em;
 }
+.dropdown {
+  position: relative;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
 
 footer {
   background-color: #000000;
@@ -163,6 +174,11 @@ span {
   font-size: small;
   background-color: #000000;
   color: #cecece;
+}
+#no-results {
+  display: none;
+  color: #ffffff;
+  font-weight: bold;
 }
 
 @media screen and (max-width: 640px) {

@@ -87,12 +87,14 @@
         </p>
         <div class="container-btn">
           <button class="moreInfo">
-            <a href="./detalles/detalle-serie-halo/index.html"
+            <a href="./detalles/detalle-serie/index.html?name=Halo"
               >Más informacion</a
             >
           </button>
           <button class="viewFilm">
-            <a href="./detalles/detalle-serie-halo/index.html">Ver serie</a>
+            <a href="./detalles/detalle-serie/index.html?name=Halo"
+              >Ver serie</a
+            >
           </button>
         </div>
       </div>
@@ -103,73 +105,184 @@
         <form class="categoria" method="post">
           <label for="categorias">Categorías:</label>
           <select id="categorias">
-            <option value="valor1">Acción</option>
-            <option value="valor2">Anime</option>
-            <option value="valor3">Ciencia ficción</option>
-            <option value="valor4">Comedia</option>
-            <option value="valor5">Comedia romantica</option>
-            <option value="valor6">Documental</option>
-            <option value="valor7">Fantasía</option>
-            <option value="valor8">Romance</option>
-            <option value="valor9">Sci-fi</option>
-            <option value="valor10">Telenovela</option>
-            <option value="valor11">Terror</option>
-            <option value="valor12">Thriller</option>
+            <option value="todos">Todos</option>
+            <option value="Accion">Accion</option>
+            <option value="Comedia">Comedia</option>
+            <option value="Drama">Drama</option>
+            <option value="Fantasia">Fantasia</option>
+            <option value="Romance">Romance</option>
+            <option value="Sci-fi">Sci-fi</option>
+            <option value="Deportes">Deportes</option>
+            <option value="Terror">Terror</option>
+            <option value="Thriller">Thriller</option>
+            <option value="Crimen">Crimen</option>
+            <option value="Animacion">Animacion</option>
+            <option value="Anime">Anime</option>
           </select>
         </form>
-        <form class="search" method="get">
+        <form class="search" method="get" id="searchForm">
           <input type="search" id="site-search" placeholder="Buscar" />
           <button class="search" type="submit">Buscar</button>
         </form>
       </section>
 
       <section class="films">
-        <a href="./detalles/detalle-serie-vikings/index.html">
-          <img alt="Vikingos" src="./films-home/vikings.webp"
-        /></a>
-        <a href="./detalles/detalle-serie-breaking-bad/index.html">
-          <img alt="Breaking bad" src="./films-home/breaking_bad.jpg"
-        /></a>
-        <a href="./detalles/detalle-serie-stranger-things/index.html">
-          <img alt="Stranger things" src="./films-home/Stranger_Things.png"
-        /></a>
-        <a href="./detalles/detalle-serie-cobra-kai/index.html">
-          <img alt="Cobra kai" src="./films-home/cobra-kai.jpg"
-        /></a>
-        <img alt="Amor y muerte" src="./films-home/amor-y-muerte.webp" />
+        <div class="serie" data-categoria="Accion">
+          <a href="./detalles/detalle-serie/index.html?name=Vikings">
+            <img alt="Vikingos" src="./films-home/vikings.webp"
+          /></a>
+        </div>
 
-        <img alt="Outlander" src="./films-home/outlander.jpg" />
-        <img alt="El caso asunta serie" src="./films-home/caso-asunta.jpg" />
-        <img alt="El desorden que dejas" src="./films-home/el-desorden.jpg" />
-        <img alt="Machos alfa" src="./films-home/machos-alfa.jpg" />
-        <img alt="Ozark" src="./films-home/ozark.jpg" />
-        <img alt="Los simpson" src="./films-home/los-simpson.jpeg" />
-        <img alt="Que le paso a lunes" src="./films-home/lunes.jpg" />
-        <img alt="The walking dead" src="./films-home/walking-dead.jpg" />
-        <img alt="Todo el dinero" src="./films-home/todo-dinero.jpg" />
-        <img alt="Suits" src="./films-home/suits.jpg" />
-        <img alt="Dexter" src="./films-home/dexter.jpg" />
-        <img alt="Los protectores" src="./films-home/los-protectores.avif" />
-        <img alt="Dark" src="./films-home/dark.webp" />
-        <img alt="Modern family" src="./films-home/modern-family.webp" />
-        <img alt="Un cuento perfecto" src="./films-home/cuento-perfecto.webp" />
-        <img alt="Death note" src="./films-home/death-note.webp" />
-        <img alt="Hacks" src="./films-home/hacks.jpg" />
-        <img alt="Orange is the new black" src="./films-home/orange.jpeg" />
-        <img alt="Friends" src="./films-home/friends.avif" />
-        <img alt="Another" src="./films-home/another.jpg" />
-        <img alt="Futurama" src="./films-home/futurama.jpg" />
-        <img alt="Bridgerton" src="./films-home/Bridgerton.webp" />
-        <img alt="Shadowhunters" src="./films-home/shadowhunters.webp" />
-        <img alt="Dr house" src="./films-home/house.jpg" />
-        <img alt="King the land" src="./films-home/king.jpg" />
-        <img alt="Ginny y georgia" src="./films-home/ginny-georgia.jpg" />
-        <img alt="Formula 1" src="./films-home/formula1.jpg" />
-        <img alt="Hannah montana" src="./films-home/hanna.webp" />
-        <img alt="Van helsing" src="./films-home/van-helsing.jpg" />
-        <img alt="The boys" src="./films-home/boys.webp" />
-        <img alt="The oa" src="./films-home/oa.jpg" />
+        <div class="serie" data-categoria="Drama">
+          <a href="./detalles/detalle-serie/index.html?name=Breaking Bad">
+            <img alt="Breaking bad" src="./films-home/breaking_bad.jpg"
+          /></a>
+        </div>
+
+        <div class="serie" data-categoria="Sci-fi">
+          <a href="./detalles/detalle-serie/index.html?name=Stranger Things">
+            <img alt="Stranger things" src="./films-home/Stranger_Things.png"
+          /></a>
+        </div>
+
+        <div class="serie" data-categoria="Accion">
+          <a href="./detalles/detalle-serie/index.html?name=Cobra Kai">
+            <img alt="Cobra kai" src="./films-home/cobra-kai.jpg"
+          /></a>
+        </div>
+
+        <div class="serie" data-categoria="Crimen">
+          <img alt="Amor y muerte" src="./films-home/amor-y-muerte.webp" />
+        </div>
+
+        <div class="serie" data-categoria="Drama">
+          <img alt="Outlander" src="./films-home/outlander.jpg" />
+        </div>
+
+        <div class="serie" data-categoria="Crimen">
+          <img alt="El caso asunta" src="./films-home/caso-asunta.jpg" />
+        </div>
+
+        <div class="serie" data-categoria="Drama">
+          <img alt="El desorden que dejas" src="./films-home/el-desorden.jpg" />
+        </div>
+
+        <div class="serie" data-categoria="Comedia">
+          <img alt="Machos alfa" src="./films-home/machos-alfa.jpg" />
+        </div>
+
+        <div class="serie" data-categoria="Drama">
+          <img alt="Ozark" src="./films-home/ozark.jpg" />
+        </div>
+
+        <div class="serie" data-categoria="Animacion">
+          <img alt="Los simpson" src="./films-home/los-simpson.jpeg" />
+        </div>
+
+        <div class="serie" data-categoria="Sci-fi">
+          <img alt="Que le paso a lunes" src="./films-home/lunes.jpg" />
+        </div>
+
+        <div class="serie" data-categoria="Terror">
+          <img alt="The walking dead" src="./films-home/walking-dead.jpg" />
+        </div>
+
+        <div class="serie" data-categoria="Drama">
+          <img alt="Todo el dinero" src="./films-home/todo-dinero.jpg" />
+        </div>
+
+        <div class="serie" data-categoria="Drama">
+          <img alt="Suits" src="./films-home/suits.jpg" />
+        </div>
+
+        <div class="serie" data-categoria="Crimen">
+          <img alt="Dexter" src="./films-home/dexter.jpg" />
+        </div>
+
+        <div class="serie" data-categoria="Comedia">
+          <img alt="Los protectores" src="./films-home/los-protectores.avif" />
+        </div>
+
+        <div class="serie" data-categoria="Sci-fi">
+          <img alt="Dark" src="./films-home/dark.webp" />
+        </div>
+
+        <div class="serie" data-categoria="Comedia">
+          <img alt="Modern family" src="./films-home/modern-family.webp" />
+        </div>
+
+        <div class="serie" data-categoria="Romance">
+          <img
+            alt="Un cuento perfecto"
+            src="./films-home/cuento-perfecto.webp"
+          />
+        </div>
+
+        <div class="serie" data-categoria="Anime">
+          <img alt="Death note" src="./films-home/death-note.webp" />
+        </div>
+
+        <div class="serie" data-categoria="Comedia">
+          <img alt="Hacks" src="./films-home/hacks.jpg" />
+        </div>
+
+        <div class="serie" data-categoria="Drama">
+          <img alt="Orange is the new black" src="./films-home/orange.jpeg" />
+        </div>
+
+        <div class="serie" data-categoria="Comedia">
+          <img alt="Friends" src="./films-home/friends.avif" />
+        </div>
+
+        <div class="serie" data-categoria="Anime">
+          <img alt="Another" src="./films-home/another.jpg" />
+        </div>
+
+        <div class="serie" data-categoria="Animacion">
+          <img alt="Futurama" src="./films-home/futurama.jpg" />
+        </div>
+
+        <div class="serie" data-categoria="Romance">
+          <img alt="Bridgerton" src="./films-home/Bridgerton.webp" />
+        </div>
+
+        <div class="serie" data-categoria="Fantasia">
+          <img alt="Shadowhunters" src="./films-home/shadowhunters.webp" />
+        </div>
+
+        <div class="serie" data-categoria="Drama">
+          <img alt="Dr house" src="./films-home/house.jpg" />
+        </div>
+
+        <div class="serie" data-categoria="Romance">
+          <img alt="King the land" src="./films-home/king.jpg" />
+        </div>
+
+        <div class="serie" data-categoria="Drama">
+          <img alt="Ginny y georgia" src="./films-home/ginny-georgia.jpg" />
+        </div>
+
+        <div class="serie" data-categoria="Deportes">
+          <img alt="Formula 1" src="./films-home/formula1.jpg" />
+        </div>
+
+        <div class="serie" data-categoria="Comedia">
+          <img alt="Hannah montana" src="./films-home/hanna.webp" />
+        </div>
+
+        <div class="serie" data-categoria="Accion">
+          <img alt="Van helsing" src="./films-home/van-helsing.jpg" />
+        </div>
+
+        <div class="serie" data-categoria="Accion">
+          <img alt="The boys" src="./films-home/boys.webp" />
+        </div>
+
+        <div class="serie" data-categoria="Crimen">
+          <img alt="The oa" src="./films-home/oa.jpg" />
+        </div>
       </section>
+      <p id="no-results">No se encontraron coincidencias.</p>
     </main>
     <footer>
       <ul class="company">
