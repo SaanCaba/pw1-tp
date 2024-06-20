@@ -43,7 +43,7 @@ header {
     border-radius: 0.4em;
     display: inline-block;
     background-color: #504747;
-    color: #ffffff;
+    color: #1a1818;
     text-decoration: none;
 
     h1 {
@@ -54,6 +54,7 @@ header {
     p {
       width: 35%;
       margin-top: 0;
+      font-weight: bolder;
     }
     .viewFilm:hover {
       opacity: 0.8;
@@ -261,6 +262,9 @@ span {
     h1 {
       width: 90%;
     }
+    p {
+      font-weight: bolder;
+    }
   }
   main {
     margin: 0;
@@ -271,5 +275,8 @@ span {
     color: #cecece;
     width: 50%;
     top: 35%;
+    p {
+      font-weight: bolder;
+    }
   }
 }
