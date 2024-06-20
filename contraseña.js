@@ -23,7 +23,7 @@ verifEmail.addEventListener("click", validar);
 function validar (evento) {
     evento.preventDefault();
 
-    let ES_VALIDO = true;
+    let ES_VALIDO = false;
 
     const usuario = document.querySelector("#usuario");
     const email = document.querySelector("#mail");
@@ -38,20 +38,28 @@ function validar (evento) {
         errorUsuario.textContent = MENSAJE_ERROR.usuario.vacio;
         usuario.focus();
         ES_VALIDO = false;
-    } else if (USUARIOS_REGISTRADOS !== null){
-        for (let usuarioRegistrado of USUARIOS_REGISTRADOS){
-            if (usuario.value !== usuarioRegistrado.username) {
-                usuario.classList.add("es-visible");
-                errorUsuario.classList.remove("es-invisible");
-                errorUsuario.textContent = MENSAJE_ERROR.usuario.noExiste;
-                usuario.focus();
-                ES_VALIDO = false;
-            } else {
-                usuario.classList.remove("es-visible");
-                errorUsuario.classList.add("es-invisible");
+    } else if (USUARIOS_REGISTRADOS === null){
+        usuario.classList.add("es-visible");
+        errorUsuario.classList.remove("es-invisible");
+        errorUsuario.textContent = MENSAJE_ERROR.usuario.noExiste;
+        usuario.focus();
+        ES_VALIDO = false;
+        } else {
+            for (let usuarioRegistrado of USUARIOS_REGISTRADOS){
+                if (usuario.value !== usuarioRegistrado.username) {
+                    usuario.classList.add("es-visible");
+                    errorUsuario.classList.remove("es-invisible");
+                    errorUsuario.textContent = MENSAJE_ERROR.usuario.noExiste;
+                    usuario.focus();
+                    ES_VALIDO = false;
+                } else {
+                    usuario.classList.remove("es-visible");
+                    errorUsuario.classList.add("es-invisible");
+                    ES_VALIDO = true;
+                }
             }
         }
-    }
+    
 
     /* verificación email, el primer if es si está vacío, el segundo es si no corresponde con el formato (asd@gmail.com) 
     y el tercero es lo que no funca, si no está vacío el local storage, lo recorre y compara*/
@@ -68,20 +76,27 @@ function validar (evento) {
         errorEmail.textContent = MENSAJE_ERROR.email.noValido;
         email.focus();
         ES_VALIDO = false;
-    } else if (USUARIOS_REGISTRADOS !== null) {
-        for (let usuarioRegistrado of USUARIOS_REGISTRADOS){
-            if (email.value !== usuarioRegistrado.email) {
-                email.classList.add("es-visible");
-                errorEmail.classList.remove("es-invisible");
-                errorEmail.textContent = MENSAJE_ERROR.email.noExiste;
-                email.focus();
-                ES_VALIDO = false;
-            } else {
-                email.classList.remove("es-visible");
-                errorEmail.classList.add("es-invisible");
-            }
+    } else if (USUARIOS_REGISTRADOS === null) {
+        email.classList.add("es-visible");
+        errorEmail.classList.remove("es-invisible");
+        errorEmail.textContent = MENSAJE_ERROR.email.noExiste;
+        email.focus();
+        ES_VALIDO = false;
+        } else {
+            for (let usuarioRegistrado of USUARIOS_REGISTRADOS){
+                if (email.value !== usuarioRegistrado.email) {
+                    email.classList.add("es-visible");
+                    errorEmail.classList.remove("es-invisible");
+                    errorEmail.textContent = MENSAJE_ERROR.email.noExiste;
+                    email.focus();
+                    ES_VALIDO = false;
+                } else {
+                    email.classList.remove("es-visible");
+                    errorEmail.classList.add("es-invisible");
+                    ES_VALIDO = true;
+                }
         }
-    }
+        }
 
     if (ES_VALIDO){
         window.location.href = "login.html"
