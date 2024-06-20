@@ -180,8 +180,8 @@ const contenido = [
         critica: "Buena",
         actores: [
           {
-            nombre: "Narrador",
-            wikipediaUrl: "",
+            nombre: "Tristán Ulloa",
+            wikipediaUrl: "https://es.wikipedia.org/wiki/Trist%C3%A1n_Ulloa",
           },
         ],
         youtubeVideo: "https://www.youtube.com/embed/_6-ZAtSknNc",
@@ -363,7 +363,7 @@ const contenido = [
             wikipediaUrl: "https://es.wikipedia.org/wiki/Christopher_Plummer",
           },
         ],
-        youtubeVideo: "",
+        youtubeVideo: "https://www.youtube.com/watch?v=E_lfHpGcp28",
         resumen:
           "Todo el dinero es una película que relata el secuestro del nieto de un magnate del petróleo y el intento desesperado de su madre por asegurar su liberación. La historia destaca la codicia y las relaciones familiares complejas.",
       },
@@ -444,7 +444,7 @@ const contenido = [
             wikipediaUrl: "https://es.wikipedia.org/wiki/Gustavo_Bermúdez",
           },
         ],
-        youtubeVideo: "",
+        youtubeVideo: "https://www.youtube.com/watch?v=5TtQwVVbGU0",
         resumen:
           "Los protectores es una serie que sigue a un grupo de guardaespaldas que deben proteger a sus clientes mientras enfrentan sus propios conflictos personales y profesionales. La serie combina drama y acción con toques de humor.",
       },
@@ -522,7 +522,7 @@ const contenido = [
             wikipediaUrl: "https://es.wikipedia.org/wiki/Álvaro_Mel",
           },
         ],
-        youtubeVideo: "",
+        youtubeVideo: "https://www.youtube.com/watch?v=okXeeY7iE1Y",
         resumen:
           "Un cuento perfecto es una miniserie romántica que sigue la historia de dos personas de mundos diferentes que se encuentran y se ayudan mutuamente a descubrir el verdadero significado del amor y la felicidad.",
       },
@@ -774,7 +774,7 @@ const contenido = [
             wikipediaUrl: "https://en.wikipedia.org/wiki/Im_Yoon-ah",
           },
         ],
-        youtubeVideo: "",
+        youtubeVideo: "https://www.youtube.com/watch?v=s4m2RWaFoZM",
         resumen:
           "King the Land es una serie de comedia romántica que sigue a un heredero de un conglomerado hotelero y una empleada que trabaja en el mismo hotel. La serie explora su relación mientras navegan las complejidades de la vida profesional y personal.",
       }
