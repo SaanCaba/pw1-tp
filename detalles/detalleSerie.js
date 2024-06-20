@@ -777,7 +777,147 @@ const contenido = [
         youtubeVideo: "https://www.youtube.com/watch?v=s4m2RWaFoZM",
         resumen:
           "King the Land es una serie de comedia romántica que sigue a un heredero de un conglomerado hotelero y una empleada que trabaja en el mismo hotel. La serie explora su relación mientras navegan las complejidades de la vida profesional y personal.",
-      }
+      },{
+        nombre: "Ginny y Georgia",
+        temporadas: 2,
+        capitulosPorTemporada: {
+         1: 10,
+         2: 10
+        },
+        genero: "Drama",
+        critica: "Buena",
+        actores: [
+         {
+             nombre: "Antonia Gentry",
+             wikipediaUrl: "https://es.wikipedia.org/wiki/Antonia_Gentry"
+         },
+         {
+             nombre: "Brianne Howey",
+             wikipediaUrl: "https://es.wikipedia.org/wiki/Brianne_Howey"
+         }
+        ],
+        youtubeVideo: "https://www.youtube.com/embed/QsacpJwXCO8",
+        resumen: "Ginny y Georgia es una serie de drama que sigue la vida de una madre joven, Georgia, y su hija adolescente, Ginny, mientras intentan comenzar de nuevo en una nueva ciudad."
+     },
+     {
+        nombre: "Fórmula 1: Drive to Survive",
+        temporadas: 5,
+        capitulosPorTemporada: {
+         1: 10,
+         2: 10,
+         3: 10,
+         4: 10,
+         5: 10
+        },
+        genero: "Documental",
+        critica: "Excelente",
+        actores: [
+         {
+             nombre: "Lewis Hamilton",
+             wikipediaUrl: "https://es.wikipedia.org/wiki/Lewis_Hamilton"
+         },
+         {
+             nombre: "Max Verstappen",
+             wikipediaUrl: "https://es.wikipedia.org/wiki/Max_Verstappen"
+         }
+        ],
+        youtubeVideo: "https://www.youtube.com/embed/WTt2ES93A78",
+        resumen: "Fórmula 1: Drive to Survive ofrece una visión exclusiva del mundo de la Fórmula 1, mostrando las carreras, las rivalidades y las vidas de los pilotos y los equipos."
+     },
+     {
+        nombre: "Hannah Montana",
+        temporadas: 4,
+        capitulosPorTemporada: {
+         1: 26,
+         2: 30,
+         3: 30,
+         4: 13
+        },
+        genero: "Comedia",
+        critica: "Buena",
+        actores: [
+         {
+             nombre: "Miley Cyrus",
+             wikipediaUrl: "https://es.wikipedia.org/wiki/Miley_Cyrus"
+         },
+         {
+             nombre: "Emily Osment",
+             wikipediaUrl: "https://es.wikipedia.org/wiki/Emily_Osment"
+         }
+        ],
+        youtubeVideo: "https://www.youtube.com/embed/3esKAbQFSck",
+        resumen: "Hannah Montana sigue la vida de Miley Stewart, una adolescente que lleva una doble vida como la famosa estrella pop Hannah Montana."
+     },
+     {
+        nombre: "Van Helsing",
+        temporadas: 5,
+        capitulosPorTemporada: {
+         1: 13,
+         2: 13,
+         3: 13,
+         4: 13,
+         5: 13
+        },
+        genero: "Acción",
+        critica: "Buena",
+        actores: [
+         {
+             nombre: "Kelly Overton",
+             wikipediaUrl: "https://es.wikipedia.org/wiki/Kelly_Overton"
+         },
+         {
+             nombre: "Jonathan Scarfe",
+             wikipediaUrl: "https://es.wikipedia.org/wiki/Jonathan_Scarfe"
+         }
+        ],
+        youtubeVideo: "https://www.youtube.com/embed/qSxyffSB7wA",
+        resumen: "Van Helsing sigue a Vanessa Helsing, descendiente del famoso cazador de vampiros, mientras lucha por salvar a la humanidad en un mundo dominado por vampiros."
+     },
+     {
+        nombre: "The Boys",
+        temporadas: 3,
+        capitulosPorTemporada: {
+         1: 8,
+         2: 8,
+         3: 8
+        },
+        genero: "Acción",
+        critica: "Excelente",
+        actores: [
+         {
+             nombre: "Karl Urban",
+             wikipediaUrl: "https://es.wikipedia.org/wiki/Karl_Urban"
+         },
+         {
+             nombre: "Jack Quaid",
+             wikipediaUrl: "https://es.wikipedia.org/wiki/Jack_Quaid"
+         }
+        ],
+        youtubeVideo: "https://www.youtube.com/embed/M-TP2aoMM9E",
+        resumen: "The Boys es una serie de acción y sátira que sigue a un grupo de vigilantes mientras intentan derribar a los superhéroes corruptos que abusan de sus poderes."
+     },
+     {
+        nombre: "The OA",
+        temporadas: 2,
+        capitulosPorTemporada: {
+         1: 8,
+         2: 8
+        },
+        genero: "Drama",
+        critica: "Excelente",
+        actores: [
+         {
+             nombre: "Brit Marling",
+             wikipediaUrl: "https://es.wikipedia.org/wiki/Brit_Marling"
+         },
+         {
+             nombre: "Jason Isaacs",
+             wikipediaUrl: "https://es.wikipedia.org/wiki/Jason_Isaacs"
+         }
+        ],
+        youtubeVideo: "https://www.youtube.com/embed/DvHJtez2IlY",
+        resumen: "The OA sigue la historia de Prairie Johnson, una joven ciega que desaparece y regresa siete años después con la vista recuperada, desatando un misterio que involucra dimensiones alternativas."
+     }
 ]
 
 const contenidoSimilar = [
