@@ -8,11 +8,11 @@ const EXPRESION_USUARIO = /^[A-Za-z\d]+$/;
 
 const MENSAJE_ERROR = {
   nombre:{
-    vacio: "El nombre es requerido",
+    vacio: "Nombre requerido",
     noValido: "Solo acepta letras"
   },
   apellido:{
-    vacio: "El apellido es requerido",
+    vacio: "Apellido requerido",
     noValido: "Solo acepta letras"
   },
   email:{
@@ -26,7 +26,7 @@ const MENSAJE_ERROR = {
       duplicado: "Usuario ya registrado"
   },
   contraseña:{
-    vacio: "La contraseña es requerida",
+    vacio: "Contraseña requerida",
     noValido: "Debe tener al menos 8 caracteres, incluyendo al menos dos letras, dos números y dos caracteres especiales",
     noCoincide: "Las contraseñas no coinciden"
   },
@@ -37,7 +37,7 @@ const MENSAJE_ERROR = {
     noValidoPorCeros: "Revise la clave de su tarjeta",
     noValidoPorDigitos: "La clave debe contener 3 dígitos"
   },
-  tarjetaDeCredito:{
+  numeroDeTarjeta:{
     noValidoPorDigitos: "El número de tarjeta debe contener entre 16 y 19 dígitos",
     noValidoPorCondiciones: "Tarjeta inválida"
   }
@@ -61,9 +61,23 @@ document.getElementById("registrationForm").addEventListener("submit", function 
   const errorContraseña = document.querySelector(".p-contraseña");
   const errorConfirmarContraseña = document.querySelector(".p-confirmar-contraseña");
   const errorMetodosPago = document.querySelector(".p-metodos-pago");
+  const errorNumeroTarjeta = document.querySelector(".p-numero-tarjeta");
+  const errorClaveTarjeta = document.querySelector(".p-clave-tarjeta");
+  //busca de todos los métodos de pago, uno que esté tildado
+  const selectedPaymentMethod = document.querySelector('input[name="payMethod"]:checked');
+  const cardNumber = document.getElementById("cardNumber").value;
+  
 
-  //hacer el valido para todos
-  let ES_VALIDO = false;
+  // booleanos para verificar que todos los input estén llenos 
+  let ES_VALIDO_NOMBRE = false;
+  let ES_VALIDO_APELLIDO = false;
+  let ES_VALIDO_EMAIL = false;
+  let ES_VALIDO_USUARIO = false;
+  let ES_VALIDO_CONTRASEÑA = false;
+  let ES_VALIDO_CONFIRMAR_CONTRASEÑA = false;
+  let ES_VALIDO_METODOS_PAGO = false;
+
+
 
   // verificación nombre
 
@@ -72,17 +86,17 @@ document.getElementById("registrationForm").addEventListener("submit", function 
     errorNombre.classList.remove("es-invisible");
     errorNombre.textContent = MENSAJE_ERROR.nombre.vacio;
     nombre.focus();
-    ES_VALIDO = false;  
+    ES_VALIDO_NOMBRE = false;  
     } else if (!validarNombreYApellido(nombre.value)){
       nombre.classList.add("es-visible")
       errorNombre.classList.remove("es-invisible");
       errorNombre.textContent = MENSAJE_ERROR.nombre.noValido;
       nombre.focus();
-      ES_VALIDO = false;
+      ES_VALIDO_NOMBRE = false;
       } else {
         nombre.classList.remove("es-visible");
         errorNombre.classList.add("es-invisible");
-        ES_VALIDO = true;
+        ES_VALIDO_NOMBRE = true;
         }
 
   // verificación apellido
@@ -92,17 +106,17 @@ document.getElementById("registrationForm").addEventListener("submit", function 
     errorApellido.classList.remove("es-invisible");
     errorApellido.textContent = MENSAJE_ERROR.apellido.vacio;
     apellido.focus();
-    ES_VALIDO = false;  
+    ES_VALIDO_APELLIDO = false;  
     } else if (!validarNombreYApellido(apellido.value)){
       apellido.classList.add("es-visible");
       errorApellido.classList.remove("es-invisible");
       errorApellido.textContent = MENSAJE_ERROR.apellido.noValido;
       apellido.focus();
-      ES_VALIDO = false;
+      ES_VALIDO_APELLIDO = false;
       } else {
         apellido.classList.remove("es-visible");
         errorApellido.classList.add("es-invisible");
-        ES_VALIDO = true;
+        ES_VALIDO_APELLIDO = true;
         }
 
   // verificación email
@@ -112,27 +126,27 @@ document.getElementById("registrationForm").addEventListener("submit", function 
     errorEmail.classList.remove("es-invisible");
     errorEmail.textContent = MENSAJE_ERROR.email.vacio;
     email.focus();
-    ES_VALIDO = false;
+    ES_VALIDO_EMAIL = false;
     } else if (!validarEmail(email.value)){
       email.classList.add("es-visible");
       errorEmail.classList.remove("es-invisible");
       errorEmail.textContent = MENSAJE_ERROR.email.noValido;
       email.focus();
-      ES_VALIDO = false;
+      ES_VALIDO_EMAIL = false;
       } else if (USUARIOS === null){
         email.classList.remove("es-visible");
         errorEmail.classList.add("es-invisible");
-        ES_VALIDO = true;
+        ES_VALIDO_EMAIL = true;
         } else if (yaExisteElEmail(email.value)) {
               email.classList.add("es-visible");
               errorEmail.classList.remove("es-invisible");
               errorEmail.textContent = MENSAJE_ERROR.email.duplicado;
               email.focus();
-              ES_VALIDO = false;
+              ES_VALIDO_EMAIL = false;
               } else {
                 email.classList.remove("es-visible");
                 errorEmail.classList.add("es-invisible");
-                ES_VALIDO = true;
+                ES_VALIDO_EMAIL = true;
                 }
 
   // verificación usuario
@@ -143,27 +157,27 @@ document.getElementById("registrationForm").addEventListener("submit", function 
     errorUsuario.classList.remove("es-invisible");
     errorUsuario.textContent = MENSAJE_ERROR.usuario.vacio;
     usuario.focus();
-    ES_VALIDO = false;
+    ES_VALIDO_USUARIO = false;
     } else if (!validarUsuario(usuario.value)){
       usuario.classList.add("es-visible");
       errorUsuario.classList.remove("es-invisible");
       errorUsuario.textContent = MENSAJE_ERROR.usuario.noValido;
       usuario.focus();
-      ES_VALIDO = false;
+      ES_VALIDO_USUARIO = false;
       } else if (USUARIOS === null){
         usuario.classList.remove("es-visible");
         errorUsuario.classList.add("es-invisible");
-        ES_VALIDO = true;
+        ES_VALIDO_USUARIO = true;
         } else if (yaExisteElUsuario(usuario.value)) {
               usuario.classList.add("es-visible");
               errorUsuario.classList.remove("es-invisible");
               errorUsuario.textContent = MENSAJE_ERROR.usuario.duplicado;
               usuario.focus();
-              ES_VALIDO = false;
+              ES_VALIDO_USUARIO = false;
               } else {
                 usuario.classList.remove("es-visible");
                 errorUsuario.classList.add("es-invisible");
-                ES_VALIDO = true;
+                ES_VALIDO_USUARIO = true;
                 }
 
   // verificación contraseña
@@ -173,17 +187,17 @@ document.getElementById("registrationForm").addEventListener("submit", function 
     errorContraseña.classList.remove("es-invisible");
     errorContraseña.textContent = MENSAJE_ERROR.contraseña.vacio;
     contraseña.focus();
-    ES_VALIDO = false;  
+    ES_VALIDO_CONTRASEÑA = false;  
     } else if (!validarContraseña(contraseña.value)){
       contraseña.classList.add("es-visible")
       errorContraseña.classList.remove("es-invisible");
       errorContraseña.textContent = MENSAJE_ERROR.contraseña.noValido;
       contraseña.focus();
-      ES_VALIDO = false;
+      ES_VALIDO_CONTRASEÑA = false;
       } else {
         contraseña.classList.remove("es-visible");
         errorContraseña.classList.add("es-invisible");
-        ES_VALIDO = true;
+        ES_VALIDO_CONTRASEÑA = true;
         }
 
   // verificación confirmación contraseña
@@ -193,61 +207,62 @@ document.getElementById("registrationForm").addEventListener("submit", function 
     errorConfirmarContraseña.classList.remove("es-invisible");
     errorConfirmarContraseña.textContent = MENSAJE_ERROR.contraseña.noCoincide;
     confirmarContraseña.focus();
-    ES_VALIDO = false;  
+    ES_VALIDO_CONFIRMAR_CONTRASEÑA = false;  
     } else {
       confirmarContraseña.classList.remove("es-visible");
       errorConfirmarContraseña.classList.add("es-invisible");
-      ES_VALIDO = true;
+      ES_VALIDO_CONFIRMAR_CONTRASEÑA = true;
       }
 
+  //verificación métodos de pago
 
-    
-  //busca de todos los métodos de pago, uno que esté tildado
-
-  const selectedPaymentMethod = document.querySelector('input[name="payMethod"]:checked');
-
-    //meter los válidos y modificar los que faltan
-    if (!selectedPaymentMethod) {
-      errorMetodosPago.classList.add("es-visible");
-      errorMetodosPago.classList.remove("es-invisible");
-      errorMetodosPago.textContent = MENSAJE_ERROR.metodoDePago.vacio;
-      return;
+  if (!selectedPaymentMethod) {
+    errorMetodosPago.classList.add("es-visible");
+    errorMetodosPago.classList.remove("es-invisible");
+    errorMetodosPago.textContent = MENSAJE_ERROR.metodoDePago.vacio;
+    return;
     } else {
       errorMetodosPago.classList.remove("es-visible");
       errorMetodosPago.classList.add("es-invisible");
       }
 
-    if (selectedPaymentMethod.value === "creditCard") {
-      const cardNumber = document.getElementById("cardNumber").value;
-
-      if (
-        !cardNumber ||
-        cardNumber.length < 16 ||
-        cardNumber.length > 19 ||
-        !/^\d+$/.test(cardNumber)
-      ) {
-        alert("El número de tarjeta debe contener entre 16 y 19 dígitos");
-        document.getElementById("cardNumber").focus();
+  // verificación tarjeta de crédito
+  
+  if (selectedPaymentMethod.value === "creditCard") {
+    
+    if (!cardNumber || cardNumber.length < 16 || 
+    cardNumber.length > 19 || !/^\d+$/.test(cardNumber)) {
+      errorNumeroTarjeta.classList.add("es-visible");
+      errorNumeroTarjeta.classList.remove("es-invisible");
+      errorNumeroTarjeta.textContent = MENSAJE_ERROR.numeroDeTarjeta.noValidoPorDigitos;
+      cardNumber.focus();
+      return;
+      } else if (!isValidCardNumber(cardNumber)) {
+        errorNumeroTarjeta.classList.add("es-visible");
+        errorNumeroTarjeta.classList.remove("es-invisible");
+        errorNumeroTarjeta.textContent = MENSAJE_ERROR.numeroDeTarjeta.noValidoPorCondiciones;
+        cardNumber.focus();
         return;
-      }
+        } else {
+          errorNumeroTarjeta.classList.remove("es-visible");
+          errorNumeroTarjeta.classList.add("es-invisible");
+          }
 
-      if (!isValidCardNumber(cardNumber)) {
-        alert("El número de la tarjeta es inválido");
-        document.getElementById("cardNumber").focus();
-        return;
-      }
-
-      if (cardCVC.length !== 3 || !/^\d{3}$/.test(cardCVC)) {
-        alert("El código CVC debe contener exactamente 3 dígitos");
-        document.getElementById("cardCVC").focus();
-        return;
-      }
-
-      if (cardCVC === "000") {
-        alert('El código CVC no puede ser "000"');
-        document.getElementById("cardCVC").focus();
-        return;
-      }
+    if (cardCVC.length !== 3 || !/^\d{3}$/.test(cardCVC)) {
+      errorClaveTarjeta.classList.add("es-visible");
+      errorClaveTarjeta.classList.remove("es-invisible");
+      errorClaveTarjeta.textContent = MENSAJE_ERROR.claveTarjeta.noValidoPorDigitos;
+      cardCVC.focus();
+      return;
+        } else if (cardCVC === "000") {
+        errorClaveTarjeta.classList.add("es-visible");
+        errorClaveTarjeta.classList.remove("es-invisible");
+        errorClaveTarjeta.textContent = MENSAJE_ERROR.claveTarjeta.noValidoPorCeros;
+        cardCVC.focus();
+        } else {
+          errorClaveTarjeta.classList.remove("es-visible");
+          errorClaveTarjeta.classList.add("es-invisible");
+          }
     }
 
     const USUARIO_REGISTRADO = {
@@ -266,7 +281,11 @@ document.getElementById("registrationForm").addEventListener("submit", function 
 
     USUARIOS.push(USUARIO_REGISTRADO);
 
-    if (ES_VALIDO){
+    // si todo es correcto, guarda y dirige a otra pestaña
+
+    if (ES_VALIDO_NOMBRE && ES_VALIDO_APELLIDO && ES_VALIDO_EMAIL && 
+    ES_VALIDO_USUARIO && ES_VALIDO_CONTRASEÑA && ES_VALIDO_CONFIRMAR_CONTRASEÑA
+    && ES_VALIDO_METODOS_PAGO){
       console.log("Formulario guardado en Session Storage:", USUARIOS);
       localStorage.setItem("DATOS REGISTRADOS", JSON.stringify(USUARIOS));
       alert("Formulario enviado con éxito y guardado en Session Storage");
