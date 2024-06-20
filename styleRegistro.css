@@ -151,6 +151,25 @@ h2 {
   }
 }
 
+
+/* estilo errores */
+
+.es-invisible{
+  display: none;
+}
+.es-visible{
+  border: 0.15em solid #a10000;
+}
+.p-email, .p-usuario, .p-contraseña, .p-nombre, .p-apellido,
+.p-confirmar-contraseña, .p-numero-tarjeta, .p-clave-tarjeta, 
+.p-metodos-pago{
+  border-width: 0;
+  border-radius: 1em;
+  background-color: #a1000034;
+  font-size: 0.8em;
+  padding: 0.8em;
+}
+
 @media screen and (max-width: 900px) and (min-width: 640px) {
   h1 {
     text-align: center;

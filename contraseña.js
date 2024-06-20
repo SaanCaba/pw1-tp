@@ -23,7 +23,8 @@ verifEmail.addEventListener("click", validar);
 function validar (evento) {
     evento.preventDefault();
 
-    let ES_VALIDO = false;
+    let ES_VALIDO_USUARIO = false;
+    let ES_VALIDO_CORREO = false;
 
     const usuario = document.querySelector("#usuario");
     const email = document.querySelector("#mail");
@@ -37,13 +38,13 @@ function validar (evento) {
         errorUsuario.classList.remove("es-invisible");
         errorUsuario.textContent = MENSAJE_ERROR.usuario.vacio;
         usuario.focus();
-        ES_VALIDO = false;
+        ES_VALIDO_USUARIO = false;
     } else if (USUARIOS_REGISTRADOS === null){
         usuario.classList.add("es-visible");
         errorUsuario.classList.remove("es-invisible");
         errorUsuario.textContent = MENSAJE_ERROR.usuario.noExiste;
         usuario.focus();
-        ES_VALIDO = false;
+        ES_VALIDO_USUARIO = false;
         } else {
             for (let usuarioRegistrado of USUARIOS_REGISTRADOS){
                 if (usuario.value !== usuarioRegistrado.username) {
@@ -51,11 +52,11 @@ function validar (evento) {
                     errorUsuario.classList.remove("es-invisible");
                     errorUsuario.textContent = MENSAJE_ERROR.usuario.noExiste;
                     usuario.focus();
-                    ES_VALIDO = false;
+                    ES_VALIDO_USUARIO = false;
                 } else {
                     usuario.classList.remove("es-visible");
                     errorUsuario.classList.add("es-invisible");
-                    ES_VALIDO = true;
+                    ES_VALIDO_USUARIO = true;
                 }
             }
         }
@@ -69,19 +70,19 @@ function validar (evento) {
         errorEmail.classList.remove("es-invisible");
         errorEmail.textContent = MENSAJE_ERROR.email.vacio;
         email.focus();
-        ES_VALIDO = false;
+        ES_VALIDO_CORREO = false;
     } else if (!validarEmail(email.value)) {
-        email.classList.remove("es-invisible")
-        errorEmail.classList.add("es-visible");
+        email.classList.add("es-visible");
+        errorEmail.classList.remove("es-invisible");
         errorEmail.textContent = MENSAJE_ERROR.email.noValido;
         email.focus();
-        ES_VALIDO = false;
+        ES_VALIDO_CORREO = false;
     } else if (USUARIOS_REGISTRADOS === null) {
         email.classList.add("es-visible");
         errorEmail.classList.remove("es-invisible");
         errorEmail.textContent = MENSAJE_ERROR.email.noExiste;
         email.focus();
-        ES_VALIDO = false;
+        ES_VALIDO_CORREO = false;
         } else {
             for (let usuarioRegistrado of USUARIOS_REGISTRADOS){
                 if (email.value !== usuarioRegistrado.email) {
@@ -89,16 +90,16 @@ function validar (evento) {
                     errorEmail.classList.remove("es-invisible");
                     errorEmail.textContent = MENSAJE_ERROR.email.noExiste;
                     email.focus();
-                    ES_VALIDO = false;
+                    ES_VALIDO_CORREO = false;
                 } else {
                     email.classList.remove("es-visible");
                     errorEmail.classList.add("es-invisible");
-                    ES_VALIDO = true;
+                    ES_VALIDO_CORREO = true;
                 }
         }
         }
 
-    if (ES_VALIDO){
+    if (ES_VALIDO_USUARIO && ES_VALIDO_CORREO){
         window.location.href = "login.html"
     };
 }

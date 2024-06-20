@@ -22,7 +22,8 @@ verifInicioSesion.addEventListener("click", validar);
 function validar (evento) {
     evento.preventDefault();
 
-    let ES_VALIDO = true;
+    let ES_VALIDO_USUARIO = false;
+    let ES_VALIDO_CONTRASEÑA = false;
 
     const usuario = document.querySelector("#usuario");
     const contrasenia = document.querySelector("#contraseña");
@@ -36,13 +37,13 @@ function validar (evento) {
         errorUsuario.classList.remove("es-invisible");
         errorUsuario.textContent = MENSAJE_ERROR.usuario.vacio;
         usuario.focus();
-        ES_VALIDO = false;
+        ES_VALIDO_USUARIO = false;
     } else if (USUARIOS_REGISTRADOS === null){
         usuario.classList.add("es-visible");
         errorUsuario.classList.remove("es-invisible");
         errorUsuario.textContent = MENSAJE_ERROR.usuario.noExiste;
         usuario.focus();
-        ES_VALIDO = false;
+        ES_VALIDO_USUARIO = false;
         } else {
             for (let usuarioRegistrado of USUARIOS_REGISTRADOS){
                 if (usuario.value !== usuarioRegistrado.username) {
@@ -50,11 +51,11 @@ function validar (evento) {
                     errorUsuario.classList.remove("es-invisible");
                     errorUsuario.textContent = MENSAJE_ERROR.usuario.noExiste;
                     usuario.focus();
-                    ES_VALIDO = false;
+                    ES_VALIDO_USUARIO = false;
                 } else {
                     usuario.classList.remove("es-visible");
                     errorUsuario.classList.add("es-invisible");
-                    ES_VALIDO = true;
+                    ES_VALIDO_USUARIO = true;
                 }
         }
     }
@@ -66,13 +67,13 @@ function validar (evento) {
         errorContrasenia.classList.remove("es-invisible");
         errorContrasenia.textContent = MENSAJE_ERROR.contrasenia.vacio;
         contrasenia.focus();
-        ES_VALIDO = false;
+        ES_VALIDO_CONTRASEÑA = false;
     } else if (USUARIOS_REGISTRADOS === null) {
         contrasenia.classList.add("es-visible");
         errorContrasenia.classList.remove("es-invisible");
         errorContrasenia.textContent = MENSAJE_ERROR.contrasenia.noExiste;
         contrasenia.focus();
-        ES_VALIDO = false;
+        ES_VALIDO_CONTRASEÑA = false;
         } else {
             for (let usuarioRegistrado of USUARIOS_REGISTRADOS){
                 if (contrasenia.value !== usuarioRegistrado.password) {
@@ -80,16 +81,16 @@ function validar (evento) {
                     errorContrasenia.classList.remove("es-invisible");
                     errorContrasenia.textContent = MENSAJE_ERROR.contrasenia.noExiste;
                     contrasenia.focus();
-                    ES_VALIDO = false;
+                    ES_VALIDO_CONTRASEÑA = false;
                 } else {
                     contrasenia.classList.remove("es-visible");
                     errorContrasenia.classList.add("es-invisible");
-                    ES_VALIDO = true;
+                    ES_VALIDO_CONTRASEÑA = true;
                 }
         }
     }
 
-    if (ES_VALIDO){
+    if (ES_VALIDO_USUARIO && ES_VALIDO_CONTRASEÑA){
         window.location.href = "pantallaPrincipal.html"
     };
 }
