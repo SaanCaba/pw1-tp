@@ -41,7 +41,7 @@ const contenido = [
             wikipediaUrl: "https://es.wikipedia.org/wiki/Pablo_Schreiber",
           },
         ],
-        youtubeVideo: "https://youtu.be/5mcO5WiBmxM?si=fFqtyh1mrOvxsEM3",
+        youtubeVideo: "https://www.youtube.com/watch?v=SQ92hXK2w3M",
         resumen: `Una de las franquicias más populares del mundo de los videojuegos. La historia se centra en un
                   conflicto interestelar entre los humanos y alienígenas guiados por profetas obsesionados con una antigua
                   especie conocida como los Forerunners.`,
