@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
     noResultsMessage.style.display = found ? "none" : "block";
   };
 
-  searchForm.addEventListener("submit", function (event) {
+  searchForm.addEventListener("input", function (event) {
     event.preventDefault();
     filterContent();
   });
