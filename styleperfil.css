@@ -142,64 +142,49 @@ a {
   cursor: pointer;
 }
 
-.footer-sections {
-  display: flex;
-}
-
 footer {
   background-color: #000000;
   color: #cecece;
-  padding: 0px; 
+  padding: 1em;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: space-around;
-  bottom: 0;
-  width: 100%;
-  height: min-content;
-  color: white;
-  div {
-    width: 100%;
+  align-items: center;
+  ul {
+    list-style-type: none;
     display: flex;
-    justify-content: space-around;
-    ul {
-      list-style-type: none;
-      display: flex;
-      flex-direction: column;
-    }
-    svg {
-      width: 1rem;
-    }
-    a {
-      text-decoration: none;
-      color: #cecece;
-    }
-    li {
-      display: flex;
-      gap: 0.5rem;
-      align-items: flex-end;
-    }
-    p {
-      width: 100%;
-    }
+    flex-direction: column;
+  }
+  svg {
+    width: 1em;
+  }
+  a {
+    text-decoration: none;
+    color: #cecece;
+  }
+  li {
+    display: flex;
+    gap: 0.5em;
+    align-items: flex-end;
   }
 }
 .interno {
   text-decoration: none;
   color: #ffffff;
 }
-
+span {
+  font-weight: bold;
+}
 .copy {
   margin: 0;
-  padding: 1rem;
+  padding: 1em;
   text-align: center;
   font-size: small;
   background-color: #000000;
   color: #cecece;
-  width: 100%;
 }
-
-span {
+#no-results {
+  display: none;
+  color: #ffffff;
   font-weight: bold;
 }
 
