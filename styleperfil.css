@@ -12,7 +12,9 @@ body {
   justify-content: center;
   overflow-x: hidden;
 }
-
+.nav{
+  margin-top: 2em;
+}
 main {
   padding: 2rem 0 2rem 0;
   justify-content: center;
