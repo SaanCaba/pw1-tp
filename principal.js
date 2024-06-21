@@ -69,3 +69,22 @@ document.addEventListener("DOMContentLoaded", function () {
     filterContent();
   });
 });
+
+//cerrar sesion en menu
+document.addEventListener("DOMContentLoaded", function () {
+  const cerrarSesionLink = document.getElementById("cerrarSesion");
+
+  cerrarSesionLink.addEventListener("click", function (event) {
+      event.preventDefault(); // Prevenir la redirección inmediata
+      
+      // Limpiar todos los datos de la sesión aquí
+      sessionStorage.clear();
+      localStorage.clear();
+      
+      // Mostrar mensaje de alerta
+      alert("La sesión se cerró con éxito.");
+      
+      // Redirigir al index
+      window.location.href = "index.html";
+  });
+});
