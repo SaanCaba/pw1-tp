@@ -54,6 +54,51 @@ nav ul li:hover {
   width: 1em;
 }
 
+
+/*menu desplegable*/
+
+nav ul li {
+  position: relative;
+}
+
+nav ul li .interno {
+  display: block;
+  text-align: center;
+}
+
+nav ul li .interno:hover {
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top:100%;
+  left: -55%;
+  min-width: 9rem;
+}
+
+.dropdown-content li {
+  display: block;
+}
+
+.dropdown-content li a {
+  color: #ffffff;
+  padding: 0.4rem 0rem;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content li a:hover {
+  font-weight:bolder;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+/*menu desp*/
+
+
 .article {
   display: grid;
   grid-template-columns: 1fr 1fr;
