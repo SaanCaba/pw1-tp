@@ -64,6 +64,7 @@ nav ul li {
 nav ul li .interno {
   display: block;
   text-align: center;
+  color: #000000;
 }
 
 nav ul li .interno:hover {
@@ -83,7 +84,7 @@ nav ul li .interno:hover {
 }
 
 .dropdown-content li a {
-  color: #ffffff;
+  color: #000000;
   padding: 0.4rem 0rem;
   text-decoration: none;
   display: block;
