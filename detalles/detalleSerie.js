@@ -69,7 +69,7 @@ const contenido = [
                   amigo desaparecido, tejiendo nostalgia, misterio y amistad.`,
       },
       {
-        nombre: "Vikingos",
+        nombre: "Vikings",
         temporadas: 6,
         capitulosPorTemporada: {
           1: 9,
