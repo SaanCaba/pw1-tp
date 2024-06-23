@@ -5,6 +5,8 @@ let USUARIOS = JSON.parse(localStorage.getItem("DATOS REGISTRADOS")) || [];
 const EXPRESION_CONTRASEÑA = /^(?=(.*[A-Za-z]){2})(?=(.*\d){2})(?=(.*[^A-Za-z0-9]){2}).{8,}$/;
 const EXPRESION_NOMBREAPELLIDO = /^[A-Za-z]+$/;
 const EXPRESION_USUARIO = /^[A-Za-z\d]+$/;
+const EXPRESION_CODIGO_TARJETA = /^\d{3}$/;
+const EXPRESION_EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 const MENSAJE_ERROR = {
   nombre:{
@@ -224,6 +226,7 @@ document.getElementById("registrationForm").addEventListener("submit", function 
     } else {
       errorMetodosPago.classList.remove("es-visible");
       errorMetodosPago.classList.add("es-invisible");
+      ES_VALIDO_METODOS_PAGO = true;
       }
 
   // verificación tarjeta de crédito
@@ -236,33 +239,44 @@ document.getElementById("registrationForm").addEventListener("submit", function 
       errorNumeroTarjeta.classList.remove("es-invisible");
       errorNumeroTarjeta.textContent = MENSAJE_ERROR.numeroDeTarjeta.noValidoPorDigitos;
       cardNumber.focus();
+      ES_VALIDO_METODOS_PAGO = false;
       return;
       } else if (!isValidCardNumber(cardNumber)) {
         errorNumeroTarjeta.classList.add("es-visible");
         errorNumeroTarjeta.classList.remove("es-invisible");
         errorNumeroTarjeta.textContent = MENSAJE_ERROR.numeroDeTarjeta.noValidoPorCondiciones;
         cardNumber.focus();
+        ES_VALIDO_METODOS_PAGO = false;
         return;
         } else {
           errorNumeroTarjeta.classList.remove("es-visible");
           errorNumeroTarjeta.classList.add("es-invisible");
+          ES_VALIDO_METODOS_PAGO = true;
           }
 
-    if (cardCVC.length !== 3 || !/^\d{3}$/.test(cardCVC)) {
+    if (cardCVC.value.length !== 3 || !validarClaveTarjeta(cardCVC.value)) {
       errorClaveTarjeta.classList.add("es-visible");
       errorClaveTarjeta.classList.remove("es-invisible");
       errorClaveTarjeta.textContent = MENSAJE_ERROR.claveTarjeta.noValidoPorDigitos;
       cardCVC.focus();
+      ES_VALIDO_METODOS_PAGO = false;
       return;
-        } else if (cardCVC === "000") {
+        } else if (cardCVC.value === "000") {
         errorClaveTarjeta.classList.add("es-visible");
         errorClaveTarjeta.classList.remove("es-invisible");
         errorClaveTarjeta.textContent = MENSAJE_ERROR.claveTarjeta.noValidoPorCeros;
         cardCVC.focus();
+        ES_VALIDO_METODOS_PAGO = false;
         } else {
           errorClaveTarjeta.classList.remove("es-visible");
           errorClaveTarjeta.classList.add("es-invisible");
+          ES_VALIDO_METODOS_PAGO = true;
           }
+    } else {
+      errorNumeroTarjeta.classList.remove("es-visible");
+      errorNumeroTarjeta.classList.add("es-invisible");
+      errorClaveTarjeta.classList.remove("es-visible");
+      errorClaveTarjeta.classList.add("es-invisible");
     }
 
     const USUARIO_REGISTRADO = {
@@ -279,16 +293,14 @@ document.getElementById("registrationForm").addEventListener("submit", function 
       cardCVC: selectedPaymentMethod.value === "creditCard" ? cardCVC : null,
     };
 
-    USUARIOS.push(USUARIO_REGISTRADO);
-
     // si todo es correcto, guarda y dirige a otra pestaña
 
     if (ES_VALIDO_NOMBRE && ES_VALIDO_APELLIDO && ES_VALIDO_EMAIL && 
     ES_VALIDO_USUARIO && ES_VALIDO_CONTRASEÑA && ES_VALIDO_CONFIRMAR_CONTRASEÑA
     && ES_VALIDO_METODOS_PAGO){
+      USUARIOS.push(USUARIO_REGISTRADO);
       console.log("Formulario guardado en Session Storage:", USUARIOS);
       localStorage.setItem("DATOS REGISTRADOS", JSON.stringify(USUARIOS));
-      alert("Formulario enviado con éxito y guardado en Session Storage");
       window.location.href = "login.html";
     };
 
@@ -330,6 +342,10 @@ function validarEmail (texto) {
 
 function validarContraseña (texto) {
   return EXPRESION_CONTRASEÑA.test(texto);
+}
+
+function validarClaveTarjeta (texto) {
+  return EXPRESION_CODIGO_TARJETA.test(texto);
 }
 
 //verificar ya existente
