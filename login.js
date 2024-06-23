@@ -46,7 +46,7 @@ function validar (evento) {
         ES_VALIDO_USUARIO = false;
         } else {
             for (let usuarioRegistrado of USUARIOS_REGISTRADOS){
-                if (usuario.value !== usuarioRegistrado.username) {
+                if (usuario.value !== usuarioRegistrado.usuario) {
                     usuario.classList.add("es-visible");
                     errorUsuario.classList.remove("es-invisible");
                     errorUsuario.textContent = MENSAJE_ERROR.usuario.noExiste;
@@ -56,6 +56,7 @@ function validar (evento) {
                     usuario.classList.remove("es-visible");
                     errorUsuario.classList.add("es-invisible");
                     ES_VALIDO_USUARIO = true;
+                    break;
                 }
         }
     }
@@ -76,7 +77,7 @@ function validar (evento) {
         ES_VALIDO_CONTRASEÑA = false;
         } else {
             for (let usuarioRegistrado of USUARIOS_REGISTRADOS){
-                if (contrasenia.value !== usuarioRegistrado.password) {
+                if (contrasenia.value !== usuarioRegistrado.contraseña) {
                     contrasenia.classList.add("es-visible");
                     errorContrasenia.classList.remove("es-invisible");
                     errorContrasenia.textContent = MENSAJE_ERROR.contrasenia.noExiste;
@@ -86,6 +87,7 @@ function validar (evento) {
                     contrasenia.classList.remove("es-visible");
                     errorContrasenia.classList.add("es-invisible");
                     ES_VALIDO_CONTRASEÑA = true;
+                    break;
                 }
         }
     }

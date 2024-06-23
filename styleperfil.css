@@ -144,6 +144,23 @@ a {
   cursor: pointer;
 }
 
+/* estilo para el error */
+
+.es-invisible{
+  display: none;
+}
+.es-visible{
+  border: 0.15em solid #a10000;
+}
+.p-nueva-contraseña, .p-repetir-contraseña, .p-metodos-pago,
+.p-numero-tarjeta, .p-clave-tarjeta, .p-cupon-pago{
+  border-width: 0;
+  border-radius: 1em;
+  background-color: #a1000034;
+  font-size: 0.8em;
+  padding: 0.8em;
+}
+
 footer {
   background-color: #000000;
   color: #cecece;

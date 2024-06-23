@@ -81,7 +81,7 @@
           title="Foto De Perfil"
         />
         <div>
-          <h5 class="nombre-de-usuario">Nombre de Usuario</h5>
+          <h5 class="nombre-de-usuario"></h5>
         </div>
       </section>
 
@@ -94,7 +94,7 @@
 
             <div>
               <h4 class="h4-textos">E-Mail:</h4>
-              <label>ejemplo1@gmail.com</label>
+              <label class="email-del-usuario"></label>
             </div>
 
             <div>
@@ -105,10 +105,11 @@
             <div>
               <h4 class="h4-textos">Nueva Contraseña:</h4>
               <input
-                class="nueva-contraseña"
+                id="nueva-contraseña"
                 type="password"
                 placeholder="Nueva Contraseña"
               />
+              <p class="p-nueva-contraseña es-invisible"></p>
             </div>
 
             <div>
@@ -118,6 +119,7 @@
                 type="password"
                 placeholder="Repetir Contraseña"
               />
+              <p class="p-repetir-contraseña es-invisible"></p>
             </div>
           </form>
         </section>
@@ -126,36 +128,36 @@
           <form class="section-form2">
             <div>
               <h2>Métodos de Pago</h2>
+              <p class="p-metodos-pago es-invisible"></p>
             </div>
 
             <div>
-              <input type="radio" name="payMethod1" />
+              <input type="radio" name="payMethod" value="creditCard"/>
               <h4 class="opcionTarjetaDeCredito">Tarjeta de Crédito:</h4>
               <br />
-              <input
-                class="numeroDeTarjeta"
-                type="number"
-                placeholder="Numero de Tarjeta"
-              />
-              <input class="numeroDeTarjeta" type="number" placeholder="XXX" />
+              <input class="numeroDeTarjeta" type="number" placeholder="Numero de Tarjeta"/>
+              <p class="p-numero-tarjeta es-invisible"></p>
+              <input class="claveDeTarjeta" type="number" placeholder="XXX" />
+              <p class="p-clave-tarjeta es-invisible"></p>
             </div>
 
             <div>
               <div>
-                <input type="radio" name="payMethod1" />
+                <input type="radio" name="payMethod" value="cuponDePago"/>
                 <h4>Cupón de Pago:</h4>
+                <p class="p-cupon-pago es-invisible"></p>
               </div>
 
               <div>
-                <input type="checkbox" name="payMethod2" />
+                <input type="checkbox" name="payMethod1" />
                 <h4>RapiPago</h4>
-                <input type="checkbox" name="payMethod2" />
+                <input type="checkbox" name="payMethod1" />
                 <h4>PagoFácil</h4>
               </div>
             </div>
 
             <div>
-              <input type="radio" name="payMethod1" />
+              <input type="radio" name="payMethod" value="transferenciaBancaria"/>
               <h4>Transferencia Bancaria:</h4>
               <ul class="cbu">
                 <li>

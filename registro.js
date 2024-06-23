@@ -55,7 +55,6 @@ document.getElementById("registrationForm").addEventListener("submit", function 
   const contraseña = document.querySelector("#password");
   const confirmarContraseña = document.querySelector("#confirmPassword");
   const cardCVC = document.querySelector("#cardCVC");
-  const metodosDePago = document.querySelector(".metodos-pago");
   const errorNombre = document.querySelector(".p-nombre");
   const errorApellido = document.querySelector(".p-apellido");
   const errorEmail = document.querySelector(".p-email");
@@ -280,11 +279,11 @@ document.getElementById("registrationForm").addEventListener("submit", function 
     }
 
     const USUARIO_REGISTRADO = {
-      nombre,
-      apellido,
-      email,
-      usuario,
-      contraseña,
+      nombre: nombre.value,
+      apellido: apellido.value,
+      email: email.value,
+      usuario: usuario.value,
+      contraseña: contraseña.value,
       paymentMethod: selectedPaymentMethod.value,
       cardNumber:
         selectedPaymentMethod.value === "creditCard"
@@ -363,7 +362,7 @@ function yaExisteElUsuario(usuarioAEncontrar){
 function yaExisteElEmail(emailAEncontrar){
   let existe = false;
   for (let emailRegistrado of USUARIOS){
-    if (usuarioRegistrado.email === emailAEncontrar){
+    if (emailRegistrado.email === emailAEncontrar){
       existe = true;
     }
   }
