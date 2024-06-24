@@ -537,7 +537,7 @@ document.addEventListener("DOMContentLoaded", () => {
     filmsSection.appendChild(div);
   });
 
-  // Event listeners for navigation
+  // Event listeners navegacion
   document.getElementById("todoTodas").addEventListener("click", () => {
     showAll();
   });
@@ -550,12 +550,12 @@ document.addEventListener("DOMContentLoaded", () => {
     showOnly("film");
   });
 
-  // Event listener for category filter
+  // Event listener filtrarporcategoria
   document.getElementById("categorias").addEventListener("change", (event) => {
     filterByCategory(event.target.value);
   });
 
-  // Event listener for search
+  // Event listener busqueda
   document.getElementById("site-search").addEventListener("input", (event) => {
     filterBySearch(event.target.value);
   });
