@@ -545,6 +545,7 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("todasLasSeries").addEventListener("click", () => {
     showOnly("serie");
   });
+  
 
   document.getElementById("todasLasPeliculas").addEventListener("click", () => {
     showOnly("film");
@@ -610,16 +611,49 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
+  // Función para actualizar los detalles de la película/serie
+  function updateMovieDetails(title, description, moreInfoLink, viewFilmLink, imgSrc) {
+    document.getElementById("title").textContent = title;
+    document.getElementById("description").textContent = description;
+    document.getElementById("moreInfoLink").href = moreInfoLink;
+    document.getElementById("viewFilmLink").href = viewFilmLink;
+    document.getElementById("background-img").src = imgSrc;
+  }
+
   // Aplicar filtros basados en parámetros de URL
+  // Declaración de la constante urlParams
   const urlParams = new URLSearchParams(window.location.search);
   const filter = urlParams.get("filter");
+
   if (filter) {
     if (filter === "series") {
       showOnly("serie");
+      updateMovieDetails(
+        "The OA",
+        "Una joven ciega desaparecida vuelve a casa con la vista recuperada, lo que lleva a muchos a cuestionarse si es un milagro o algo más.",
+        "./detalles/detalle-serie/index.html?name=The OA",
+        "./detalles/detalle-serie/index.html?name=The OA",
+        "./films-home/oa.jpg"
+      );
     } else if (filter === "peliculas") {
       showOnly("film");
+      updateMovieDetails(
+        "El planeta de los simios",
+        "Mientras un nuevo y tiránico líder simio construye su imperio, un joven simio emprende un viaje desgarrador que le llevará a tomar decisiones que definirán el futuro de simios y humanos por igual.",
+        "./detalles/detalle-pelicula/index.html?name=Planeta de los simios",
+        "./detalles/detalle-pelicula/index.html?name=Planeta de los simios",
+        "./films-home/simios.jpg"
+      );
+    } else {
+      showAll();
+      updateMovieDetails(
+        "El planeta de los simios",
+        "Mientras un nuevo y tiránico líder simio construye su imperio, un joven simio emprende un viaje desgarrador que le llevará a tomar decisiones que definirán el futuro de simios y humanos por igual.",
+        "./detalles/detalle-pelicula/index.html?name=Planeta de los simios",
+        "./detalles/detalle-pelicula/index.html?name=Planeta de los simios",
+        "./films-home/simios.jpg"
+      );
     }
-  } else {
-    showAll();
   }
 });
+

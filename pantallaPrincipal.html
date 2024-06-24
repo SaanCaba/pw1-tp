@@ -5,7 +5,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Stream Time</title>
-  <style>.hidden{display:none;}
+  <style>
+  .hidden{display:none;}
+  .movie-details img{
+    width: 100%;
+    height: auto;
+  }
     </style>
   <link rel="stylesheet" href="stylePrincipal.css" />
 </head>
@@ -53,22 +58,22 @@
       </nav>
     </header>
     <div class="container-img">
-      <img class="portada" src="./films-home/simios.jpg" />
+      <img class="portada" id="background-img" src="./films-home/simios.jpg" alt="Imagen de fondo" />
     </div>
-    <div class="movie-details">
+    <div class="movie-details" id="movie-details">
       <h1>El planeta de los simios</h1>
-      <p>
+      <p id="description">
         Mientras un nuevo y tiránico líder simio construye su imperio, un
         joven simio emprende un viaje desgarrador que le llevará a tomar decisiones que
         definirán el futuro de simios y humanos por igual.
       </p>
       <div class="container-btn">
         <button class="moreInfo">
-          <a href="./detalles/detalle-pelicula/index.html?name=Planeta de los simios">
+          <a id="moreInfoLink" href="./detalles/detalle-pelicula/index.html?name=Planeta de los simios">
             Más informacion</a>
         </button>
         <button class="viewFilm">
-          <a href="./detalles/detalle-pelicula/index.html?name=Planeta de los simios">
+          <a id="viewFilmLink" href="./detalles/detalle-pelicula/index.html?name=Planeta de los simios">
             Ver película</a>
         </button>
       </div>
