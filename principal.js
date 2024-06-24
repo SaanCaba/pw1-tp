@@ -352,6 +352,13 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     {
       type: "film",
+      category: "Drama",
+      url: "./detalles/detalle-pelicula/index.html?name=El correo",
+      imgSrc: "./films-home/correo.jpg",
+      alt: "el correo",
+    },
+    {
+      type: "film",
       category: "Animacion",
       url: "./detalles/detalle-serie/index.html?name=Buscando a nemo",
       imgSrc: "./films-home/nemo.png",
