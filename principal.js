@@ -519,7 +519,7 @@ document.addEventListener("DOMContentLoaded", () => {
       alt: "the oa",
     },
   ];
-
+ 
   films.forEach((film) => {
     const div = document.createElement("div");
     div.classList.add(film.type);
@@ -537,7 +537,7 @@ document.addEventListener("DOMContentLoaded", () => {
     filmsSection.appendChild(div);
   });
 
-  // Event listeners navegacion
+  // Event listeners para navegación
   document.getElementById("todoTodas").addEventListener("click", () => {
     showAll();
   });
@@ -550,16 +550,17 @@ document.addEventListener("DOMContentLoaded", () => {
     showOnly("film");
   });
 
-  // Event listener filtrarporcategoria
+  // Event listener para filtrar por categoría
   document.getElementById("categorias").addEventListener("change", (event) => {
     filterByCategory(event.target.value);
   });
 
-  // Event listener busqueda
+  // Event listener para búsqueda
   document.getElementById("site-search").addEventListener("input", (event) => {
     filterBySearch(event.target.value);
   });
 
+  // Función para mostrar todos los elementos
   function showAll() {
     const items = filmsSection.children;
     for (let item of items) {
@@ -567,6 +568,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
+  // Función para mostrar solo elementos específicos (series o films)
   function showOnly(type) {
     const items = filmsSection.children;
     for (let item of items) {
@@ -578,6 +580,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
+  // Función para filtrar por categoría
   function filterByCategory(category) {
     const items = filmsSection.children;
     if (category === "todos") {
@@ -593,6 +596,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
+  // Función para filtrar por búsqueda
   function filterBySearch(query) {
     const items = filmsSection.children;
     query = query.toLowerCase();
@@ -604,5 +608,18 @@ document.addEventListener("DOMContentLoaded", () => {
         item.classList.add("hidden");
       }
     }
+  }
+
+  // Aplicar filtros basados en parámetros de URL
+  const urlParams = new URLSearchParams(window.location.search);
+  const filter = urlParams.get("filter");
+  if (filter) {
+    if (filter === "series") {
+      showOnly("serie");
+    } else if (filter === "peliculas") {
+      showOnly("film");
+    }
+  } else {
+    showAll();
   }
 });
