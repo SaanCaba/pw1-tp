@@ -79,7 +79,7 @@ function validar (evento) {
         ES_VALIDO_CONTRASEÑA = false;
         } else {
             for (let usuarioRegistrado of USUARIOS_REGISTRADOS){
-                if (contrasenia.value !== usuarioRegistrado.contraseña) {
+                if (contrasenia.value !== usuarioRegistrado.contraseña && usuario.value !== usuarioRegistrado.usuario) {
                     contrasenia.classList.add("es-visible");
                     errorContrasenia.classList.remove("es-invisible");
                     errorContrasenia.textContent = MENSAJE_ERROR.contrasenia.noExiste;
