@@ -4,6 +4,7 @@
 const JSON_USUARIOS_REGISTRADOS = localStorage.getItem("DATOS REGISTRADOS");
 const USUARIOS_REGISTRADOS = JSON.parse(JSON_USUARIOS_REGISTRADOS);
 
+let emailActual;
 
 const MENSAJE_ERROR = {
     usuario:{
@@ -56,6 +57,7 @@ function validar (evento) {
                     usuario.classList.remove("es-visible");
                     errorUsuario.classList.add("es-invisible");
                     ES_VALIDO_USUARIO = true;
+                    emailActual = usuarioRegistrado.email;
                     break;
                 }
         }
@@ -93,6 +95,8 @@ function validar (evento) {
     }
 
     if (ES_VALIDO_USUARIO && ES_VALIDO_CONTRASEÑA){
+        localStorage.setItem("USUARIO ACTUAL", usuario.value);
+        localStorage.setItem("EMAIL ACTUAL", emailActual);
         window.location.href = "pantallaPrincipal.html"
     };
 }

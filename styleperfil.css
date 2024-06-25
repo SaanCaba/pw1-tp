@@ -144,6 +144,13 @@ a {
   cursor: pointer;
 }
 
+.nombre-de-usuario{
+  display: flex;
+  align-items: center;
+  padding-left: 1rem;
+  padding-top: 0.7rem;
+}
+
 /* estilo para el error */
 
 .es-invisible{

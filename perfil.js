@@ -1,6 +1,9 @@
 const JSON_USUARIOS_REGISTRADOS = localStorage.getItem("DATOS REGISTRADOS");
 const USUARIOS_REGISTRADOS = JSON.parse(JSON_USUARIOS_REGISTRADOS);
 
+const USUARIO_ACTUAL = localStorage.getItem("USUARIO ACTUAL");
+const EMAIL_ACTUAL = localStorage.getItem("EMAIL ACTUAL");
+
 const EXPRESION_CONTRASEÑA = /^(?=(.*[A-Za-z]){2})(?=(.*\d){2})(?=(.*[^A-Za-z0-9]){2}).{8,}$/;
 const EXPRESION_CODIGO_TARJETA = /^\d{3}$/;
 
@@ -19,13 +22,17 @@ const MENSAJE_ERROR = {
   },
   cuponDePago:{
     vacio: "Seleccione al menos un tipo de cupón de pago"
-  }
+  },
 }
 
+const nombreDeUsuario = document.querySelector(".nombre-de-usuario");
+nombreDeUsuario.textContent = USUARIO_ACTUAL;
+const email = document.querySelector(".email-del-usuario");
+email.textContent = EMAIL_ACTUAL;
 
 document.querySelector(".botonGuardar").addEventListener("click", function (event) {
    
-    event.preventDefault();
+  event.preventDefault();
 
 
   const nuevaContraseña = document.querySelector("#nueva-contraseña");
@@ -34,7 +41,6 @@ document.querySelector(".botonGuardar").addEventListener("click", function (even
   const claveDeTarjeta = document.querySelector(".claveDeTarjeta");
   const errorNuevaContraseña = document.querySelector(".p-nueva-contraseña");
   const errorRepetirContraseña = document.querySelector(".p-repetir-contraseña");
-  const errorMetodosPago = document.querySelector(".p-metodos-pago");
   const errorNumeroTarjeta = document.querySelector(".p-numero-tarjeta");
   const errorClaveTarjeta = document.querySelector(".p-clave-tarjeta");
   const errorCuponPago = document.querySelector(".p-cupon-pago");
@@ -75,6 +81,7 @@ document.querySelector(".botonGuardar").addEventListener("click", function (even
         }
     }
   //verificación métodos de pago
+if (seleccionarMetodoDePago){
 
   if (seleccionarMetodoDePago.value === "transferenciaBancaria") {
     ES_VALIDO_METODOS_PAGO = true;
@@ -142,10 +149,26 @@ document.querySelector(".botonGuardar").addEventListener("click", function (even
       errorClaveTarjeta.classList.remove("es-visible");
       errorClaveTarjeta.classList.add("es-invisible");
     }
+  }
 
     if ((ES_VALIDO_CONTRASEÑA && ES_VALIDO_RECUPERAR_CONTRASEÑA) || (ES_VALIDO_METODOS_PAGO)){
+      for (let usuarioActualizado of USUARIOS_REGISTRADOS){
+        if (usuarioActualizado.usuario === USUARIO_ACTUAL){
+          if (ES_VALIDO_CONTRASEÑA && ES_VALIDO_RECUPERAR_CONTRASEÑA){
+            usuarioActualizado.contraseña = nuevaContraseña.value;
+          }
+          if (ES_VALIDO_METODOS_PAGO){
+            usuarioActualizado.paymentMethod = seleccionarMetodoDePago.value;
+            usuarioActualizado.numeroDeTarjeta = (seleccionarMetodoDePago.value === "creditCard") ? numeroDeTarjeta.value : null;
+            usuarioActualizado.cardCVC = (seleccionarMetodoDePago.value === "creditCard") ? claveDeTarjeta.value : null;
+          }
+        }
+      }
+      localStorage.setItem("DATOS REGISTRADOS", JSON.stringify(USUARIOS_REGISTRADOS));
+
       window.location.href = "pantallaPrincipal.html"
-      };
+
+      }
 });
 
 function validarContraseña (texto) {
@@ -165,3 +188,20 @@ function isValidCardNumber(cardNumber) {
     (sum % 2 !== 0 && lastDigit % 2 === 0)
   );
 }
+document.querySelector(".botonCancelar").addEventListener("click", function (event) {
+  
+  event.preventDefault();
+
+  const USUARIOS_REGISTRADOS_NUEVO = [];
+
+  for (let i = 0; i < USUARIOS_REGISTRADOS.length; i++){
+    if (USUARIOS_REGISTRADOS[i].usuario !== USUARIO_ACTUAL){
+      USUARIOS_REGISTRADOS_NUEVO.push(USUARIOS_REGISTRADOS[i]);
+    }
+  }
+
+  localStorage.setItem("DATOS REGISTRADOS", JSON.stringify(USUARIOS_REGISTRADOS_NUEVO));
+
+  window.location.href = "index.html"
+
+});

@@ -298,7 +298,6 @@ document.getElementById("registrationForm").addEventListener("submit", function 
     ES_VALIDO_USUARIO && ES_VALIDO_CONTRASEÑA && ES_VALIDO_CONFIRMAR_CONTRASEÑA
     && ES_VALIDO_METODOS_PAGO){
       USUARIOS.push(USUARIO_REGISTRADO);
-      console.log("Formulario guardado en Session Storage:", USUARIOS);
       localStorage.setItem("DATOS REGISTRADOS", JSON.stringify(USUARIOS));
       window.location.href = "login.html";
     };
