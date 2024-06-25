@@ -105,7 +105,7 @@ const contenido = [
         wikipediaUrl: "https://es.wikipedia.org/wiki/Dave_Franco",
       },
     ],
-    youtubeVideo: "https://www.youtube.com/watch?v=2PR9MOPTI7g",
+    youtubeVideo: "https://www.youtube.com/embed/2PR9MOPTI7g",
     resumen:
       "Nerve es un thriller sobre un juego en línea de verdad o reto en el que los participantes se ven empujados a realizar tareas cada vez más peligrosas. La película explora los peligros de la tecnología y la presión social.",
   },
@@ -117,10 +117,10 @@ const contenido = [
     actores: [
       {
         nombre: "Mark Wahlberg",
-        wikipediaUrl: "https://www.youtube.com/watch?v=3e3_iOsIRfY",
+        wikipediaUrl: "https://www.youtube.com/embed/3e3_iOsIRfY",
       },
     ],
-    youtubeVideo: "https://www.youtube.com/watch?v=2PR9MOPTI7g",
+    youtubeVideo: "https://www.youtube.com/embed/3e3_iOsIRfY",
     resumen:
       "Joe Bell cuenta la historia real de un padre que decide recorrer a pie los Estados Unidos en honor a su hijo, quien fue víctima de bullying. Es una emotiva historia sobre amor, pérdida y la lucha contra la intolerancia.",
   },
@@ -135,7 +135,7 @@ const contenido = [
         wikipediaUrl: "https://es.wikipedia.org/wiki/Billy_Eichner",
       },
     ],
-    youtubeVideo: "https://www.youtube.com/watch?v=z1lfO2kQ0F4",
+    youtubeVideo: "https://www.youtube.com/embed/0yAHD2p7yrk",
     resumen:
       "Patos es una encantadora película animada sobre un grupo de patos que se embarcan en una aventura para salvar su hogar de la destrucción. Llena de humor y lecciones de vida, es una historia para toda la familia.",
   },
@@ -165,7 +165,7 @@ const contenido = [
         wikipediaUrl: "https://es.wikipedia.org/wiki/Anne_Hathaway",
       },
     ],
-    youtubeVideo: "https://www.youtube.com/embed/7sep3CUIKPA",
+    youtubeVideo: "https://www.youtube.com/embed/G3jzLo31DTk",
     resumen:
       "El diario de la princesa sigue la historia de una adolescente que descubre que es la heredera al trono de un pequeño país europeo. Con la ayuda de su abuela, aprende a ser una princesa mientras navega por la vida adolescente.",
   },
@@ -180,7 +180,7 @@ const contenido = [
         wikipediaUrl: "https://es.wikipedia.org/wiki/Justin_Timberlake",
       },
     ],
-    youtubeVideo: "https://www.youtube.com/embed/YRSBiTF3Qo8",
+    youtubeVideo: "https://www.youtube.com/embed/h7DGhxr8xU8",
     resumen:
       "El precio del mañana es una película de ciencia ficción en la que el tiempo es la moneda de cambio. Los ricos viven eternamente mientras los pobres luchan por cada segundo. Es una crítica a la desigualdad social y económica.",
   },
@@ -195,7 +195,7 @@ const contenido = [
         wikipediaUrl: "https://es.wikipedia.org/wiki/Ryan_Reynolds",
       },
     ],
-    youtubeVideo: "https://www.youtube.com/watch?v=ZnJxmnko64o",
+    youtubeVideo: "https://www.youtube.com/embed/ZnJxmnko64o",
     resumen:
       "El proyecto Adam sigue a un piloto que viaja en el tiempo para unirse a su yo más joven y su padre fallecido con el fin de reconciliar su pasado y salvar el futuro. Es una aventura emocionante con toques de humor y drama.",
   },
@@ -214,7 +214,7 @@ const contenido = [
         wikipediaUrl: "https://es.wikipedia.org/wiki/Anne_Hathaway",
       },
     ],
-    youtubeVideo: "https://www.youtube.com/embed/XTDSwAxlNhc",
+    youtubeVideo: "https://www.youtube.com/embed/uW-6yDYDB1k",
     resumen:
       "El diablo viste a la moda sigue la vida de una joven asistente que trabaja para una poderosa editora de moda. La película ofrece una mirada fascinante y divertida al mundo de la moda y la alta presión que lo acompaña.",
   },
@@ -233,7 +233,7 @@ const contenido = [
         wikipediaUrl: "https://es.wikipedia.org/wiki/Stephen_Amell",
       },
     ],
-    youtubeVideo: "https://www.youtube.com/embed/xDAsABdkWSc",
+    youtubeVideo: "https://www.youtube.com/embed/3X7avMkneS0",
     resumen:
       "Código 8 está ambientada en un mundo donde el 4% de la población tiene habilidades sobrenaturales. La historia sigue a un joven con poderes que lucha por encontrar una forma de ayudar a su familia en una sociedad que lo persigue.",
   },
@@ -282,7 +282,7 @@ const contenido = [
         wikipediaUrl: "https://es.wikipedia.org/wiki/Kang_Soo-youn",
       },
     ],
-    youtubeVideo: "https://www.youtube.com/watch?v=laGNC_QvYRc",
+    youtubeVideo: "https://www.youtube.com/embed/mWCWaTwuhSs",
     resumen:
       "Jung_e está ambientada en un futuro donde la humanidad vive en colonias espaciales debido al cambio climático. La historia sigue a una científica que trata de salvar a la humanidad clonando el cerebro de su madre, una heroína de guerra.",
   },
@@ -297,7 +297,7 @@ const contenido = [
         wikipediaUrl: "https://es.wikipedia.org/wiki/Maite_Lanata",
       },
     ],
-    youtubeVideo: "https://www.youtube.com/watch?v=OEPENC7PZ0g",
+    youtubeVideo: "https://www.youtube.com/embed/OEPENC7PZ0g",
     resumen:
       "Casi muerta es una comedia argentina que sigue a María y su grupo de amigos en una serie de eventos desafortunados que llevan a situaciones hilarantes y llenas de enredos, mientras enfrentan la vida con un sentido del humor único.",
   },
@@ -312,7 +312,7 @@ const contenido = [
         wikipediaUrl: "https://es.wikipedia.org/wiki/Anne_Hathaway",
       },
     ],
-    youtubeVideo: "https://www.youtube.com/embed/koE9edjEDci",
+    youtubeVideo: "https://www.youtube.com/embed/Xpp2LelglrE",
     resumen:
       "El diario de la princesa 2 continúa la historia de Mia Thermopolis, ahora princesa de Genovia, mientras navega por su nueva vida real y enfrenta desafíos, incluida la búsqueda de un marido adecuado para asegurar su trono.",
   },
@@ -327,7 +327,7 @@ const contenido = [
         wikipediaUrl: "https://es.wikipedia.org/wiki/Belén_Rueda",
       },
     ],
-    youtubeVideo: "https://www.youtube.com/watch?v=c_TOYXdsRag",
+    youtubeVideo: "https://www.youtube.com/embed/c_TOYXdsRag",
     resumen:
       "La familia perfecta es una comedia que gira en torno a una mujer obsesionada con la perfección que se enfrenta a la caótica y disfuncional familia de su futuro yerno. Es una historia sobre aceptación y aprender a amar lo imperfecto.",
   },
@@ -342,7 +342,7 @@ const contenido = [
         wikipediaUrl: "https://es.wikipedia.org/wiki/Jim_Sturgess",
       },
     ],
-    youtubeVideo: "https://www.youtube.com/watch?v=sbYCJ6jZdDc",
+    youtubeVideo: "https://www.youtube.com/embed/sbYCJ6jZdDc",
     resumen:
       "Milagro en la cueva narra la historia real de un equipo de jóvenes futbolistas y su entrenador atrapados en una cueva inundada en Tailandia. La película sigue el intenso rescate y la esperanza que mantuvo a todos unidos.",
   },
@@ -357,7 +357,7 @@ const contenido = [
         wikipediaUrl: "https://es.wikipedia.org/wiki/Daniel_Hansen",
       },
     ],
-    youtubeVideo: "https://www.youtube.com/embed/4lFZ45brIw0",
+    youtubeVideo: "https://www.youtube.com/embed/aHybFprZsTI",
     resumen:
       "La familia del futuro es una película animada que sigue a un joven inventor que viaja en el tiempo y se encuentra con una excéntrica familia del futuro. Juntos, deben detener a un villano y aprender valiosas lecciones sobre familia y perseverancia.",
   },
@@ -425,7 +425,7 @@ const contenido = [
         wikipediaUrl: "https://es.wikipedia.org/wiki/Camila_Mendes",
       },
     ],
-    youtubeVideo: "https://www.youtube.com/watch?v=Teb5FnDG5Fs",
+    youtubeVideo: "https://www.youtube.com/embed/diWyWDSsyDs",
     resumen:
       "Cuenta la historia de una joven ambiciosa que lucha por equilibrar su carrera profesional con sus deseos de encontrar el amor verdadero. ",
   },
@@ -440,29 +440,29 @@ const contenido = [
         wikipediaUrl: "https://es.wikipedia.org/wiki/Ar%C3%B3n_Piper",
       },
     ],
-    youtubeVideo: "https://www.youtube.com/watch?v=3wHbCXVNd_E",
+    youtubeVideo: "https://www.youtube.com/embed/3wHbCXVNd_E",
     resumen:
       "Tras emplear su astucia para unirse a un esquema de lavado de dinero, un modesto valet parking descubre un mundo que se mueve a toda velocidad. Estrellarse es inevitable.",
   },
-  {
-    nombre: "Dejar el mundo atrás",
-    duracion: "2 Horas",
-    genero: "Drama/Thriller",
-    critica: "Intrigante",
-    actores: [
-      {
-        nombre: "Julia Roberts",
-        wikipediaUrl: "https://es.wikipedia.org/wiki/Julia_Roberts",
-      },
-      {
-        nombre: "Ethan Hawke",
-        wikipediaUrl: "https://es.wikipedia.org/wiki/Ethan_Hawke",
-      },
-    ],
-    youtubeVideo: "https://www.youtube.com/watch?v=-8mZ-AzmYgY",
-    resumen:
-      "Dejar el mundo atrás es un thriller psicológico sobre una familia que, durante unas vacaciones, se enfrenta a eventos misteriosos y potencialmente catastróficos. A medida que la situación empeora, deben confrontar sus propios miedos y secretos.",
-  },
+  // {
+  //   nombre: "Dejar el mundo atrás",
+  //   duracion: "2 Horas",
+  //   genero: "Drama/Thriller",
+  //   critica: "Intrigante",
+  //   actores: [
+  //     {
+  //       nombre: "Julia Roberts",
+  //       wikipediaUrl: "https://es.wikipedia.org/wiki/Julia_Roberts",
+  //     },
+  //     {
+  //       nombre: "Ethan Hawke",
+  //       wikipediaUrl: "https://es.wikipedia.org/wiki/Ethan_Hawke",
+  //     },
+  //   ],
+  //   youtubeVideo: "https://www.youtube.com/embed/oZMPvPfk9WY",
+  //   resumen:
+  //     "Dejar el mundo atrás es un thriller psicológico sobre una familia que, durante unas vacaciones, se enfrenta a eventos misteriosos y potencialmente catastróficos. A medida que la situación empeora, deben confrontar sus propios miedos y secretos.",
+  // },
   {
     nombre: "La purga",
     duracion: "1 Hora 25 minutos",
@@ -531,7 +531,7 @@ const contenido = [
         wikipediaUrl: "https://es.wikipedia.org/wiki/Jennifer_Aniston",
       },
     ],
-    youtubeVideo: "https://www.youtube.com/embed/7htOTHPpSDQ",
+    youtubeVideo: "https://www.youtube.com/embed/MQdEUNmv1J0",
     resumen:
       "Una esposa de mentira sigue a un cirujano plástico que, para cubrir una mentira, persuade a su leal asistente para que se haga pasar por su esposa. Juntos, viven situaciones cómicas y románticas mientras tratan de mantener la farsa.",
   },
@@ -569,7 +569,7 @@ const contenido = [
         wikipediaUrl: "https://es.wikipedia.org/wiki/Ellen_DeGeneres",
       },
     ],
-    youtubeVideo: "https://www.youtube.com/embed/wZdpNglLbt8",
+    youtubeVideo: "https://www.youtube.com/embed/X-Z-gQ8mKs0",
     resumen:
       "Buscando a Nemo es una película animada de Pixar que sigue a un pez payaso llamado Marlin en su aventura para encontrar a su hijo, Nemo, que ha sido capturado por un buzo. Con la ayuda de Dory, Marlin enfrenta diversos peligros en el océano.",
   },
@@ -603,7 +603,7 @@ const contenido = [
         wikipediaUrl: "https://es.wikipedia.org/wiki/Timothée_Chalamet",
       },
     ],
-    youtubeVideo: "https://www.youtube.com/watch?v=-YRw-3dgsjo",
+    youtubeVideo: "https://www.youtube.com/embed/-YRw-3dgsjo",
     resumen:
       "Wonka es una película que explora los orígenes del famoso chocolatero Willy Wonka. La historia muestra su juventud, cómo llegó a crear su imperio de dulces y los eventos que lo convirtieron en el excéntrico personaje conocido mundialmente.",
   },

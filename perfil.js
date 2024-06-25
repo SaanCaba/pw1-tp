@@ -188,20 +188,3 @@ function isValidCardNumber(cardNumber) {
     (sum % 2 !== 0 && lastDigit % 2 === 0)
   );
 }
-document.querySelector(".botonCancelar").addEventListener("click", function (event) {
-  
-  event.preventDefault();
-
-  const USUARIOS_REGISTRADOS_NUEVO = [];
-
-  for (let i = 0; i < USUARIOS_REGISTRADOS.length; i++){
-    if (USUARIOS_REGISTRADOS[i].usuario !== USUARIO_ACTUAL){
-      USUARIOS_REGISTRADOS_NUEVO.push(USUARIOS_REGISTRADOS[i]);
-    }
-  }
-
-  localStorage.setItem("DATOS REGISTRADOS", JSON.stringify(USUARIOS_REGISTRADOS_NUEVO));
-
-  window.location.href = "index.html"
-
-});

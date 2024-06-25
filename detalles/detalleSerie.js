@@ -139,7 +139,7 @@ const contenido = [
             wikipediaUrl: "https://es.wikipedia.org/wiki/Jesse_Plemons",
           },
         ],
-        youtubeVideo: "https://www.youtube.com/embed/0NjTSRpIRlw",
+        youtubeVideo: "https://www.youtube.com/embed/aNzzlXw0cyE",
         resumen:
           "Amor y muerte es una miniserie basada en hechos reales que sigue la historia de Candy Montgomery, una ama de casa que se ve envuelta en un asesinato en su comunidad tranquila. La serie explora las complejidades del crimen y las relaciones humanas.",
       },
@@ -166,7 +166,7 @@ const contenido = [
             wikipediaUrl: "https://es.wikipedia.org/wiki/Sam_Heughan",
           },
         ],
-        youtubeVideo: "https://www.youtube.com/embed/hlj2vW7js54",
+        youtubeVideo: "https://www.youtube.com/embed/BQ0eYtDCZ2g",
         resumen:
           "Outlander sigue a Claire Randall, una enfermera de combate de la Segunda Guerra Mundial, que es misteriosamente transportada al año 1743. La serie combina historia, romance y fantasía mientras Claire navega su nueva vida en el pasado.",
       },
@@ -261,6 +261,27 @@ const contenido = [
         nombre: "Los Simpson",
         temporadas: 34,
         capitulosPorTemporada: {
+          1: 22,
+          2: 22,
+          3: 22,
+          4: 22,
+          5: 22,
+          6: 22,
+          7: 22,
+          8: 21,
+          9: 23,
+          10: 22,
+          11: 22,
+          12: 22,
+          13: 22,
+          14: 22,
+          15: 22,
+          16: 22,
+          17: 22,
+          18: 22,
+          19: 22,
+          20: 22,
+          21: 22,
           22: 22,
           23: 22,
           24: 22,
@@ -287,7 +308,7 @@ const contenido = [
             wikipediaUrl: "https://es.wikipedia.org/wiki/Nancy_Cartwright",
           },
         ],
-        youtubeVideo: "https://www.youtube.com/embed/lCMAx6lQ3Ac",
+        youtubeVideo: "https://www.youtube.com/embed/IBHgoj5_B6E",
         resumen:
           "Los Simpson es una serie animada que sigue las aventuras y desventuras de la familia Simpson en la ciudad de Springfield. Con su sátira social y humor ingenioso, la serie ha sido un pilar de la televisión durante más de tres décadas.",
       },
@@ -309,7 +330,7 @@ const contenido = [
             wikipediaUrl: "https://es.wikipedia.org/wiki/Glenn_Close",
           },
         ],
-        youtubeVideo: "https://www.youtube.com/embed/YjOVtZXEU9g",
+        youtubeVideo: "https://www.youtube.com/embed/gwHU55Ezdh0",
         resumen:
           "En un futuro distópico con políticas de un solo hijo, siete hermanas idénticas deben evitar ser descubiertas mientras buscan a su hermana desaparecida. Una intensa exploración de la identidad y la supervivencia.",
       },
@@ -341,7 +362,7 @@ const contenido = [
             wikipediaUrl: "https://es.wikipedia.org/wiki/Norman_Reedus",
           },
         ],
-        youtubeVideo: "https://www.youtube.com/embed/R1v0uFms68U",
+        youtubeVideo: "https://www.youtube.com/embed/s1xjv2iCQUc",
         resumen:
           "The Walking Dead sigue a un grupo de supervivientes en un mundo post-apocalíptico plagado de zombis. La serie explora las luchas humanas, la moralidad y la supervivencia en circunstancias extremas.",
       },
@@ -363,7 +384,7 @@ const contenido = [
             wikipediaUrl: "https://es.wikipedia.org/wiki/Christopher_Plummer",
           },
         ],
-        youtubeVideo: "https://www.youtube.com/watch?v=E_lfHpGcp28",
+        youtubeVideo: "https://www.youtube.com/embed/E_lfHpGcp28",
         resumen:
           "Todo el dinero es una película que relata el secuestro del nieto de un magnate del petróleo y el intento desesperado de su madre por asegurar su liberación. La historia destaca la codicia y las relaciones familiares complejas.",
       },
@@ -422,7 +443,7 @@ const contenido = [
             wikipediaUrl: "https://es.wikipedia.org/wiki/Jennifer_Carpenter",
           },
         ],
-        youtubeVideo: "https://www.youtube.com/embed/YQeUmSD1c3g",
+        youtubeVideo: "https://www.youtube.com/embed/Vu-6iZjREZU",
         resumen:
           "Dexter sigue la vida de Dexter Morgan, un forense especializado en análisis de salpicaduras de sangre que lleva una doble vida como asesino en serie. La serie explora temas de justicia, moralidad y la doble naturaleza del protagonista.",
       },
@@ -444,7 +465,7 @@ const contenido = [
             wikipediaUrl: "https://es.wikipedia.org/wiki/Gustavo_Bermúdez",
           },
         ],
-        youtubeVideo: "https://www.youtube.com/watch?v=5TtQwVVbGU0",
+        youtubeVideo: "https://www.youtube.com/embed/5TtQwVVbGU0",
         resumen:
           "Los protectores es una serie que sigue a un grupo de guardaespaldas que deben proteger a sus clientes mientras enfrentan sus propios conflictos personales y profesionales. La serie combina drama y acción con toques de humor.",
       },
@@ -500,7 +521,7 @@ const contenido = [
             wikipediaUrl: "https://es.wikipedia.org/wiki/Sofía_Vergara",
           },
         ],
-        youtubeVideo: "https://www.youtube.com/embed/X6FGeM6h-EA",
+        youtubeVideo: "https://www.youtube.com/embed/Ub_lfN2VMIo",
         resumen:
           "Modern Family es una comedia que sigue la vida de tres familias interconectadas mientras navegan los desafíos y alegrías de la vida moderna. Con un formato de falso documental, la serie ofrece una mirada humorística y sincera a la familia.",
       },
@@ -522,7 +543,7 @@ const contenido = [
             wikipediaUrl: "https://es.wikipedia.org/wiki/Álvaro_Mel",
           },
         ],
-        youtubeVideo: "https://www.youtube.com/watch?v=okXeeY7iE1Y",
+        youtubeVideo: "https://www.youtube.com/embed/okXeeY7iE1Y",
         resumen:
           "Un cuento perfecto es una miniserie romántica que sigue la historia de dos personas de mundos diferentes que se encuentran y se ayudan mutuamente a descubrir el verdadero significado del amor y la felicidad.",
       },
@@ -544,7 +565,7 @@ const contenido = [
             wikipediaUrl: "https://es.wikipedia.org/wiki/Kappei_Yamaguchi",
           },
         ],
-        youtubeVideo: "https://www.youtube.com/embed/0R6VTQesQTQ",
+        youtubeVideo: "https://www.youtube.com/embed/fHLkS7tQFtk",
         resumen:
           "Death Note sigue la historia de Light Yagami, un estudiante prodigio que encuentra un cuaderno sobrenatural llamado Death Note. El cuaderno le permite matar a cualquier persona cuyo nombre escriba en él, lo que desencadena una serie de eventos donde Light intenta limpiar el mundo de criminales, mientras es perseguido por un brillante detective conocido como L.",
       },
@@ -567,7 +588,7 @@ const contenido = [
             wikipediaUrl: "https://es.wikipedia.org/wiki/Hannah_Einbinder",
           },
         ],
-        youtubeVideo: "https://www.youtube.com/embed/1-y78RVn7Xw",
+        youtubeVideo: "https://www.youtube.com/embed/OL0qh7o_-0g",
         resumen:
           "Hacks explora la compleja relación profesional entre una legendaria comediante de Las Vegas y una joven escritora en apuros. La serie ofrece una mirada incisiva y humorística a la industria del entretenimiento.",
       },
@@ -626,7 +647,7 @@ const contenido = [
             wikipediaUrl: "https://es.wikipedia.org/wiki/Courteney_Cox",
           },
         ],
-        youtubeVideo: "https://www.youtube.com/embed/hDNNmeeJs1Q",
+        youtubeVideo: "https://www.youtube.com/embed/IEEbUzffzrk",
         resumen:
           "Friends sigue las vidas y las relaciones de seis amigos que viven en Nueva York. La serie, con su humor icónico y personajes entrañables, se ha convertido en un clásico de la televisión.",
       },
@@ -648,7 +669,7 @@ const contenido = [
             wikipediaUrl: "https://en.wikipedia.org/wiki/Natsumi_Takamori",
           },
         ],
-        youtubeVideo: "https://www.youtube.com/embed/AK7Y8hTge5A",
+        youtubeVideo: "https://www.youtube.com/embed/_U_57mzfjB4",
         resumen:
           "Another es una serie de terror que sigue a un estudiante transferido que descubre un oscuro secreto sobre su nueva clase. La serie combina elementos de misterio y horror psicológico.",
       },
@@ -723,7 +744,7 @@ const contenido = [
             wikipediaUrl: "https://en.wikipedia.org/wiki/Dominic_Sherwood",
           },
         ],
-        youtubeVideo: "https://www.youtube.com/embed/PF8CPQiY-Jc",
+        youtubeVideo: "https://www.youtube.com/embed/kahvkxcb03Q",
         resumen:
           "Shadowhunters sigue la vida de Clary Fray, una joven que descubre que es una cazadora de sombras, seres humanos nacidos con sangre de ángel que protegen al mundo de los demonios.",
       },
@@ -752,7 +773,7 @@ const contenido = [
             wikipediaUrl: "https://en.wikipedia.org/wiki/Lisa_Edelstein",
           },
         ],
-        youtubeVideo: "https://www.youtube.com/embed/V8g6N6k2oLQ",
+        youtubeVideo: "https://www.youtube.com/embed/1nqW4g_S0wo",
         resumen:
           "Dr. House sigue la vida del brillante pero irascible Dr. Gregory House, un médico especializado en diagnósticos complejos. La serie combina drama médico con elementos de misterio y caracterización profunda.",
       },
@@ -774,7 +795,7 @@ const contenido = [
             wikipediaUrl: "https://en.wikipedia.org/wiki/Im_Yoon-ah",
           },
         ],
-        youtubeVideo: "https://www.youtube.com/watch?v=s4m2RWaFoZM",
+        youtubeVideo: "https://www.youtube.com/embed/6798ZL1aaYg",
         resumen:
           "King the Land es una serie de comedia romántica que sigue a un heredero de un conglomerado hotelero y una empleada que trabaja en el mismo hotel. La serie explora su relación mientras navegan las complejidades de la vida profesional y personal.",
       },{
@@ -796,7 +817,7 @@ const contenido = [
              wikipediaUrl: "https://es.wikipedia.org/wiki/Brianne_Howey"
          }
         ],
-        youtubeVideo: "https://www.youtube.com/embed/QsacpJwXCO8",
+        youtubeVideo: "https://www.youtube.com/embed/qhUZG9Qy9RE",
         resumen: "Ginny y Georgia es una serie de drama que sigue la vida de una madre joven, Georgia, y su hija adolescente, Ginny, mientras intentan comenzar de nuevo en una nueva ciudad."
      },
      {
@@ -821,7 +842,7 @@ const contenido = [
              wikipediaUrl: "https://es.wikipedia.org/wiki/Max_Verstappen"
          }
         ],
-        youtubeVideo: "https://www.youtube.com/embed/WTt2ES93A78",
+        youtubeVideo: "https://www.youtube.com/embed/wtJPe1ksS6E",
         resumen: "Fórmula 1: Drive to Survive ofrece una visión exclusiva del mundo de la Fórmula 1, mostrando las carreras, las rivalidades y las vidas de los pilotos y los equipos."
      },
      {
@@ -845,7 +866,7 @@ const contenido = [
              wikipediaUrl: "https://es.wikipedia.org/wiki/Emily_Osment"
          }
         ],
-        youtubeVideo: "https://www.youtube.com/embed/3esKAbQFSck",
+        youtubeVideo: "https://www.youtube.com/embed/WJX1_pbEh9g",
         resumen: "Hannah Montana sigue la vida de Miley Stewart, una adolescente que lleva una doble vida como la famosa estrella pop Hannah Montana."
      },
      {
@@ -870,7 +891,7 @@ const contenido = [
              wikipediaUrl: "https://es.wikipedia.org/wiki/Jonathan_Scarfe"
          }
         ],
-        youtubeVideo: "https://www.youtube.com/embed/qSxyffSB7wA",
+        youtubeVideo: "https://www.youtube.com/embed/dF0G4_WAgJY",
         resumen: "Van Helsing sigue a Vanessa Helsing, descendiente del famoso cazador de vampiros, mientras lucha por salvar a la humanidad en un mundo dominado por vampiros."
      },
      {
