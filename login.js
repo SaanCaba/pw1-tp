@@ -79,17 +79,17 @@ function validar (evento) {
         ES_VALIDO_CONTRASEÑA = false;
         } else {
             for (let usuarioRegistrado of USUARIOS_REGISTRADOS){
-                if (contrasenia.value !== usuarioRegistrado.contraseña && usuario.value !== usuarioRegistrado.usuario) {
+                if ((contrasenia.value === usuarioRegistrado.contraseña) && (usuario.value === usuarioRegistrado.usuario)) {
+                    contrasenia.classList.remove("es-visible");
+                    errorContrasenia.classList.add("es-invisible");
+                    ES_VALIDO_CONTRASEÑA = true;
+                    break;
+                } else {
                     contrasenia.classList.add("es-visible");
                     errorContrasenia.classList.remove("es-invisible");
                     errorContrasenia.textContent = MENSAJE_ERROR.contrasenia.noExiste;
                     contrasenia.focus();
                     ES_VALIDO_CONTRASEÑA = false;
-                } else {
-                    contrasenia.classList.remove("es-visible");
-                    errorContrasenia.classList.add("es-invisible");
-                    ES_VALIDO_CONTRASEÑA = true;
-                    break;
                 }
         }
     }
