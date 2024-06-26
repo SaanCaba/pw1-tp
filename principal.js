@@ -629,10 +629,10 @@ function showMovieDetails(name) {
  const filter = urlParams.get('filter');
 
  if (filter === "series") {
-   showOnly("series");
+   showOnly("serie");
    showMovieDetails("The OA");
  } else if (filter === "peliculas") {
-   showOnly("peliculas");
+   showOnly("films");
  } else {
    showAll();
  }
