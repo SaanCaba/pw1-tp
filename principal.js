@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
       alt: "vikings",
     },
     {
-      type: "film",
+      type: "serie",
       category: "Accion",
       url: "./detalles/detalle-serie/index.html?name=Cobra Kai",
       imgSrc: "./films-home/cobra-kai.jpg",
