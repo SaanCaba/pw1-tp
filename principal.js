@@ -624,4 +624,16 @@ function showMovieDetails(name) {
   document.getElementById("moreInfoLink").href = details.moreInfoUrl;
   document.getElementById("viewFilmLink").href = details.viewFilmUrl;
 }
+ // Leer el parámetro de la URL y filtrar según corresponda
+ const urlParams = new URLSearchParams(window.location.search);
+ const filter = urlParams.get('filter');
+
+ if (filter === "series") {
+   showOnly("series");
+   showMovieDetails("The OA");
+ } else if (filter === "peliculas") {
+   showOnly("peliculas");
+ } else {
+   showAll();
+ }
 });
