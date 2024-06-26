@@ -42,10 +42,9 @@ h2 {
   flex-direction: column;
   div {
     display: flex;
-    justify-content:flex-end;
+    justify-content: flex-end;
     gap: 1rem;
     margin: 1rem;
-    margin-bottom: 2.5em;
   }
   label {
     font-size: 1.2rem;
@@ -84,12 +83,13 @@ h2 {
 }
 
 /* agregué esto para q no se agranden los input */
-.register div, .payMethod div {
+.register div,
+.payMethod div {
   display: flex;
   justify-content: flex-end;
   align-items: center; /* Asegura que el contenido esté centrado verticalmente */
   flex-wrap: wrap; /* Permite que los elementos se envuelvan */
-} 
+}
 
 .roundCheck {
   height: 1rem;
@@ -128,15 +128,21 @@ h2 {
 
 /* estilo errores */
 
-.es-invisible{
+.es-invisible {
   display: none;
 }
-.es-visible{
+.es-visible {
   border: 0.15em solid #a10000;
 }
-.p-email, .p-usuario, .p-contraseña, .p-nombre, .p-apellido,
-.p-confirmar-contraseña, .p-numero-tarjeta, .p-clave-tarjeta, 
-.p-metodos-pago{
+.p-email,
+.p-usuario,
+.p-contraseña,
+.p-nombre,
+.p-apellido,
+.p-confirmar-contraseña,
+.p-numero-tarjeta,
+.p-clave-tarjeta,
+.p-metodos-pago {
   border-width: 0;
   border-radius: 1em;
   background-color: #a1000034;
