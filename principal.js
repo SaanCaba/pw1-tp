@@ -632,7 +632,7 @@ function showMovieDetails(name) {
    showOnly("serie");
    showMovieDetails("The OA");
  } else if (filter === "peliculas") {
-   showOnly("films");
+   showOnly("film");
  } else {
    showAll();
  }
