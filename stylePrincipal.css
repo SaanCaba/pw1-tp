@@ -32,12 +32,15 @@ header {
   top: 0;
 }
 .movie-details {
-  color: #070707;
+  color: #000000;
   position: absolute;
   width: 40%;
   top: 35%;
   padding: 1em;
   box-sizing: border-box;
+  p {
+    font-weight: bolder;
+  }
   .moreInfo,
   .viewFilm {
     border-radius: 0.4em;
@@ -46,11 +49,6 @@ header {
     color: #1a1818;
     text-decoration: none;
 
-    h1 {
-      text-align: left;
-      width: 20vw;
-      margin: 0;
-    }
     p {
       width: 35%;
       margin-top: 0;
@@ -66,6 +64,7 @@ header {
     }
   }
 }
+
 nav {
   color: #ffffff;
   display: flex;
@@ -142,7 +141,7 @@ nav ul li .interno:hover {
 .dropdown-content {
   display: none;
   position: absolute;
-  top:100%;
+  top: 100%;
   left: -55%;
   min-width: 9rem;
 }
@@ -159,7 +158,7 @@ nav ul li .interno:hover {
 }
 
 .dropdown-content li a:hover {
-  font-weight:bolder;
+  font-weight: bolder;
 }
 
 .dropdown:hover .dropdown-content {

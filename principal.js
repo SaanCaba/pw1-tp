@@ -19,7 +19,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.addEventListener("DOMContentLoaded", () => {
   const filmsSection = document.getElementById("films-section");
-  const movieDetailsSection = document.getElementById("movie-details");
 
   const films = [
     {
@@ -506,239 +505,123 @@ document.addEventListener("DOMContentLoaded", () => {
     //   alt: "the oa",
     // },
   ];
-  /*
-  films.forEach((film) => {
-    const div = document.createElement("div");
-    div.classList.add(film.type);
-    div.dataset.categoria = film.category;
 
-    const a = document.createElement("a");
-    a.href = film.url;
+const movieDetails = {
+  "Planeta de los simios": {
+    title: "El planeta de los simios",
+    description:
+      "Mientras un nuevo y tiránico líder simio construye su imperio, un joven simio emprende un viaje desgarrador que le llevará a tomar decisiones que definirán el futuro de simios y humanos por igual.",
+    moreInfoUrl:
+      "./detalles/detalle-pelicula/index.html?name=Planeta de los simios",
+    viewFilmUrl:
+      "./detalles/detalle-pelicula/index.html?name=Planeta de los simios",
+    imgSrc: "./films-home/simios.jpg",
+  },
+  "The OA": {
+    title: "The OA",
+    description:
+      "Una joven ciega desaparecida vuelve a casa con la vista recuperada, lo que lleva a muchos a cuestionarse si es un milagro o algo más.",
+    moreInfoUrl: "./detalles/detalle-serie/index.html?name=The OA",
+    viewFilmUrl: "./detalles/detalle-serie/index.html?name=The OA",
+    imgSrc: "./films-home/oa.jpg",
+  },
+};
 
-    const img = document.createElement("img");
-    img.src = film.imgSrc;
-    img.alt = film.alt;
+films.forEach((film) => {
+  const div = document.createElement("div");
+  div.classList.add(film.type);
+  div.dataset.categoria = film.category;
 
-    a.appendChild(img);
-    div.appendChild(a);
-    filmsSection.appendChild(div);
-  });
+  const a = document.createElement("a");
+  a.href = film.url;
 
-  // Event listeners para navegación
-  document.getElementById("todoTodas").addEventListener("click", () => {
-    showAll();
-  });
+  const img = document.createElement("img");
+  img.src = film.imgSrc;
+  img.alt = film.alt;
 
-  document.getElementById("todasLasSeries").addEventListener("click", () => {
-    showOnly("serie");
-  });
-  
-
-  document.getElementById("todasLasPeliculas").addEventListener("click", () => {
-    showOnly("film");
-  });
-
-  // Event listener para filtrar por categoría
-  document.getElementById("categorias").addEventListener("change", (event) => {
-    filterByCategory(event.target.value);
-  });
-
-  // Event listener para búsqueda
-  document.getElementById("site-search").addEventListener("input", (event) => {
-    filterBySearch(event.target.value);
-  });
-
-  // Función para mostrar todos los elementos
-  function showAll() {
-    const items = filmsSection.children;
-    for (let item of items) {
-      item.classList.remove("hidden");
-    }
-  }
-
-  // Función para mostrar solo elementos específicos (series o films)
-  function showOnly(type) {
-    const items = filmsSection.children;
-    for (let item of items) {
-      if (item.classList.contains(type)) {
-        item.classList.remove("hidden");
-      } else {
-        item.classList.add("hidden");
-      }
-    }
-  }
-
-  // Función para filtrar por categoría
-  function filterByCategory(category) {
-    const items = filmsSection.children;
-    if (category === "todos") {
-      showAll();
-    } else {
-      for (let item of items) {
-        if (item.dataset.categoria === category) {
-          item.classList.remove("hidden");
-        } else {
-          item.classList.add("hidden");
-        }
-      }
-    }
-  }
-
-  // Función para filtrar por búsqueda
-  function filterBySearch(query) {
-    const items = filmsSection.children;
-    query = query.toLowerCase();
-    for (let item of items) {
-      const altText = item.querySelector("img").alt.toLowerCase();
-      if (altText.includes(query)) {
-        item.classList.remove("hidden");
-      } else {
-        item.classList.add("hidden");
-      }
-    }
-  }
-
-  // Aplicar filtros basados en parámetros de URL
-  const urlParams = new URLSearchParams(window.location.search);
-  const filter = urlParams.get("filter");
-  if (filter) {
-    if (filter === "series") {
-      showOnly("serie");
-    } else if (filter === "peliculas") {
-      showOnly("film");
-    }
-  } else {
-    showAll();
-  }
+  a.appendChild(img);
+  div.appendChild(a);
+  filmsSection.appendChild(div);
 });
 
-*/
+const movieDetailsSection = document.getElementById("details");
 
-  const movieDetails = {
-    "Planeta de los simios": {
-      title: "El planeta de los simios",
-      description:
-        "Mientras un nuevo y tiránico líder simio construye su imperio, un joven simio emprende un viaje desgarrador que le llevará a tomar decisiones que definirán el futuro de simios y humanos por igual.",
-      moreInfoUrl:
-        "./detalles/detalle-pelicula/index.html?name=Planeta de los simios",
-      viewFilmUrl:
-        "./detalles/detalle-pelicula/index.html?name=Planeta de los simios",
-      imgSrc: "./films-home/simios.jpg",
-    },
-    "The OA": {
-      title: "The OA",
-      description:
-        "Una joven ciega desaparecida vuelve a casa con la vista recuperada, lo que lleva a muchos a cuestionarse si es un milagro o algo más.",
-      moreInfoUrl: "./detalles/detalle-serie/index.html?name=The OA",
-      viewFilmUrl: "./detalles/detalle-serie/index.html?name=The OA",
-      imgSrc: "./films-home/oa.jpg",
-    },
-  };
+document.getElementById("todoTodas").addEventListener("click", () => {
+  showAll();
+  showMovieDetails("Planeta de los simios");
+});
 
-  films.forEach((film) => {
-    const div = document.createElement("div");
-    div.classList.add(film.type);
-    div.dataset.categoria = film.category;
+document.getElementById("todasLasSeries").addEventListener("click", () => {
+  showOnly("serie");
+  showMovieDetails("The OA");
+});
 
-    const a = document.createElement("a");
-    a.href = film.url;
+document.getElementById("todasLasPeliculas").addEventListener("click", () => {
+  showOnly("film");
+  showMovieDetails("Planeta de los simios");
+});
 
-    const img = document.createElement("img");
-    img.src = film.imgSrc;
-    img.alt = film.alt;
+document.getElementById("categorias").addEventListener("change", (event) => {
+  filterByCategory(event.target.value);
+});
 
-    a.appendChild(img);
-    div.appendChild(a);
-    filmsSection.appendChild(div);
-  });
+document.getElementById("site-search").addEventListener("input", (event) => {
+  filterBySearch(event.target.value);
+});
 
-  document.getElementById("todoTodas").addEventListener("click", () => {
-    showAll();
-    showMovieDetails("Planeta de los simios");
-  });
+function showAll() {
+  const items = filmsSection.children;
+  for (let item of items) {
+    item.classList.remove("hidden");
+  }
+}
 
-  document.getElementById("todasLasSeries").addEventListener("click", () => {
-    showOnly("serie");
-    showMovieDetails("The OA");
-  });
-
-  document.getElementById("todasLasPeliculas").addEventListener("click", () => {
-    showOnly("film");
-    showMovieDetails("Planeta de los simios");
-  });
-
-  document.getElementById("categorias").addEventListener("change", (event) => {
-    filterByCategory(event.target.value);
-  });
-
-  document.getElementById("site-search").addEventListener("input", (event) => {
-    filterBySearch(event.target.value);
-  });
-
-  function showAll() {
-    const items = filmsSection.children;
-    for (let item of items) {
+function showOnly(type) {
+  const items = filmsSection.children;
+  for (let item of items) {
+    if (item.classList.contains(type)) {
       item.classList.remove("hidden");
-    }
-  }
-
-  function showOnly(type) {
-    const items = filmsSection.children;
-    for (let item of items) {
-      if (item.classList.contains(type)) {
-        item.classList.remove("hidden");
-      } else {
-        item.classList.add("hidden");
-      }
-    }
-  }
-
-  function filterByCategory(category) {
-    const items = filmsSection.children;
-    if (category === "todos") {
-      showAll();
     } else {
-      for (let item of items) {
-        if (item.dataset.categoria === category) {
-          item.classList.remove("hidden");
-        } else {
-          item.classList.add("hidden");
-        }
-      }
+      item.classList.add("hidden");
     }
   }
+}
 
-  function filterBySearch(query) {
-    const items = filmsSection.children;
-    query = query.toLowerCase();
+function filterByCategory(category) {
+  const items = filmsSection.children;
+  if (category === "todos") {
+    showAll();
+  } else {
     for (let item of items) {
-      const altText = item.querySelector("img").alt.toLowerCase();
-      if (altText.includes(query)) {
+      if (item.dataset.categoria === category) {
         item.classList.remove("hidden");
       } else {
         item.classList.add("hidden");
       }
     }
   }
+}
 
-  function showMovieDetails(name) {
-    const details = movieDetails[name];
-    movieDetailsSection.innerHTML = `
-    <div class="container-img">
-      <img class="portada" id="background-img" src="${details.imgSrc}" alt="${details.title}" />
-    </div>
-    <div class="movie-details">
-      <h1>${details.title}</h1>
-      <p id="description">${details.description}</p>
-      <div class="container-btn">
-        <button class="moreInfo">
-          <a id="moreInfoLink" href="${details.moreInfoUrl}">Más información</a>
-        </button>
-        <button class="viewFilm">
-          <a id="viewFilmLink" href="${details.viewFilmUrl}">Ver película</a>
-        </button>
-      </div>
-    </div>
-  `;
+function filterBySearch(query) {
+  const items = filmsSection.children;
+  query = query.toLowerCase();
+  for (let item of items) {
+    const altText = item.querySelector("img").alt.toLowerCase();
+    if (altText.includes(query)) {
+      item.classList.remove("hidden");
+    } else {
+      item.classList.add("hidden");
+    }
   }
+}
+
+function showMovieDetails(name) {
+  const details = movieDetails[name];
+  document.getElementById("background-img").src = details.imgSrc;
+  document.getElementById("background-img").alt = details.title;
+  document.getElementById("title").textContent = details.title;
+  document.getElementById("description").textContent = details.description;
+  document.getElementById("moreInfoLink").href = details.moreInfoUrl;
+  document.getElementById("viewFilmLink").href = details.viewFilmUrl;
+}
 });
