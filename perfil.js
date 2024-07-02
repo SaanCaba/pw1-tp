@@ -54,9 +54,9 @@ const cuponDePago_rapiPago = document.querySelector('input[value="rapipago"]');
     } else if (FORMA_PAGO_ACTUAL === "rapipago" || CUPON_PAGO_ACTUAL === "rapipago"){
       cuponDePago_rapiPago.checked = true;
     }
-  } else if (FORMA_PAGO_ACTUAL == "transferenciaBancaria"){
+  } else if (FORMA_PAGO_ACTUAL === "transferenciaBancaria" && FORMA_PAGO_ACTUAL === "bankTransfer"){
     metodoDePago_transferenciaBancaria.checked = true;
-  } else if (FORMA_PAGO_ACTUAL == "creditCard"){
+  } else if (FORMA_PAGO_ACTUAL === "creditCard"){
     textoTarjeta.classList.remove("es-invisible");
   }
 
