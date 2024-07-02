@@ -5,6 +5,8 @@ const JSON_USUARIOS_REGISTRADOS = localStorage.getItem("DATOS REGISTRADOS");
 const USUARIOS_REGISTRADOS = JSON.parse(JSON_USUARIOS_REGISTRADOS);
 
 let emailActual;
+let formaDePagoActual;
+let numeroTarjetaActual;
 
 const MENSAJE_ERROR = {
     usuario:{
@@ -58,6 +60,8 @@ function validar (evento) {
                     errorUsuario.classList.add("es-invisible");
                     ES_VALIDO_USUARIO = true;
                     emailActual = usuarioRegistrado.email;
+                    formaDePagoActual = usuarioRegistrado.paymentMethod;
+                    numeroTarjetaActual = usuarioRegistrado.cardNumber;
                     break;
                 }
         }
@@ -97,6 +101,10 @@ function validar (evento) {
     if (ES_VALIDO_USUARIO && ES_VALIDO_CONTRASEÑA){
         localStorage.setItem("USUARIO ACTUAL", usuario.value);
         localStorage.setItem("EMAIL ACTUAL", emailActual);
+        localStorage.setItem("FORMA DE PAGO ACTUAL", formaDePagoActual);
+        if (formaDePagoActual === "creditCard"){
+            localStorage.setItem("NUMERO TARJETA ACTUAL", numeroTarjetaActual);
+        }
         window.location.href = "pantallaPrincipal.html"
     };
 }
